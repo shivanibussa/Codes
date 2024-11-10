@@ -17,22 +17,17 @@ class Solution {
     private int maxh = Integer.MIN_VALUE;
     public int diameterOfBinaryTree(TreeNode root) 
     {
-        if(root==null)
-            return 0;
-        
-        int ln = height(root.left);
-        int rn = height(root.right);
-        maxh = Math.max(maxh, ln+rn);
-        diameterOfBinaryTree(root.left);
-        diameterOfBinaryTree(root.right);
-        
+        height(root);
         return maxh;
         
     }
-    public int height(TreeNode root)
-    {
-        if(root == null)
-            return 0;
-        return 1+Math.max(height(root.left), height(root.right));
+    private int height(TreeNode root) {
+        if (root == null) return 0;
+        
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        
+        maxh = Math.max(maxh, leftHeight + rightHeight);
+        return 1 + Math.max(leftHeight, rightHeight);
     }
 }
