@@ -32,11 +32,12 @@ class Solution
             for(int i=0;i<l;i++)
             {
                 TreeNode node = q.poll();
+                 al.add(node.val);
                 if(node.left!=null)
                     q.offer(node.left);
                 if(node.right!=null)
                     q.offer(node.right);
-                 al.add(node.val);
+                
             }
            if (check) {
                 Collections.reverse(al); // Corrected here
