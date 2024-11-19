@@ -23,11 +23,14 @@ public class Codec {
             if(node == null)
             {
                 sb.append("n ");
-                continue;
+                // continue;
             }
+            else
+            {
             sb.append(node.val+" ");
             q.add(node.left);
             q.add(node.right);
+            }
         }
         return sb.toString();
         
