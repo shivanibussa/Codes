@@ -40,7 +40,8 @@ public class Codec {
             return null;
         Queue<TreeNode> q = new LinkedList<>();
         String [] values = data.split(" ");
-        if (values[0].equals("n")) return null;  
+        if (values[0].equals("n")) 
+            return null;  
         TreeNode root = new TreeNode(Integer.parseInt(values[0]));
         q.add(root);
         for(int i=1;i<values.length;i++)
@@ -54,9 +55,9 @@ public class Codec {
             }
             if(!values[++i].equals("n"))
             {
-                TreeNode left = new TreeNode(Integer.parseInt(values[i]));
-                q.add(left);
-                parent.right = left;
+                TreeNode right = new TreeNode(Integer.parseInt(values[i]));
+                q.add(right);
+                parent.right = right;
             }
         }
         return root;
