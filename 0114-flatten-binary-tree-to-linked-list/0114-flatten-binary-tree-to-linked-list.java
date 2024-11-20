@@ -33,6 +33,5 @@ class Solution
             }
             curr = curr.right;
         }
-         // return root;   
     }
 }
