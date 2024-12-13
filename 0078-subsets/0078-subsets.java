@@ -14,9 +14,10 @@ class Solution
             res.add(new ArrayList<>(al));
             return;
         }
+        helper(res,nums,i+1,al);
         al.add(nums[i]);
         helper(res,nums,i+1,al);
         al.remove(al.size() - 1);
-        helper(res,nums,i+1,al);
+        
     }
 }
