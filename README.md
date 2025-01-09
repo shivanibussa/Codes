@@ -18,4 +18,20 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1258-article-views-i](https://github.com/shivanibussa/Codes/tree/master/1258-article-views-i) |
 | [1509-replace-employee-id-with-the-unique-identifier](https://github.com/shivanibussa/Codes/tree/master/1509-replace-employee-id-with-the-unique-identifier) |
 | [1908-recyclable-and-low-fat-products](https://github.com/shivanibussa/Codes/tree/master/1908-recyclable-and-low-fat-products) |
+## Array
+|  |
+| ------- |
+| [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+## Hash Table
+|  |
+| ------- |
+| [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+## Greedy
+|  |
+| ------- |
+| [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+## Sorting
+|  |
+| ------- |
+| [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 <!---LeetCode Topics End-->
