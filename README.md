@@ -7,3 +7,11 @@ This repository contains my solutions to various problems on LeetCode, implement
 You can browse through this repository to explore my solutions to LeetCode problems. Each Java file contains the solution to a specific problem, and the file name corresponds to the LeetCode problem number and name (e.g., `1_Two_Sum.java`).
 
 
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Database
+|  |
+| ------- |
+| [1509-replace-employee-id-with-the-unique-identifier](https://github.com/shivanibussa/Codes/tree/master/1509-replace-employee-id-with-the-unique-identifier) |
+<!---LeetCode Topics End-->
