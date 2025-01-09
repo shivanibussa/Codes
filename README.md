@@ -59,6 +59,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Bucket Sort
 |  |
 | ------- |
@@ -90,6 +91,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Two Pointers
 |  |
 | ------- |
@@ -98,4 +100,17 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
+## Tree
+|  |
+| ------- |
+| [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
+## Binary Tree
+|  |
+| ------- |
+| [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 <!---LeetCode Topics End-->
