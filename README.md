@@ -21,10 +21,12 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Array
 |  |
 | ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 ## Hash Table
 |  |
 | ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 ## Greedy
 |  |
@@ -33,5 +35,26 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Sorting
 |  |
 | ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+## Bucket Sort
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+## Counting
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+## Quickselect
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 <!---LeetCode Topics End-->
