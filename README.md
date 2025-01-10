@@ -21,6 +21,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Array
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0215-kth-largest-element-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
@@ -124,21 +125,25 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Depth-First Search
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 ## Breadth-First Search
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 ## Union Find
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 ## Matrix
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 ## Graph
 |  |
