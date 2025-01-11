@@ -18,6 +18,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1153-product-sales-analysis-i](https://github.com/shivanibussa/Codes/tree/master/1153-product-sales-analysis-i) |
 | [1258-article-views-i](https://github.com/shivanibussa/Codes/tree/master/1258-article-views-i) |
 | [1509-replace-employee-id-with-the-unique-identifier](https://github.com/shivanibussa/Codes/tree/master/1509-replace-employee-id-with-the-unique-identifier) |
+| [1724-customer-who-visited-but-did-not-make-any-transactions](https://github.com/shivanibussa/Codes/tree/master/1724-customer-who-visited-but-did-not-make-any-transactions) |
 | [1908-recyclable-and-low-fat-products](https://github.com/shivanibussa/Codes/tree/master/1908-recyclable-and-low-fat-products) |
 ## Array
 |  |
