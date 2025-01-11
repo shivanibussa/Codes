@@ -37,11 +37,13 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
 ## Greedy
 |  |
 | ------- |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+| [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
 ## Sorting
 |  |
 | ------- |
@@ -75,6 +77,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
+| [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
 ## Quickselect
 |  |
 | ------- |
@@ -84,6 +87,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/shivanibussa/Codes/tree/master/2292-counting-words-with-a-given-prefix) |
 ## String Matching
 |  |
