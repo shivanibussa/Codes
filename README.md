@@ -30,6 +30,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0215-kth-largest-element-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+| [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
@@ -146,6 +147,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
+| [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 ## Union Find
@@ -160,9 +162,14 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
+| [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 ## Graph
 |  |
 | ------- |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 <!---LeetCode Topics End-->
