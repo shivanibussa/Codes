@@ -78,7 +78,7 @@ class Solution
         }
         return arr;
     }
-    public static void dfs(ArrayList<ArrayList<Integer>> adj, int[] visited,ArrayList<Integer> arr,
+    public static void dfs(ArrayList<ArrayList<Integer>> adj, int[] visited, ArrayList<Integer> arr,
     Stack<Integer> st, int node)
     {
         visited[node]=1;
