@@ -48,52 +48,45 @@ class Solution
 
     List<Integer> eventualSafeNodes(int V, List<List<Integer>> adj) 
     {
-        int n = adj.size();
-        int visited[] = new int[n];
-        int pathvisited[] = new int[n];
-        int checked[] = new int[n];
-        
+        List<List<Integer>> adjRev = new ArrayList<>();
+        int indegree[] = new int[V];
+        Queue<Integer> q = new LinkedList<>();
         ArrayList<Integer> arr = new ArrayList<>();
         
-        for(int i=0;i<n;i++)
+        for(int i=0;i<V;i++)
         {
-            if(visited[i]==0)
-            {
-                dfs(adj,visited,pathvisited,checked,arr,i);
-            }
+            adjRev.add(new ArrayList<>());
         }
-        for(int i=0;i<n;i++)
-        {
-            if(checked[i]==1)
-            {
-                arr.add(i);
-            }
-        }
-        return arr;
-    }
-    
-    public boolean dfs(List<List<Integer>> adj,int[] visited,int[] pathvisited, int[] checked, 
-    ArrayList<Integer> arr,int node)
-    {
-        visited[node]=1;
-        pathvisited[node]=1;
-        checked[node]=0;
         
-        for(int con:adj.get(node))
+        for(int i=0;i<V;i++)
         {
-            if(visited[con]==0)
+            for(int it:adj.get(i))
             {
-                if(dfs(adj,visited,pathvisited,checked,arr,con)==true)
-                    return true;
-            }
-            else if(visited[con]==1 && pathvisited[con]==1)
-            {
-                checked[node]=0;
-                return true;
+                adjRev.get(it).add(i);
+                indegree[i]++;
             }
         }
-        checked[node]=1;
-        pathvisited[node]=0;
-        return false;
+        for(int i=0;i<V;i++)
+        {
+            if(indegree[i]==0)
+            {
+                q.offer(i);
+            }
+        }
+        while(!q.isEmpty())
+        {
+            int pop = q.poll();
+            arr.add(pop);
+            for(int it:adjRev.get(pop))
+            {
+                indegree[it]--;
+                if(indegree[it]==0)
+                {
+                    q.offer(it);
+                }
+            }
+        }
+        Collections.sort(arr);
+        return arr;
     }
 }
