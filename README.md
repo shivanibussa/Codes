@@ -147,6 +147,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
+| [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -157,6 +158,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
+| [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 ## Union Find
 |  |
 | ------- |
@@ -179,6 +181,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
+| [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -192,4 +195,5 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0207-course-schedule](https://github.com/shivanibussa/Codes/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
+| [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 <!---LeetCode Topics End-->
