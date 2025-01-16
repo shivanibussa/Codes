@@ -150,6 +150,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
+| [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -161,6 +162,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
+| [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 ## Union Find
 |  |
 | ------- |
@@ -168,6 +170,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
+| [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 ## Matrix
 |  |
 | ------- |
@@ -184,6 +187,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
+| [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 ## Dynamic Programming
 |  |
 | ------- |
