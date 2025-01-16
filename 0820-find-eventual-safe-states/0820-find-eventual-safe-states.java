@@ -6,6 +6,7 @@ class Solution
         int N = graph.length;
         Queue<Integer> q = new LinkedList<>();
         ArrayList<Integer> arr = new ArrayList<>();
+        int inorder[] = new int[N];
 
         for(int i=0;i<N;i++)
         {
@@ -16,16 +17,17 @@ class Solution
             for(int j=0;j<graph[i].length;j++)
             {
                 adj.get(graph[i][j]).add(i);
+                inorder[i]++;
             }
         }
-        int inorder[] = new int[N];
-        for(int i=0;i<N;i++)
-        {
-            for(int it:adj.get(i))
-            {
-                inorder[it]++;
-            }
-        }
+        
+        // for(int i=0;i<N;i++)
+        // {
+        //     for(int it:adj.get(i))
+        //     {
+        //         inorder[it]++;
+        //     }
+        // }
         for(int i=0;i<N;i++)
         {
             if(inorder[i]==0)
