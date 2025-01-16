@@ -19,8 +19,6 @@ class Solution
             adj.get(b).add(a);
         }
         System.out.println(adj);
-        // q.offer(1);
-        // likes[1] = 0;
         for(int i=1;i<n+1;i++)
         {
             if(likes[i]==-1)
@@ -37,7 +35,7 @@ class Solution
     {
         q.offer(node);
         likes[node]=0;
-        
+
         while(!q.isEmpty())
         {
             int pop=q.poll();
