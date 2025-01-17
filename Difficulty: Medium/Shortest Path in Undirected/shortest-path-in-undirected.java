@@ -64,12 +64,12 @@ class Solution
             int pop = q.poll();
             for(int it:adj.get(pop))
             {
-                if(visited[it]==0)
+                if(1+dist[pop]<dist[it])
                 {
-                    visited[it]=1;
+                    dist[it] = 1+dist[pop];
                     q.add(it);
                 }
-                dist[it] = Math.min(dist[it],1+dist[pop]);
+                
             }
         }
         for(int i=0;i<V;i++)
