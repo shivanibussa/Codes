@@ -37,6 +37,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/shivanibussa/Codes/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2606-difference-between-ones-and-zeros-in-row-and-column](https://github.com/shivanibussa/Codes/tree/master/2606-difference-between-ones-and-zeros-in-row-and-column) |
 ## Hash Table
@@ -191,10 +192,12 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
+| [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 ## Simulation
 |  |
 | ------- |
