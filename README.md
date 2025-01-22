@@ -37,6 +37,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/shivanibussa/Codes/tree/master/2292-counting-words-with-a-given-prefix) |
 | [2606-difference-between-ones-and-zeros-in-row-and-column](https://github.com/shivanibussa/Codes/tree/master/2606-difference-between-ones-and-zeros-in-row-and-column) |
@@ -181,6 +182,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 ## Matrix
 |  |
 | ------- |
@@ -201,6 +203,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
+| [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 ## Dynamic Programming
 |  |
@@ -225,4 +228,8 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0744-network-delay-time](https://github.com/shivanibussa/Codes/tree/master/0744-network-delay-time) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
+## Minimum Spanning Tree
+|  |
+| ------- |
+| [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 <!---LeetCode Topics End-->
