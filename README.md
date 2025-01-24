@@ -35,6 +35,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
@@ -49,6 +50,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
@@ -65,6 +67,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 ## Divide and Conquer
 |  |
@@ -103,6 +106,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/shivanibussa/Codes/tree/master/2292-counting-words-with-a-given-prefix) |
@@ -154,6 +158,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0207-course-schedule](https://github.com/shivanibussa/Codes/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0744-network-delay-time](https://github.com/shivanibussa/Codes/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
@@ -169,6 +174,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0744-network-delay-time](https://github.com/shivanibussa/Codes/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
@@ -180,6 +186,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
+| [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
