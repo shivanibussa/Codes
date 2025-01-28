@@ -164,6 +164,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -209,6 +210,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
@@ -239,4 +241,8 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
+## Biconnected Component
+|  |
+| ------- |
+| [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
 <!---LeetCode Topics End-->
