@@ -220,6 +220,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Dynamic Programming
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
@@ -248,4 +249,12 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
+## Math
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
