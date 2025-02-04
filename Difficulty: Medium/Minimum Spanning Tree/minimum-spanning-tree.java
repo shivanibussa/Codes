@@ -56,6 +56,7 @@ class DisjointSet
     {
         return node;
     }
+    // Perform path compression
     parent.set(node, findUParent(parent.get(node)));
     return parent.get(node);
 }
@@ -77,46 +78,53 @@ class DisjointSet
         }
     }
 }
-class Edge implements Comparable<Edge> {
-    int src, dest, weight;
-    Edge(int _src, int _dest, int _wt) {
-        this.src = _src; this.dest = _dest; this.weight = _wt;
-    }
+// class Edge implements Comparable<Edge> {
+//     int src, dest, weight;
+//     Edge(int _src, int _dest, int _wt) {
+//         this.src = _src; this.dest = _dest; this.weight = _wt;
+//     }
     
-    public int compareTo(Edge compareEdge) {
-        return this.weight - compareEdge.weight;
-    }
-}
+//     public int compareTo(Edge compareEdge) {
+//         return this.weight - compareEdge.weight;
+//     }
+// }
 class Solution 
 {
     static int spanningTree(int V, int E, List<List<int[]>> adj) 
     {
-        List<Edge> edges = new ArrayList<>();
-        for (int i = 0; i < V; i++) {
-            for (int j = 0; j < adj.get(i).size(); j++) {
-                int adjNode = adj.get(i).get(j)[0];
+        DisjointSet ds = new DisjointSet(V);
+        int mwt=0;
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        for(int i=0;i<adj.size();i++)
+        {
+            for (int j = 0; j < adj.get(i).size(); j++)
+            {
+                int u = i;
+                int v = adj.get(i).get(j)[0];
                 int wt = adj.get(i).get(j)[1];
-                int node = i;
-                Edge temp = new Edge(i, adjNode, wt);
-                edges.add(temp);
+                
+                pq.offer(new int[]{wt,u,v});
             }
         }
-    
-    DisjointSet ds = new DisjointSet(V);
-
-        Collections.sort(edges);
-        int mstWt = 0;
-        for (int i = 0; i < edges.size(); i++) {
-            int wt = edges.get(i).weight;
-            int u = edges.get(i).src;
-            int v = edges.get(i).dest;
-
-            if (ds.findUParent(u) != ds.findUParent(v)) {
-                mstWt += wt;
-                ds.UnionBySize(u, v);
+        
+        while(!pq.isEmpty())
+        {
+            int pops[] = pq.poll();
+            int wt = pops[0];
+            int u = pops[1];
+            int v = pops[2];
+            
+            if(ds.findUParent(u)!=ds.findUParent(v))
+            {
+                ds.UnionBySize(u,v);
+                mwt+=wt;
             }
+            // else
+            // {
+            //     continue;
+            // }
         }
-
-        return mstWt;
+        return mwt;
     }
+    
 }
