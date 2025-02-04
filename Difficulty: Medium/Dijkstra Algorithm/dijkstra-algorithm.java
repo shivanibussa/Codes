@@ -71,29 +71,30 @@ class Solution
 {
     ArrayList<Integer> dijkstra(ArrayList<ArrayList<iPair>> adj, int src) 
     {
-        PriorityQueue<iPair> q = new PriorityQueue<>((x,y)->x.first-y.first);
-        q.add(new iPair(0,src));
-        int V = adj.size();
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        pq.offer(new int[]{0,src});
+        int n = adj.size();
+        ArrayList<Integer> dist = new ArrayList<>();
+        for(int i=0;i<n;i++)
+            dist.add(Integer.MAX_VALUE);
+        dist.set(src,0);
         
-       ArrayList<Integer> dist = new ArrayList<>();
-        for (int i = 0; i < V; i++) {
-            dist.add((int) 1e9); // Fill the list with "infinity"
-        }
-        dist.set(src, 0); 
-        while(!q.isEmpty())
+        while(!pq.isEmpty())
         {
-            iPair p = q.poll();
-            int dista = p.first;
-            int vertex = p.second;
+            int pops[] = pq.poll();
             
-            for(iPair p1:adj.get(vertex))
+            int wt = pops[0];
+            int node = pops[1];
+            
+            for(iPair p1:adj.get(node))
             {
-                int v = p1.first;
-                int d = p1.second;
-                if(dist.get(v)>dista+d)
+                int vertex = p1.first;
+                int dis = p1.second;
+                
+                if(dis+wt<dist.get(vertex))
                 {
-                    dist.set(v,dista+d);
-                    q.offer(new iPair(dist.get(v),v));
+                    dist.set(vertex,dis+wt);
+                    pq.offer(new int[]{dis+wt,vertex});
                 }
             }
         }
