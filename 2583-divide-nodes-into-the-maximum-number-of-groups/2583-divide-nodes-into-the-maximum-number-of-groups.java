@@ -64,30 +64,28 @@ class Solution
         }
         return maxg;
     }
-    public int bfs(int node,ArrayList<ArrayList<Integer>> adj)
-    {
-        Queue<Integer> q = new LinkedList<>();
-        Map<Integer,Integer> depth = new HashMap<>();
-        q.offer(node);
-        depth.put(node,1);
+    public int bfs(int node, ArrayList<ArrayList<Integer>> adj) {
+    Queue<int[]> q = new LinkedList<>();
+    boolean[] visited = new boolean[adj.size()]; // Track visited nodes
+    q.offer(new int[]{node, 1}); // Add the starting node with depth 1
+    visited[node] = true;
 
-        int md=1;
+    int maxDepth = 1;
 
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            int cd = depth.get(pop);
+    while (!q.isEmpty()) {
+        int[] current = q.poll();
+        int currentNode = current[0];
+        int currentDepth = current[1];
+        maxDepth = Math.max(maxDepth, currentDepth);
 
-            for(int it:adj.get(pop))
-            {
-                if(!depth.containsKey(it))
-                {
-                    depth.put(it,cd+1);
-                    q.offer(it);
-                    md = Math.max(md,cd+1);
-                }
+        for (int neighbor : adj.get(currentNode)) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.offer(new int[]{neighbor, currentDepth + 1}); // Add neighbor with incremented depth
             }
         }
-        return md;
     }
+    return maxDepth;
+}
+
 }
