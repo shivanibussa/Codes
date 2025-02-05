@@ -3,6 +3,8 @@ class Solution
     public int magnificentSets(int n, int[][] edges) 
     {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        int res=0;
+        int visited[] = new int[n+1];
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
@@ -11,37 +13,41 @@ class Solution
             adj.get(edge[1]).add(edge[0]);
         }
 
-        int[] visited = new int[n + 1];
-        int result = 0;
-
-        for (int i = 1; i <= n; i++) {
-            if (visited[i] == 0) {
-                List<Integer> component = new ArrayList<>();
-                if (!isBipartite(i, adj, visited, component)) {
-                    return -1; 
+        for(int i=1;i<n+1;i++)
+        {
+            List<Integer> component = new ArrayList<>();
+            if(visited[i]==0)
+            {
+                if(bipartite(i,adj,visited,component)==false)
+                    return -1;
+                else
+                {
+                    res+=maxgroups(component,adj);
                 }
-                result += getMaxGroups(component, adj);
             }
         }
-
-        return result;
+        return res;
     }
+    public boolean bipartite(int node,ArrayList<ArrayList<Integer>> adj,int visited[],List<Integer> component)
+    {
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(node);
+        visited[node]=1;
+        component.add(node);
 
-    private boolean isBipartite(int start, ArrayList<ArrayList<Integer>> adj, int[] visited, List<Integer> component) {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(start);
-        visited[start] = 1; 
-        component.add(start);
-
-        while (!queue.isEmpty()) {
-            int node = queue.poll();
-            for (int neighbor : adj.get(node)) {
-                if (visited[neighbor] == 0) {
-                    visited[neighbor] = -visited[node]; 
-                    queue.offer(neighbor);
-                    component.add(neighbor);
-                } else if (visited[neighbor] == visited[node]) {
-                    // Not bipartite
+        while(!q.isEmpty())
+        {
+            int pop = q.poll();
+            for(int it:adj.get(pop))
+            {
+                if(visited[it]==0)
+                {
+                    visited[it]=-visited[pop];
+                    q.offer(it);
+                    component.add(it);
+                }
+                else if(visited[it]==visited[pop])
+                {
                     return false;
                 }
             }
@@ -49,38 +55,39 @@ class Solution
         return true;
     }
 
-    
-    private int getMaxGroups(List<Integer> component, ArrayList<ArrayList<Integer>> adj) {
-        int maxGroups = 0;
-
-        for (int node : component) {
-            maxGroups = Math.max(maxGroups, bfsDepth(node, adj));
+    public int maxgroups(List<Integer> comp,ArrayList<ArrayList<Integer>> adj)
+    {
+        int maxg =0;
+        for(int n:comp)
+        {
+            maxg = Math.max(maxg,bfs(n,adj));
         }
-
-        return maxGroups;
+        return maxg;
     }
+    public int bfs(int node,ArrayList<ArrayList<Integer>> adj)
+    {
+        Queue<Integer> q = new LinkedList<>();
+        Map<Integer,Integer> depth = new HashMap<>();
+        q.offer(node);
+        depth.put(node,1);
 
-    private int bfsDepth(int start, ArrayList<ArrayList<Integer>> adj) {
-        Queue<Integer> queue = new LinkedList<>();
-        Map<Integer, Integer> depth = new HashMap<>();
-        queue.offer(start);
-        depth.put(start, 1); // Start with depth 1
+        int md=1;
 
-        int maxDepth = 1;
+        while(!q.isEmpty())
+        {
+            int pop = q.poll();
+            int cd = depth.get(pop);
 
-        while (!queue.isEmpty()) {
-            int node = queue.poll();
-            int currentDepth = depth.get(node);
-
-            for (int neighbor : adj.get(node)) {
-                if (!depth.containsKey(neighbor)) {
-                    depth.put(neighbor, currentDepth + 1);
-                    queue.offer(neighbor);
-                    maxDepth = Math.max(maxDepth, currentDepth + 1);
+            for(int it:adj.get(pop))
+            {
+                if(!depth.containsKey(it))
+                {
+                    depth.put(it,cd+1);
+                    q.offer(it);
+                    md = Math.max(md,cd+1);
                 }
             }
         }
-
-        return maxDepth;
+        return md;
     }
 }
