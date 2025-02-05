@@ -1,6 +1,7 @@
-class Solution {
-    public int magnificentSets(int n, int[][] edges) {
-        // Adjacency list to represent the graph
+class Solution 
+{
+    public int magnificentSets(int n, int[][] edges) 
+    {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
@@ -17,7 +18,7 @@ class Solution {
             if (visited[i] == 0) {
                 List<Integer> component = new ArrayList<>();
                 if (!isBipartite(i, adj, visited, component)) {
-                    return -1; // Graph is not bipartite
+                    return -1; 
                 }
                 result += getMaxGroups(component, adj);
             }
@@ -26,18 +27,17 @@ class Solution {
         return result;
     }
 
-    // Check if the graph is bipartite and collect nodes in the connected component
     private boolean isBipartite(int start, ArrayList<ArrayList<Integer>> adj, int[] visited, List<Integer> component) {
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(start);
-        visited[start] = 1; // Start with group 1
+        visited[start] = 1; 
         component.add(start);
 
         while (!queue.isEmpty()) {
             int node = queue.poll();
             for (int neighbor : adj.get(node)) {
                 if (visited[neighbor] == 0) {
-                    visited[neighbor] = -visited[node]; // Alternate group
+                    visited[neighbor] = -visited[node]; 
                     queue.offer(neighbor);
                     component.add(neighbor);
                 } else if (visited[neighbor] == visited[node]) {
@@ -49,7 +49,7 @@ class Solution {
         return true;
     }
 
-    // Get the maximum number of groups for a connected component
+    
     private int getMaxGroups(List<Integer> component, ArrayList<ArrayList<Integer>> adj) {
         int maxGroups = 0;
 
@@ -60,7 +60,6 @@ class Solution {
         return maxGroups;
     }
 
-    // Perform BFS and calculate depth
     private int bfsDepth(int start, ArrayList<ArrayList<Integer>> adj) {
         Queue<Integer> queue = new LinkedList<>();
         Map<Integer, Integer> depth = new HashMap<>();
