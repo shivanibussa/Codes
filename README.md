@@ -33,6 +33,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
 | [0120-triangle](https://github.com/shivanibussa/Codes/tree/master/0120-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/shivanibussa/Codes/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0198-house-robber](https://github.com/shivanibussa/Codes/tree/master/0198-house-robber) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
@@ -66,6 +67,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Greedy
 |  |
 | ------- |
+| [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
@@ -246,6 +248,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0120-triangle](https://github.com/shivanibussa/Codes/tree/master/0120-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/shivanibussa/Codes/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0198-house-robber](https://github.com/shivanibussa/Codes/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/shivanibussa/Codes/tree/master/0213-house-robber-ii) |
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
