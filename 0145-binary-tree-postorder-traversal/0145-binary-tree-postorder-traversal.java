@@ -15,18 +15,23 @@
  */
 class Solution 
 {
-    public List<Integer> f(TreeNode root,List<Integer> al)
-    {
-        if(root==null)
-            return al;
-        f(root.left,al);
-        f(root.right,al);
-        al.add(root.val);
-        return al;
-    }
     public List<Integer> postorderTraversal(TreeNode root) 
     {
-        List<Integer> al = new ArrayList<>();
-        return f(root,al);
+        Stack<TreeNode> st1 = new Stack<>();
+        ArrayList<Integer> al = new ArrayList<>();
+        if(root==null)
+            return al;
+        st1.push(root);
+        while(!st1.isEmpty())
+        {
+            TreeNode pop = st1.pop();
+            al.add(pop.val);
+            if(pop.left!=null)
+                st1.add(pop.left);
+            if(pop.right!=null)
+                st1.add(pop.right);
+        }
+        Collections.reverse(al);
+        return al;
     }
 }
