@@ -19,8 +19,6 @@ class Solution
     public int maxh=0;
     public int diameterOfBinaryTree(TreeNode root) 
     {
-        if(root==null)
-            return 0;
          f(root);
          return maxh;
     }
@@ -31,6 +29,6 @@ class Solution
         int lh = f(root.left);
         int rh = f(root.right);
         maxh = Math.max(maxh,lh+rh);
-        return 1+Math.max(f(root.left),f(root.right));
+        return 1+Math.max(lh,rh);
     }
 }
