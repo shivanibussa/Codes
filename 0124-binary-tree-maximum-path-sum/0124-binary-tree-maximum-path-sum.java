@@ -28,6 +28,6 @@ class Solution
         int lsum = Math.max(0,f(root.left));
         int rsum = Math.max(0,f(root.right));
         maxsum = Math.max(maxsum,lsum+rsum+root.val);
-        return root.val+lsum+rsum;
+        return root.val+Math.max(lsum,rsum);
     }
 }
