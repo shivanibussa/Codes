@@ -51,7 +51,7 @@ class Solution
             for(int i=0;i<size;i++)
             {
                 TreeNode pop = q.poll();
-                // visited.put(pop,true);
+                visited.put(pop,true);
                 if(pop.left!=null && visited.get(pop.left)==null)
                 {
                     q.offer(pop.left);
