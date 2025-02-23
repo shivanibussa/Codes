@@ -17,16 +17,16 @@ class Solution
 {
     public boolean isSymmetric(TreeNode root) 
     {
-        return root==null || symmetric(root.left,root.right);
+        if(root==null)
+            return true;
+        return f(root.left,root.right);
     }
-    
-    public boolean symmetric(TreeNode left,TreeNode right)
+    public boolean f(TreeNode p, TreeNode q)
     {
-        if(left==null || right==null)
-            return left==right;
-        
-        if(left.val!=right.val)
+        if(p==null || q==null)
+            return p==q;
+        if(p.val!=q.val)
             return false;
-        return symmetric(left.left, right.right) && symmetric(left.right, right.left);
+        return f(p.left,q.right) && f(p.right,q.left);
     }
 }
