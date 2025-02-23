@@ -174,6 +174,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
+| [0662-maximum-width-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0662-maximum-width-of-binary-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 ## Binary Search Tree
@@ -198,6 +199,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
+| [0662-maximum-width-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0662-maximum-width-of-binary-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 ## Merge Sort
@@ -224,6 +226,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
+| [0662-maximum-width-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0662-maximum-width-of-binary-tree) |
 | [0684-redundant-connection](https://github.com/shivanibussa/Codes/tree/master/0684-redundant-connection) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0744-network-delay-time](https://github.com/shivanibussa/Codes/tree/master/0744-network-delay-time) |
@@ -250,6 +253,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
+| [0662-maximum-width-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0662-maximum-width-of-binary-tree) |
 | [0684-redundant-connection](https://github.com/shivanibussa/Codes/tree/master/0684-redundant-connection) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0744-network-delay-time](https://github.com/shivanibussa/Codes/tree/master/0744-network-delay-time) |
