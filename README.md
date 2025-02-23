@@ -68,6 +68,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+| [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
@@ -176,6 +177,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
 | [0662-maximum-width-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0662-maximum-width-of-binary-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
+| [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 ## Binary Search Tree
 |  |
@@ -201,6 +203,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
 | [0662-maximum-width-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0662-maximum-width-of-binary-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
+| [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 ## Merge Sort
 |  |
@@ -233,6 +236,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
+| [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
@@ -260,6 +264,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
+| [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
