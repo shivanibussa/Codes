@@ -13,44 +13,39 @@
  *     }
  * }
  */
-class Solution 
-{
+class Solution {
+    public int leftHeight(TreeNode node)
+    {
+        if(node==null)
+            return 0;
+        int c=0;
+        while(node!=null)
+        {
+            c++;
+            node = node.left;
+        }
+        return c;
+    }
+    public int rightHeight(TreeNode node)
+    {
+        if(node==null)
+            return 0;
+        int c=0;
+        while(node!=null)
+        {
+            c++;
+            node = node.right;
+        }
+        return c;
+    }
     public int countNodes(TreeNode root) 
     {
         if(root==null)
             return 0;
-        int leftHeight = getLeftHeight(root);
-        int rightHeight = getRightHeight(root);
-        
-        if(leftHeight==rightHeight)
-            return (int)Math.pow(2,leftHeight)-1;
-        else
-            return 1+countNodes(root.left)+countNodes(root.right);
-        
-    }
-    
-    public int getLeftHeight(TreeNode root)
-    {
-        int lh=0;
-        if(root==null)
-            return 0;
-        while(root!=null)
-        {
-            lh++;
-            root=root.left;
-        }
-        return lh;
-    }
-     public int getRightHeight(TreeNode root)
-    {
-         int rh=0;
-        if(root==null)
-            return 0;
-        while(root!=null)
-        {
-            rh++;
-            root=root.right;
-        }
-        return rh;
+        int lh = leftHeight(root);
+        int rh = rightHeight(root);
+        if(lh==rh)
+            return  (int)Math.pow(2,lh)-1;
+        return 1+ countNodes(root.left)+countNodes(root.right);
     }
 }
