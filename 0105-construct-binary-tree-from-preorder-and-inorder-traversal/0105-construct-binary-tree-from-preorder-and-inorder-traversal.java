@@ -17,28 +17,23 @@ class Solution
 {
     public TreeNode buildTree(int[] preorder, int[] inorder) 
     {
-        HashMap<Integer, Integer> inMap = new HashMap<>();
-        for(int i=0;i<inorder.length;i++)
-        {
-            inMap.put(inorder[i],i);
-        }
-        TreeNode root = helper(preorder,0,preorder.length-1,inorder,0,inorder.length-1,inMap);
-        return root;
+        HashMap<Integer,Integer> hm = new HashMap<>();
+        int n = inorder.length;
+        for(int i=0;i<n;i++)
+            hm.put(inorder[i],i);
+
+        return buildTree(preorder,0,preorder.length-1,inorder,0,inorder.length-1,hm);
     }
-    
-    public TreeNode helper(int[] preorder, int prestart, int preend, int[] inorder,int instart, int inend, HashMap<Integer, Integer> inMap)
+    public TreeNode buildTree(int preorder[],int prestart,int prend,int inorder[],int instart,int inend, HashMap<Integer,Integer> hm )
     {
-        if(prestart>preend || instart>inend)
+        if(prestart>prend || instart>inend)
             return null;
         TreeNode root = new TreeNode(preorder[prestart]);
-        int inRoot = inMap.get(root.val);
-        int numsLeft = inRoot - instart;
-        
-        root.left = helper(preorder, prestart+1, prestart+numsLeft, inorder, instart, 
-                           inRoot-1, inMap);
-        root.right = helper(preorder, prestart+numsLeft+1,preend, inorder, inRoot+1, 
-                               inend, inMap);
-        
+        int inn = hm.get(root.val);
+        int numsleft = inn-instart;
+        root.left = buildTree(preorder,prestart+1,prestart+numsleft,inorder,instart,inn-1,hm);
+        root.right = buildTree(preorder,prestart+numsleft+1,prend,inorder,inn+1,inend,hm);
+
         return root;
     }
 }
