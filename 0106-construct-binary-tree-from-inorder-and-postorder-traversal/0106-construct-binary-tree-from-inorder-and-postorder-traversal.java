@@ -30,15 +30,13 @@ class Solution
     {
         if(poststart>postend || instart>inend)
             return null;
+        
+        int inRoot = inMap.get(postorder[postend]);
         TreeNode root = new TreeNode(postorder[postend]);
-        int inRoot = inMap.get(root.val);
-        int numsLeft = inRoot - instart;
-        
-        root.left = helper(postorder, poststart, poststart+numsLeft-1,  inorder, instart, 
-                           inRoot-1, inMap);
-        root.right = helper(postorder, poststart+numsLeft,postend-1, inorder, inRoot+1, 
-                               inend, inMap);
-        
+        int numsleft = inRoot-instart;
+        root.left = helper(postorder,poststart,numsleft+poststart-1,inorder,instart,inRoot-1,inMap);
+        root.right = helper(postorder,poststart+numsleft,postend-1,inorder,inRoot+1,inend,inMap);
         return root;
+
     }
 }
