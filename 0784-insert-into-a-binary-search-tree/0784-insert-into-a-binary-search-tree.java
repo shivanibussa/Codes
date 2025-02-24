@@ -18,27 +18,31 @@ class Solution
     public TreeNode insertIntoBST(TreeNode curr, int val) 
     {
         TreeNode root = curr;
-        TreeNode prev = null;
         if(root==null)
                 return new TreeNode(val);
-        while(root!=null)
+        while(true)
         {
-            prev = root;
-            if(root.val>val)
+            if(root.val>=val)
             {
-                root=root.left;
+                if(root.left!=null)
+                    root=root.left;
+                else
+                {
+                    root.left = new TreeNode(val);
+                    break;
+                }
             }
             else
             {
-                root=root.right;
+                if(root.right!=null)
+                    root=root.right;
+                else
+                {
+                    root.right = new TreeNode(val);
+                    break;
+                }
             }
         }
-        System.out.println(prev.val);
-        if(prev.val>val)
-            prev.left = new TreeNode(val);
-        else
-            prev.right = new TreeNode(val);
-
         return curr;
     }
 }
