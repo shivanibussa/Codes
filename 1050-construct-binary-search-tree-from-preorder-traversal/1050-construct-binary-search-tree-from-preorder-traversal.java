@@ -14,18 +14,17 @@
  * }
  */
 class Solution {
-    private int index = 0;
+    private int index=0;
     public TreeNode bstFromPreorder(int[] preorder) {
-        return bstFromPreOrder(preorder, Integer.MAX_VALUE);
+        return helper(preorder,Integer.MAX_VALUE);
     }
-
-    private TreeNode bstFromPreOrder(int[] preorder, int bound) {
-        if (index == preorder.length || preorder[index] > bound)
+    public TreeNode helper(int preorder[], int bound)
+    {
+        if(index==preorder.length || preorder[index]>bound)
             return null;
-        
-        TreeNode root = new TreeNode(preorder[index++]); // Use instance variable to track index
-        root.left = bstFromPreOrder(preorder, root.val);
-        root.right = bstFromPreOrder(preorder, bound);
+        TreeNode root = new TreeNode(preorder[index++]);
+        root.left = helper(preorder,root.val);
+        root.right = helper(preorder,bound);
 
         return root;
     }
