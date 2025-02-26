@@ -55,6 +55,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
+| [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
@@ -196,6 +197,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -208,6 +210,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0783-search-in-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0783-search-in-a-binary-search-tree) |
 | [0784-insert-into-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0784-insert-into-a-binary-search-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
+| [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 ## Binary Tree
 |  |
 | ------- |
@@ -239,6 +242,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 ## Merge Sort
 |  |
 | ------- |
@@ -419,6 +423,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/shivanibussa/Codes/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0145-binary-tree-postorder-traversal) |
+| [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 ## Backtracking
 |  |
 | ------- |
@@ -427,4 +432,8 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0222-count-complete-tree-nodes](https://github.com/shivanibussa/Codes/tree/master/0222-count-complete-tree-nodes) |
+## Monotonic Stack
+|  |
+| ------- |
+| [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 <!---LeetCode Topics End-->
