@@ -13,48 +13,50 @@
  *     }
  * }
  */
-class Solution 
-{
+class Solution {
     private TreeNode first;
-    private TreeNode middle;
+    private TreeNode second;
+    private TreeNode mid;
     private TreeNode prev;
-    private TreeNode last;
-    public void inorder(TreeNode root) 
+    private void inorder(TreeNode root)
     {
         if(root==null)
             return;
-        
         inorder(root.left);
-        if(prev!=null && (root.val<prev.val))
+        if(prev!=null &&(root.val<prev.val))
         {
             if(first==null)
             {
                 first = prev;
-                middle = root;
+                mid = root;
             }
             else
-                last = root;
+            {
+                second = root;
+            }
         }
-        prev = root;
+        prev=root;
         inorder(root.right);
+
     }
-    public void recoverTree(TreeNode root)
+    public void recoverTree(TreeNode root) 
     {
-        first = middle = last = null;
-        prev = new TreeNode(Integer.MIN_VALUE);
+        first=null;
+        second=null;
+        mid=null;
+        prev=null;
         inorder(root);
-        if(first!=null && last!=null)
+        if(first!=null && second!=null)
         {
-            int t = first.val;
-            first.val = last.val;
-            last.val = t;
+            int temp = first.val;
+            first.val = second.val;
+            second.val = temp;
         }
-        else if(first!=null && middle!=null)
+        else if(first!=null && mid!=null)
         {
-            int t = first.val;
-            first.val = middle.val;
-            middle.val = t;
+            int temp = first.val;
+            first.val = mid.val;
+            mid.val = temp;
         }
     }
-    
 }
