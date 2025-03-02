@@ -28,59 +28,57 @@ class GFG {
 
 class Solution 
 {
-   
+    
     public int orangesRotting(int[][] mat) 
     {
-        int r=mat.length,c=mat[0].length;
-        int res=0,fresh=0,cnt=0;
-        
+        int rows = mat.length,cols = mat[0].length;
+        int rot[][] = new int[rows][cols];
+        int fresh=0,spoiled=0,time=0;
         Queue<int[]> q = new LinkedList<>();
-        int visited[][] = new int[r][c];
-        for(int i=0;i<r;i++)
+        for(int i=0;i<rows;i++)
         {
-            for(int j=0;j<c;j++)
+            for(int j=0;j<cols;j++)
             {
                 if(mat[i][j]==2)
                 {
-                   q.add(new int[]{i,j,0}); 
-                   visited[i][j] = 2;
+                    q.add(new int[]{i,j,0});
+                    rot[i][j] = 2;
                 }
-                else {
-                    visited[i][j]=0;
-                }
-                
-                if(mat[i][j]==1)
+                else if(mat[i][j]==1)
                 {
                     fresh++;
                 }
             }
         }
-        int tm = 0;
-        int dr[] = {-1,0,1,0};
-        int dc[] = {0,-1,0,1};
-        
         while(!q.isEmpty())
         {
-            int pop[] = q.poll();
-            int i=pop[0];
-            int j=pop[1];
-            int time=pop[2];
-            res = Math.max(res,time);
-            for(int m=0;m<4;m++)
+            int poll[] = q.poll();
+            int r = poll[0];
+            int c = poll[1];
+            int t = poll[2];
+            time = t;
+            
+            int dr[] = {-1,0,1,0};
+            int dc[] = {0,-1,0,1};
+            
+            for(int i=0;i<4;i++)
             {
-                int nr = i+dr[m];
-                int nc = j+dc[m];
+                int nr = r+dr[i];
+                int nc = c+dc[i];
                 
-                if(nr>=0 && nc>=0 && nr<r && nc<c && mat[nr][nc]==1 && visited[nr][nc]!=2)
+                if(nr>=0 && nr<rows && nc>=0 && nc<cols && 
+                mat[nr][nc]==1 && rot[nr][nc]==0)
                 {
-                    visited[nr][nc]=2;
-                    q.offer(new int[]{nr,nc,time+1});
-                    cnt++;
+                    rot[nr][nc]=2;
+                    q.add(new int[]{nr,nc,t+1});
+                    spoiled++;
                 }
             }
         }
-        if(cnt!=fresh)
+        if(fresh==spoiled)
+            return time;
+        else
             return -1;
-        return res;
+        
     }
 }
