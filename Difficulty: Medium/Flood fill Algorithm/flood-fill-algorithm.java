@@ -36,35 +36,56 @@ class GFG {
 
 class Solution 
 {
-    public int[][] floodFill(int[][] image, int sr, int sc, int newcolor) 
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) 
     {
-        int oldcolor = image[sr][sc];
-        if(oldcolor!=newcolor)
-            helper(oldcolor,newcolor,sr,sc,image);
-        return image;
-    }
-    public void helper(int oldcolor, int newcolor, int r,int c, int[][] image)
-    {
-        int rows = image.length;
-        int cols = image[0].length;
-        if(r>=0 && c>=0 && r<rows && c<cols && image[r][c]==oldcolor)
-            image[r][c] = newcolor;
-        
-        
-        
-        int dr[]={-1,0,1,0};
-        int dc[]={0,-1,0,1};
-        
-        for(int i=0;i<4;i++)
+        int rows = image.length,cols=image[0].length;
+        int matrix[][] = new int[rows][cols];
+        Queue<int[]> q = new LinkedList<>();
+        for(int i=0;i<rows;i++)
         {
-            int nr = r+dr[i];
-            int nc = c+dc[i];
-            
-            if(nr>=0 && nc>=0 && nr<rows && nc<cols && image[nr][nc]==oldcolor)
+            for(int j=0;j<cols;j++)
             {
-                image[nr][nc]=newcolor;
-                helper(oldcolor,newcolor,nr,nc,image);
+                matrix[i][j] =-1;
             }
         }
+        int color = image[sr][sc];
+        q.add(new int[]{sr,sc,color});
+        matrix[sr][sc] = newColor;
+        while(!q.isEmpty())
+        {
+            int poll[] = q.poll();
+            int r = poll[0];
+            int c = poll[1];
+            int col = poll[2];
+            
+            int dr[] = {-1,0,1,0};
+            int dc[] = {0,-1,0,1};
+            
+            for(int i=0;i<4;i++)
+            {
+                int nr = r+dr[i];
+                int nc = c+dc[i];
+                
+                if(nr>=0 && nr<rows && nc>=0 && nc<cols && image[nr][nc]==col 
+                && matrix[nr][nc]==-1)
+                {
+                    q.add(new int[]{nr,nc,col});
+                    matrix[nr][nc]=newColor;
+                }
+            }
+        }
+        
+        for(int i=0;i<rows;i++)
+        {
+            for(int j=0;j<cols;j++)
+            {
+                if(matrix[i][j]==-1)
+                {
+                    matrix[i][j] = image[i][j];
+                }
+            }
+        }
+        
+        return matrix;
     }
 }
