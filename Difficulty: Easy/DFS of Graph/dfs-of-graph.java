@@ -36,28 +36,24 @@ class GFG {
 
 class Solution 
 {
-
-    public ArrayList<Integer> dfsOfGraph(ArrayList<ArrayList<Integer>> adj) 
+    public void dfs(int node,ArrayList<ArrayList<Integer>> adj,boolean visited[],ArrayList<Integer> res)
     {
-        int n = adj.size();
-        int visited[] = new int[n+1];
-        visited[0]=1;
-        ArrayList<Integer> res = new ArrayList<>();
-        dfs(0,visited,res,adj);
-        
-        return res;
-    }
-    public void dfs(int node,int visited[],ArrayList<Integer> res,ArrayList<ArrayList<Integer>> adj)
-    {
-        visited[node]=1;
+        visited[node] = true;
         res.add(node);
-        for(int a:adj.get(node))
+        for(int neighbors:adj.get(node))
         {
-            if(visited[a]==0)
+            if(!visited[neighbors])
             {
-                
-                dfs(a,visited,res,adj);
+                dfs(neighbors,adj,visited,res);
             }
         }
+    }
+    public ArrayList<Integer> dfsOfGraph(ArrayList<ArrayList<Integer>> adj) 
+    {
+        int V = adj.size();
+        boolean visited[] = new boolean[V+1];
+        ArrayList<Integer> res = new ArrayList<>();
+        dfs(0,adj,visited,res);
+        return res;
     }
 }
