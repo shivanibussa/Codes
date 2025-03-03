@@ -32,50 +32,54 @@ System.out.println("~");
     }
 }
 // } Driver Code Ends
+
+
+// User function Template for Java
+
 class Solution 
 {
 
     int countDistinctIslands(int[][] grid) 
     {
-        int m = grid.length,n=grid[0].length;
-        HashSet<ArrayList<String>> set = new HashSet<>();
-        int vis[][] = new int[m][n];
+        int m = grid.length, n = grid[0].length;
+        boolean visited[][] = new boolean[m][n];
+        HashSet<ArrayList<String>> hs = new HashSet<>();
         
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
             {
-                if(grid[i][j]==1 && vis[i][j]==0)
+                if(grid[i][j]==1 && !visited[i][j])
                 {
                     ArrayList<String> arr = new ArrayList<>();
-                    helper(grid,vis,i,j,arr,set,i,j);
-                    set.add(arr);
+                    dfs(i,j,grid,visited,arr,i,j);
+                    hs.add(arr);
                 }
             }
         }
-        return set.size();
-    }
-    public void helper(int[][] grid,int[][] vis,int row,int col,
-    ArrayList<String> arr,HashSet<ArrayList<String>> set,int row0,int col0)
-    {
-        vis[row][col]=1;
-        arr.add(toString(row-row0, col-col0));
-        int m = grid.length;
-        int n = grid[0].length;
         
+        return hs.size();
+    }
+    public void dfs(int row,int col, int[][] grid, boolean[][] visited,ArrayList<String> arr,
+    int row0, int col0)
+    {
+        visited[row][col] = true;
+        arr.add(toString(row-row0,col-col0));
         int dr[] = {-1,0,1,0};
         int dc[] = {0,-1,0,1};
         
         for(int i=0;i<4;i++)
         {
-            int nr=dr[i]+row;
-            int nc=dc[i]+col;
+            int nr = row+dr[i];
+            int nc = col+dc[i];
             
-            if(nr>=0 && nc>=0 && nr<m && nc<n && grid[nr][nc]==1 && vis[nr][nc]==0)
+            if(nr>=0 && nr<grid.length && nc>=0 && nc<grid[0].length && 
+            grid[nr][nc]==1 && !visited[nr][nc])
             {
-                helper(grid,vis,nr,nc,arr,set,row0,col0);
+                dfs(nr,nc,grid,visited,arr,row0,col0);
             }
         }
+        
     }
     public String toString(int r,int c)
     {
