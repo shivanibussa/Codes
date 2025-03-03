@@ -41,36 +41,39 @@ class Solution
 {
     public boolean isBipartite(ArrayList<ArrayList<Integer>> adj) 
     {
-       int n = adj.size();
-       int color[] = new int[n];
-       
-       for(int i=0;i<n;i++)
-        color[i] = -1;
-        
-       for(int i=0;i<n;i++)
-       {
-           if(color[i]==-1)
-           {
-               if(dfs(adj,color,i,0)==false)
-                return false;
-           }
-       }
-       return true;
-    }
-    public boolean dfs(ArrayList<ArrayList<Integer>> adj, int color[], int node, int col)
-    {
-        color[node] = col;
-        
-        for(int nn:adj.get(node))
+        int V = adj.size();
+        int color[] = new int[V];
+        for(int i=0;i<V;i++)
+            color[i] = -1;
+        for(int i=0;i<V;i++)
         {
-            if(color[nn]==-1)
+            if(color[i]==-1)
             {
-                if(dfs(adj,color,nn,1-col)==false)
+                if(bfs(i,adj,color)== false)
                     return false;
             }
-            else if(color[nn]==col)
+        }
+        return true;
+    }
+    public boolean bfs(int node,ArrayList<ArrayList<Integer>> adj,int color[])
+    {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(node);
+        color[node]=0;
+        while(!q.isEmpty())
+        {
+            int pop = q.poll();
+            for(int neighbor:adj.get(pop))
             {
-                return false;
+                if(color[neighbor]==-1)
+                {
+                    color[neighbor] = 1-color[pop];
+                    q.add(neighbor);
+                }
+                else if(color[pop]==color[neighbor])
+                {   
+                    return false;
+                }
             }
         }
         return true;
