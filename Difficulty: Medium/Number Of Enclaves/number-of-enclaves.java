@@ -36,59 +36,56 @@ out.println("~");
 // } Driver Code Ends
 
 
-// User function Template for Java
+
 
 class Solution 
 {
 
-    int numberOfEnclaves(int[][] grid) 
+    int numberOfEnclaves(int[][] grid)
     {
-        int m = grid.length, n = grid[0].length;
-        int visited[][] = new int[m][n];
+        int m = grid.length,n = grid[0].length;
+        boolean visited[][] = new boolean[m][n];
         Queue<int[]> q = new LinkedList<>();
-        
-        for(int i=0;i<m;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                if(i==0 || i==m-1 || j==0 || j==n-1)
-                {
-                    if(grid[i][j]==1)
-                    {
-                        q.add(new int[]{i,j});
-                        visited[i][j]=1;
-                    }
-                }
-            }
-        }
-        
-        while(!q.isEmpty())
-        {
-            int[] pops = q.poll();
-            int r= pops[0];
-            int c = pops[1];
-            
-            int dr[] = {-1,0,1,0};
-            int dc[] = {0,-1,0,1};
-            for(int i=0;i<4;i++)
-            {
-                int nr = r+dr[i];
-                int nc = c+dc[i];
-                
-                if(nr>=0 && nr<m && nc>=0 && nc<n && grid[nr][nc]==1 && visited[nr][nc]==0)
-                {
-                    q.add(new int[]{nr,nc});
-                    visited[nr][nc]=1;
-                }
-            }
-            
-        }
         int cnt=0;
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
             {
-                if(grid[i][j]==1 && visited[i][j]==0)
+                if((i==0 || i==m-1 || j==0 || j==n-1) && grid[i][j]==1)
+                {
+                    visited[i][j] = true;
+                    q.add(new int[]{i,j});
+                }
+            }
+        }
+        // System.out.println("here"+ q.peek()[0] + q.peek()[1]);
+        while(!q.isEmpty())
+        {
+            int pops[] = q.poll();
+            int u = pops[0];
+            int v = pops[1];
+            
+            int dr[] = {-1,0,1,0};
+            int dc[] = {0,-1,0,1};
+            
+            for(int i=0;i<4;i++)
+            {
+                int nr = u+dr[i];
+                int nc = v+dc[i];
+                
+                if(nr>=0 && nr<m && nc>=0 && nc<n && grid[nr][nc]==1 && !visited[nr][nc])
+                {
+                    q.add(new int[]{nr,nc});
+                    visited[nr][nc]=true;
+                }
+            }
+        }
+        
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(grid[i][j]==1 && !visited[i][j])
                 {
                     cnt++;
                 }
