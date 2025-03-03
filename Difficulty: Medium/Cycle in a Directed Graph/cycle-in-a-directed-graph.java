@@ -18,7 +18,7 @@ class DriverClass {
                 int v = sc.nextInt();
                 list.get(u).add(v);
             }
-            if (new Solution().isCyclic(V, list) == true)
+            if (new Solution().isCyclic(list) == true)
                 System.out.println("1");
             else
                 System.out.println("0");
@@ -35,42 +35,40 @@ class DriverClass {
 class Solution 
 {
     
-    public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) 
+    public boolean isCyclic(ArrayList<ArrayList<Integer>> adj) 
     {
-        int n = adj.size();
-        int indegree[] = new int[n];
-        ArrayList<Integer> res= new ArrayList<>();
-        Queue<Integer> q = new LinkedList<>();
-        for(int i=0;i<n;i++)
+        int V = adj.size();
+        boolean visited[] = new boolean[V];
+        boolean pathvisited[] = new boolean[V];
+        for(int i=0;i<V;i++)
         {
-            for(int it:adj.get(i))
+            if(!visited[i])
             {
-                indegree[it]++;
+                if(dfs(i,adj,visited,pathvisited)==true)
+                    return true;
             }
         }
-        for(int i=0;i<n;i++)
-        {
-            if(indegree[i]==0)
-                q.offer(i);
-        }
-        
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            res.add(pop);
-            
-            for(int nn:adj.get(pop))
-            {
-                indegree[nn]--;
-                if(indegree[nn]==0)
-                {
-                    q.offer(nn);
-                }
-            }
-            
-        }
-        return res.size()!=V;
-        
+        return false;
     }
-    
+    public boolean dfs(int node,ArrayList<ArrayList<Integer>> adj,boolean visited[],boolean pathvisited[])
+    {
+        visited[node] = true;
+        pathvisited[node] = true;
+        for(int it:adj.get(node))
+        {
+            if(!visited[it])
+            {
+                if(dfs(it,adj,visited,pathvisited)==true)
+                    return true;
+            }
+            else if(visited[it] && pathvisited[it])
+            {
+                return true;
+            }
+        }
+        pathvisited[node] = false;
+        
+        
+        return false;
+    }
 }
