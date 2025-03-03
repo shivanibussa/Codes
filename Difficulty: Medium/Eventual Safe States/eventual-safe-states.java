@@ -48,45 +48,50 @@ class Solution
 
     List<Integer> eventualSafeNodes(int V, List<List<Integer>> adj) 
     {
-        List<List<Integer>> adjRev = new ArrayList<>();
-        int indegree[] = new int[V];
-        Queue<Integer> q = new LinkedList<>();
-        ArrayList<Integer> arr = new ArrayList<>();
         
+        boolean visited[] = new boolean[V];
+        boolean pathvisited[] = new boolean[V];
+        boolean check[] = new boolean[V];
+        ArrayList<Integer> safeOnes = new ArrayList<>();
         for(int i=0;i<V;i++)
         {
-            adjRev.add(new ArrayList<>());
-        }
-        
-        for(int i=0;i<V;i++)
-        {
-            for(int it:adj.get(i))
+            if(!visited[i])
             {
-                adjRev.get(it).add(i);
-                indegree[i]++;
+               dfs(i,adj,visited,pathvisited,safeOnes,check);
             }
         }
-        for(int i=0;i<V;i++)
-        {
-            if(indegree[i]==0)
-            {
-                q.offer(i);
-            }
-        }
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            arr.add(pop);
-            for(int it:adjRev.get(pop))
-            {
-                indegree[it]--;
-                if(indegree[it]==0)
-                {
-                    q.offer(it);
-                }
-            }
-        }
-        Collections.sort(arr);
-        return arr;
+        // for(int i=0;i<V;i++)
+        // {
+        //     if(check[i]==true)
+        //     {
+        //         safeOnes.add(i);
+        //     }
+        // }
+        Collections.sort(safeOnes);
+        return safeOnes;
     }
+    public boolean dfs(int node, List<List<Integer>> adj, boolean visited[],
+    boolean pathvisited[], ArrayList<Integer> safeOnes,boolean check[])
+    {
+        visited[node]=true;
+        pathvisited[node]=true;
+        for(int it:adj.get(node))
+        {
+            if(!visited[it])
+            {
+                if(dfs(it,adj,visited,pathvisited,safeOnes,check)==true)
+                    return true;
+            }
+            else if(visited[it] && pathvisited[it])
+            {
+                return true;
+            }
+        }
+        pathvisited[node] = false;
+        // check[node] = true;
+        safeOnes.add(node);
+        
+        return false;
+    }
+    
 }
