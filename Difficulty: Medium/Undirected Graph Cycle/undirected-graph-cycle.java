@@ -44,35 +44,26 @@ class Solution
         {
             if(!visited[i])
             {
-                boolean bool = bfs(i,-1,visited,adj);
+                boolean bool = dfs(i,-1,visited,adj);
                 if(bool==true)
                     return true;
             }
         }
         return false;
     }
-    public boolean bfs(int z,int p,boolean visited[],ArrayList<ArrayList<Integer>> adj)
+    public boolean dfs(int z,int p,boolean visited[],ArrayList<ArrayList<Integer>> adj)
     {
-        Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{z, p});
         visited[z]=true;
-        while(!q.isEmpty())
+        for(int neighbor:adj.get(z))
         {
-            int poll[] = q.poll();
-            int node = poll[0];
-            int parent = poll[1];
-            
-            for(int neighbor:adj.get(node))
+            if(!visited[neighbor])
             {
-                if(visited[neighbor]==false)
-                {
-                    q.add(new int[]{neighbor,node});
-                    visited[neighbor]=true;
-                }
-                else if(visited[neighbor]==true && neighbor!=parent)
-                {
-                        return true;
-                }
+                if(dfs(neighbor,z,visited,adj)==true)
+                    return true;
+            }
+            else if(visited[neighbor]==true && neighbor!=p)
+            {
+                return true;
             }
         }
         return false;
