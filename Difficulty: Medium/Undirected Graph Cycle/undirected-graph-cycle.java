@@ -36,45 +36,42 @@ class GFG {
 
 class Solution 
 {
-
     public boolean isCycle(ArrayList<ArrayList<Integer>> adj) 
     {
-        int n = adj.size();
-        int visited[] = new int[n];
-        for(int i=0;i<n;i++)
+        int V = adj.size();
+        boolean visited[] = new boolean[V];
+        for(int i=0;i<V;i++)
         {
-            if(visited[i]==0)
+            if(!visited[i])
             {
-                if(helper(i,visited,adj)==true)
-                {
+                boolean bool = bfs(i,-1,visited,adj);
+                if(bool==true)
                     return true;
-                }
             }
         }
         return false;
     }
-    
-    public boolean helper(int node,int visited[],ArrayList<ArrayList<Integer>> adj)
+    public boolean bfs(int z,int p,boolean visited[],ArrayList<ArrayList<Integer>> adj)
     {
-        visited[node]=1;
         Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{node,-1});
+        q.add(new int[]{z, p});
+        visited[z]=true;
         while(!q.isEmpty())
         {
-            int pop[] = q.poll();
-            int vertex = pop[0];
-            int parent = pop[1];
+            int poll[] = q.poll();
+            int node = poll[0];
+            int parent = poll[1];
             
-            for(int adjnode:adj.get(vertex))
+            for(int neighbor:adj.get(node))
             {
-                if(visited[adjnode]!=1)
+                if(visited[neighbor]==false)
                 {
-                    q.offer(new int[]{adjnode,vertex});
-                    visited[adjnode]=1;
+                    q.add(new int[]{neighbor,node});
+                    visited[neighbor]=true;
                 }
-                else if(adjnode!=parent)
+                else if(visited[neighbor]==true && neighbor!=parent)
                 {
-                    return true;
+                        return true;
                 }
             }
         }
