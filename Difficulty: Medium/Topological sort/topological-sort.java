@@ -59,33 +59,36 @@ class Solution
     static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj) 
     {
         int V = adj.size();
-        Stack<Integer> st = new Stack<>();
-        int visited[] = new int[V];
-        ArrayList<Integer> res = new ArrayList<>();
+        int indegree[] = new int[V];
+        Queue<Integer> q = new LinkedList<>();
+        ArrayList<Integer> arr = new ArrayList<>();
+        
         for(int i=0;i<V;i++)
         {
-            if(visited[i]==0)
+            for(int it:adj.get(i))
             {
-                dfs(i,adj,st,visited);
+                indegree[it]++;
             }
         }
-        while(!st.isEmpty())
+        for(int i=0;i<V;i++)
         {
-            res.add(st.pop());
+            if(indegree[i]==0)
+                q.add(i);
         }
-        return res;
-    }
-    public static void dfs(int node,ArrayList<ArrayList<Integer>> adj,Stack<Integer> st, int[] visited 
-    )
-    {
-        visited[node]=1;
-        for(int it:adj.get(node))
+        
+        while(!q.isEmpty())
         {
-            if(visited[it]==0)
+            int pop = q.poll();
+            arr.add(pop);
+            for(int it:adj.get(pop))
             {
-                dfs(it,adj,st,visited);
+                indegree[it]--;
+                if(indegree[it]==0)
+                {
+                    q.add(it);
+                }
             }
         }
-        st.push(node);
+        return arr;
     }
 }
