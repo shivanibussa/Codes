@@ -56,41 +56,36 @@ class Main {
 
 class Solution 
 {
-    
     static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj) 
     {
-        int n = adj.size();
-        int visited[] = new int[n];
-        ArrayList<Integer> arr = new ArrayList<>();
+        int V = adj.size();
         Stack<Integer> st = new Stack<>();
-        
-        for(int i=0;i<n;i++)
+        int visited[] = new int[V];
+        ArrayList<Integer> res = new ArrayList<>();
+        for(int i=0;i<V;i++)
         {
             if(visited[i]==0)
             {
-                dfs(adj,visited,arr,st,i);
+                dfs(i,adj,st,visited);
             }
         }
         while(!st.isEmpty())
         {
-            int pop = st.pop();
-            arr.add(pop);
+            res.add(st.pop());
         }
-        return arr;
+        return res;
     }
-    public static void dfs(ArrayList<ArrayList<Integer>> adj, int[] visited, ArrayList<Integer> arr,
-    Stack<Integer> st, int node)
+    public static void dfs(int node,ArrayList<ArrayList<Integer>> adj,Stack<Integer> st, int[] visited 
+    )
     {
         visited[node]=1;
-        
-        for(int nn:adj.get(node))
+        for(int it:adj.get(node))
         {
-            if(visited[nn]==0)
+            if(visited[it]==0)
             {
-                dfs(adj,visited,arr,st,nn);
+                dfs(it,adj,st,visited);
             }
         }
         st.push(node);
-        
     }
 }
