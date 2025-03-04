@@ -40,17 +40,17 @@ System.out.println("~");
 // } Driver Code Ends
 
 
-//User function Template for Java
 
-class Solution {
-    public boolean isPossible(int V,int P, int[][] prerequisites)
+
+class Solution 
+{
+    public boolean isPossible(int N,int P, int[][] prerequisites)
     {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        int indegree[] = new int[V];
+        int indegree[] = new int[N];
+        ArrayList<Integer> res = new ArrayList<>();
         Queue<Integer> q = new LinkedList<>();
-        ArrayList<Integer>arr = new ArrayList<>();
-        
-        for(int i=0;i<V;i++)
+        for(int i=0;i<N;i++)
         {
             adj.add(new ArrayList<>());
         }
@@ -59,36 +59,31 @@ class Solution {
             adj.get(prerequisites[i][0]).add(prerequisites[i][1]);
         }
         
-        for(int i=0;i<V;i++)
+        for(int i=0;i<N;i++)
         {
-            for(int ad:adj.get(i))
-            {
-                indegree[ad]++;
-            }
+            for(int it:adj.get(i))
+                indegree[it]++;
         }
-        
-        for(int i=0;i<V;i++)
+        for(int i=0;i<N;i++)
         {
             if(indegree[i]==0)
-            {
                 q.add(i);
-            }
         }
-        
         while(!q.isEmpty())
         {
             int pop = q.poll();
-            arr.add(pop);
+            res.add(pop);
             
             for(int it:adj.get(pop))
             {
                 indegree[it]--;
                 if(indegree[it]==0)
-                    q.offer(it);
+                {
+                    q.add(it);
+                }
             }
         }
-        
-        return arr.size()==V;
+        return res.size()==N;
     }
     
 }
