@@ -30,81 +30,68 @@ class Main {
 // } Driver Code Ends
 
 
-class Pair{
-    int first,second;
-    
-    Pair(int _f,int _s)
-    {
-        this.first = _f;
-        this.second = _s;
-    }
-}
 class Solution 
 {
 
-    public int[] shortestPath(int V, int E, int[][] edges)
+    public int[] shortestPath(int V, int E, int[][] edges) 
     {
-        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
-        int visited[] = new int[V];
+        ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
         Stack<Integer> st = new Stack<>();
+        boolean visited[] = new boolean[V];
         int dist[] = new int[V];
-    
         
         for(int i=0;i<V;i++)
         {
-            adj.add(new ArrayList<Pair>());
+            adj.add(new ArrayList<>());
         }
-        for(int i=0;i<E;i++)
+        for(int i=0;i<edges.length;i++)
         {
             int u = edges[i][0];
             int v = edges[i][1];
             int wt = edges[i][2];
-            adj.get(u).add(new Pair(v,wt));
+            adj.get(u).add(new int[]{v,wt});
         }
         for(int i=0;i<V;i++)
         {
-            if(visited[i]==0)
+            if(!visited[i])
             {
-                toposort(visited,adj,st,i);
+                dfs(i,adj,st,visited);
             }
         }
+        
         for(int i=0;i<V;i++)
-        {
-            dist[i] = (int)(1e9);
-        }
-        dist[0]=0;
+            dist[i] = Integer.MAX_VALUE;
+        dist[0] = 0;
         while(!st.isEmpty())
         {
-            int node = st.pop();
-            for(int i=0;i<adj.get(node).size();i++)
+            int pop = st.pop();
+            for(int i=0;i<adj.get(pop).size();i++)
             {
-                int v = adj.get(node).get(i).first;
-                int wt = adj.get(node).get(i).second;
+                int node = adj.get(pop).get(i)[0];
+                int weight = adj.get(pop).get(i)[1];
                 
-                if(dist[node]+wt<dist[v])
-                {
-                    dist[v]=dist[node]+wt;
-                }
+                if(dist[pop] != Integer.MAX_VALUE && dist[pop] + weight < dist[node])
+                    dist[node] = dist[pop]+weight;
             }
         }
         for(int i=0;i<V;i++)
         {
-            if(dist[i]==(int)(1e9))
+            if(dist[i]==Integer.MAX_VALUE)
             {
                 dist[i]=-1;
             }
         }
         return dist;
     }
-    public void toposort(int[] visited, ArrayList<ArrayList<Pair>> adj, Stack<Integer> st,int node)
+    public void dfs(int node, ArrayList<ArrayList<int[]>> adj,Stack<Integer> st, boolean visited[])
     {
-        visited[node]=1;
+        visited[node] = true;
         for(int i=0;i<adj.get(node).size();i++)
         {
-            int v = adj.get(node).get(i).first;
-            if(visited[v]==0)
+            int neighbor = adj.get(node).get(i)[0];
+            if(!visited[neighbor])
             {
-                toposort(visited,adj,st,v);
+                dfs(neighbor,adj,st,visited);
             }
         }
         st.push(node);
