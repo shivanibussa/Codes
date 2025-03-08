@@ -56,80 +56,70 @@ public class Main {
 
 // } Driver Code Ends
 
-class Pair
-{
-    int node;
-    int weight;
-    Pair(int weight,int node)
-    {
-        this.weight = weight;
-        this.node = node;
-    }
-}
+
 class Solution 
 {
     public List<Integer> shortestPath(int n, int m, int edges[][]) 
     {
-       int ev = n;
-       int dist[] = new int[n+1];
-       int parent[] = new int[n+1];
-       PriorityQueue<Pair> pq = new PriorityQueue<>((a, b) -> Integer.compare(a.weight, b.weight));
-       ArrayList<Integer> res = new ArrayList<>();
-       
-       List<List<Pair>> adj = new ArrayList<>();
-       for(int i=0;i<n+1;i++)
-       {
-           adj.add(new ArrayList<>());
-           dist[i] = Integer.MAX_VALUE;
-           parent[i]=i;
-       }
-       dist[1]=0;
-       for(int i=0;i<edges.length;i++)
-       {
-           int a = edges[i][0];
-           int b = edges[i][1];
-           int wt = edges[i][2];
-           adj.get(a).add(new Pair(wt,b));
-           adj.get(b).add(new Pair(wt,a));
-       }
-       pq.offer(new Pair(0,1));
-       while(!pq.isEmpty())
-       {
-           Pair pop = pq.poll();
-           int wt = pop.weight;
-           int v = pop.node;
-           
-           for(Pair it:adj.get(v))
-           {
-               int vx = it.node;
-               int w = it.weight;
-               if(wt+w<dist[vx])
-               {
-                   dist[vx] = wt+w;
-                   pq.offer(new Pair(wt+w,vx));
-                   parent[vx]=v;
-               }
-           }
-       }
-if (dist[n] == Integer.MAX_VALUE) {
-    res.add(-1);
-    return res; // No path exists
-}
-
-// Store the total path weight
-int totalWeight = dist[n];
-
-// Reconstruct the path
-res.add(n);
-while (parent[n] != n) {
-    n = parent[n];
-    res.add(n);
-}
-Collections.reverse(res);
-
-// Add the total weight at the beginning of the list
-res.add(0, totalWeight);
-return res;
-
+        ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
+        int dist[] = new int[n+1];
+        ArrayList<Integer> res = new ArrayList<>();
+        PriorityQueue<int[]> q = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        int parent[] = new int[n+1];
+        
+        for(int i=0;i<n+1;i++)
+        {
+            adj.add(new ArrayList<int[]>());
+            dist[i] = Integer.MAX_VALUE;
+            parent[i] = i;
+        }
+        for(int i=0;i<m;i++)
+        {
+            int a = edges[i][0];
+            int b = edges[i][1];
+            int c = edges[i][2];
+            adj.get(a).add(new int[]{b,c});
+            adj.get(b).add(new int[]{a,c});
+        }
+        q.add(new int[]{0,1});
+        dist[1] = 0;
+        parent[1] = 1;
+        while(!q.isEmpty())
+        {
+            int pop[] = q.poll();
+            int w = pop[0];
+            int v = pop[1];
+            
+            for(int[] neigh:adj.get(v))
+            {
+                int nv = neigh[0];
+                int nw = neigh[1];
+                if(w+nw<dist[nv])
+                {
+                    dist[nv] = w+nw;
+                    parent[nv] = v;
+                    q.add(new int[]{dist[nv],nv});
+                }
+            }
+        }
+        
+        if (dist[n] == Integer.MAX_VALUE) 
+        {
+            res.add(-1);
+             return res; // No path exists
+        }
+        
+        
+        int totalWeight = dist[n];
+        res.add(n);
+        while (parent[n] != n) 
+        {
+            n = parent[n];
+            res.add(n);
+        }
+        Collections.reverse(res);
+        res.add(0, totalWeight);
+        
+        return res;
     }
 }
