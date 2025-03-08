@@ -61,49 +61,43 @@ System.out.println("~");
 
 class Solution 
 {
-    public static int MinimumEffort(int rows, int cols, int[][] grid) 
+    public static int MinimumEffort(int m, int n, int[][] heights) 
     {
-        int dist[][] = new int[rows][cols];
         PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
-        pq.offer(new int[]{0,0,0});
+        int dist[][] = new int[m][n];
         int dr[] = {-1,0,1,0};
         int dc[] = {0,-1,0,1};
-        
-        for(int i=0;i<rows;i++)
+        for(int i=0;i<m;i++)
         {
-            for(int j=0;j<cols;j++)
+            for(int j=0;j<n;j++)
             {
                 dist[i][j] = Integer.MAX_VALUE;
             }
         }
-        dist[0][0]=0;
+        dist[0][0] =0;
+        pq.offer(new int[]{0,0,0});
         while(!pq.isEmpty())
         {
             int pop[] = pq.poll();
             int diff = pop[0];
             int x = pop[1];
             int y = pop[2];
-            if(x==rows-1 && y==cols-1)
-            {
+            if(x==m-1 && y==n-1)
                 return diff;
-            }
             for(int i=0;i<4;i++)
             {
-                int nx = x+dr[i];
-                int ny = y+dc[i];
-                
-                if(nx>=0 && ny>=0 && nx<rows && ny<cols)
+                int nr = x+dr[i];
+                int nc = y+dc[i];
+                if(nr>=0 && nr<m && nc>=0 && nc<n)
                 {
-                    int d = Math.abs(grid[x][y]-grid[nx][ny]);
-                    int neweffort = Math.max(d,diff);
-                    if(neweffort<dist[nx][ny])
+                    int newEffort = Math.max(diff,Math.abs(heights[x][y]-heights[nr][nc]));
+                    if(newEffort<dist[nr][nc])
                     {
-                        dist[nx][ny] = neweffort;
-                        pq.offer(new int[]{dist[nx][ny],nx,ny});
+                        dist[nr][nc] = newEffort;
+                        pq.add(new int[]{newEffort,nr,nc});
                     }
                 }
             }
-            
         }
         return 0;
     }
