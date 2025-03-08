@@ -33,51 +33,51 @@ System.out.println("~");
 
 class Solution 
 {
-    
     public int CheapestFLight(int n,int flights[][],int src,int dst,int k) 
     {
-        Queue<int[]> q = new LinkedList<>();
-        int dist[] = new int[n];
-        List<List<int[]>> adj = new ArrayList<>();
-        for(int i=0;i<n;i++)
-        {
-            adj.add(new ArrayList<>());
-            dist[i]=Integer.MAX_VALUE;
-        }
-        for(int i=0;i<flights.length;i++)
-        {
-            int u = flights[i][0];
-            int v = flights[i][1];
-            int wt = flights[i][2];
-            
-            adj.get(u).add(new int[]{v,wt});
-            
-        }
-        dist[src]=0;
-        q.offer(new int[]{0,src,0});
-        while(!q.isEmpty())
-        {
-            int pops[] = q.poll();
-            int a = pops[0];
-            int b = pops[1];
-            int c = pops[2];
-            
-            for(int adjn[]:adj.get(b))
-            {
-                int ver = adjn[0];
-                int cost = adjn[1];
-                if (a > k) continue;
-                if(dist[ver]>c+cost && a<=k)
-                {
-                    dist[ver] = c+cost;
-                    q.offer(new int[]{a+1,ver, c+cost});
-                }
-            }
-            
-        }
-        if(dist[dst]==Integer.MAX_VALUE)
-            return -1;
-        else
-            return dist[dst];
+       PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->(a[0]-b[0]));
+       int dist[] = new int[n];
+       ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
+       
+       for(int i=0;i<n;i++)
+       {
+           dist[i] = Integer.MAX_VALUE;
+           adj.add(new ArrayList<>());
+       }
+       for(int i=0;i<flights.length;i++)
+       {
+           int a = flights[i][0];
+           int b = flights[i][1];
+           int c = flights[i][2];
+           adj.get(a).add(new int[]{b,c});
+       }
+    
+       dist[src]=0;
+       pq.add(new int[]{0,src,0});
+       
+       while(!pq.isEmpty())
+       {
+           int pop[] = pq.poll();
+           int stops = pop[0];
+           int node = pop[1];
+           int cost = pop[2];
+           if(stops>k)
+            continue;
+           for(int neigh[]:adj.get(node))
+           {
+               int nv = neigh[0];
+               int nw = neigh[1];
+               if(nw+cost<dist[nv] && stops<=k)
+               {
+                   dist[nv] = cost+nw;
+                   pq.add(new int[]{stops+1,nv,dist[nv]});
+               }
+           }
+       }
+       if(dist[dst]==Integer.MAX_VALUE)
+        return -1;
+        return dist[dst];
+       
+       
     }
 }
