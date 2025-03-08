@@ -54,50 +54,46 @@ class DriverClass {
 // } Driver Code Ends
 
 
+/*
+class iPair {
+    int first, second;
 
-// class iPair 
-// {
-//     int distance, node;
-//     iPair(int distance, int node) 
-//     {
-//         this.distance = distance;
-//         this.node = node;
-//     }
-// }
-
+    iPair(int first, int second) {
+        this.first = first;
+        this.second = second;
+    }
+}
+*/
 
 
 class Solution 
 {
     ArrayList<Integer> dijkstra(ArrayList<ArrayList<iPair>> adj, int src) 
     {
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
-        pq.offer(new int[]{0,src});
-        int n = adj.size();
-        ArrayList<Integer> dist = new ArrayList<>();
-        for(int i=0;i<n;i++)
+        PriorityQueue<int[]> q = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        int V = adj.size();
+        ArrayList<Integer> dist= new ArrayList<>();
+        for(int i=0;i<V;i++)
             dist.add(Integer.MAX_VALUE);
         dist.set(src,0);
         
-        while(!pq.isEmpty())
+        q.add(new int[]{0,src});
+        while(!q.isEmpty())
         {
-            int pops[] = pq.poll();
-            
-            int wt = pops[0];
-            int node = pops[1];
-            
-            for(iPair p1:adj.get(node))
+            int[] pop = q.poll();
+            int d = pop[0];
+            int n = pop[1];
+            for(iPair neigh:adj.get(n))
             {
-                int vertex = p1.first;
-                int dis = p1.second;
-                
-                if(dis+wt<dist.get(vertex))
+                int neighN = neigh.first;
+                if(d+neigh.second<dist.get(neighN))
                 {
-                    dist.set(vertex,dis+wt);
-                    pq.offer(new int[]{dis+wt,vertex});
+                    dist.set(neighN, d+neigh.second);
+                    q.add(new int[]{dist.get(neighN),neighN});
                 }
             }
         }
         return dist;
+        
     }
 }
