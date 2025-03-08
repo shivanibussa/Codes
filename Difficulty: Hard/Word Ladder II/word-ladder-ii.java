@@ -53,70 +53,70 @@ System.out.println("~");
 
 // User function Template for Java
 
-
-
-
-
 class Solution 
 {
-    public ArrayList<ArrayList<String>> findSequences(String startWord, String endWord,
-                                                                        String[] wordList) 
+    public ArrayList<ArrayList<String>> findSequences(String startWord, String targetWord,
+                                                      String[] wordList)
     {
-        HashSet<String> hs = new HashSet<>();
-        ArrayList<String> usedOnLevel = new ArrayList<>();
-        usedOnLevel.add(startWord);
-        ArrayList<String> ls = new ArrayList<>();
-        ls.add(startWord);
         Queue<ArrayList<String>> q = new LinkedList<>();
+        ArrayList<String> ls = new ArrayList<>();
+        ArrayList<String> usedOnLevel = new ArrayList<>();
+        HashSet<String> hs = new HashSet<>();
+        ArrayList<ArrayList<String>> res = new ArrayList<>();
+        
+        ls.add(startWord);
+        usedOnLevel.add(startWord);
         q.add(ls);
-        int level=0;
-        ArrayList<ArrayList<String>> ans = new ArrayList<>();
         
         for(int i=0;i<wordList.length;i++)
             hs.add(wordList[i]);
-        
+            
+        int level=0;
         while(!q.isEmpty())
         {
             ArrayList<String> al = q.poll();
-            if(al.size()>level)
             {
-                level++;
-                for(String it:usedOnLevel)
+                if(level<al.size())
                 {
-                    hs.remove(it);
-                }
-                
-            }
-            String word = al.get(al.size()-1);
-            if(word.equals(endWord))
-            {
-                if(ans.size()==0)
-                {
-                    ans.add(al);
-                }
-                else if(ans.get(0).size()==al.size())
-                {
-                    ans.add(al);
+                    level++;
+                    for(String w: usedOnLevel)
+                    {
+                        hs.remove(w);
+                    }
                 }
             }
-            
-            for(int i=0;i<word.length();i++)
+            String w = al.get(al.size()-1);
+            if(w.equals(targetWord))
             {
-                for(char ch='a';ch<='z';ch++)
+                if(res.size()==0)
                 {
-                    char chars[] = word.toCharArray();
-                    chars[i] = ch;
-                    String nw = new String(chars);
-                    if(hs.contains(nw))
+                    res.add(new ArrayList<>(al));
+                }
+                else if(res.get(0).size()==al.size())
+                {
+                    res.add(new ArrayList<>(al));
+                }
+            }
+            for(int i=0;i<w.length();i++)
+            {
+                for(char c='a';c<='z';c++)
+                {
+                    char chs[] = w.toCharArray();
+                    chs[i] = c;
+                    String news = new String(chs);
+                    
+                    if(hs.contains(news))
                     {
                         ArrayList<String> temp = new ArrayList<>(al);
-                        temp.add(nw);
+                        temp.add(news);
                         q.add(temp);
-                        usedOnLevel.add(nw);
+                        usedOnLevel.add(news);
                     }
                 }
             }
         }
-        return ans;
+        
+        return res;
+        
     }
 }
