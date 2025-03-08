@@ -42,54 +42,47 @@ System.out.println("~");
 }
 // } Driver Code Ends
 
-class Solution 
-{
 
-    int shortestPath(int[][] grid, int[] source, int[] destination) 
-    {
+// User function Template for Java
+
+class Solution {
+
+    int shortestPath(int[][] grid, int[] source, int[] target) {
+
         int m = grid.length;
         int n = grid[0].length;
-        int dist[][] = new int[m][n];
-        Queue<int[]>q = new LinkedList<>();
-        int sx = source[0], sy = source[1];
-        int ex = destination[0], ey = destination[1];
-        int dr[] = {-1,0,1,0};
-        int dc[] = {0,-1,0,1};
-            
-        q.add(new int[]{0,sx,sy});
-        for(int i=0;i<m;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                dist[i][j] = Integer.MAX_VALUE;
-            }
-        }
-        dist[sx][sy]=0;
-        
-        while(!q.isEmpty())
-        {
-            int pop[] = q.poll();
-            int wt = pop[0], x = pop[1], y = pop[2];
-            
-            if(x==ex && y==ey)
-            {
-                return wt;
-            }
-            for(int i=0;i<4;i++)
-            {
-                int nx=x+dr[i], ny = y+dc[i];
-                if(nx>=0 && ny>=0 && nx<m && ny<n && grid[nx][ny]==1 && dist[nx][ny]>wt+1)
-                {
-                    dist[nx][ny] = wt+1;
-                    if(nx==ex && ny==ey)
-                    {
-                        return wt+1;
-                    }
-                    q.offer(new int[]{wt+1,nx,ny});
-                }
-            }
-            
-        }
-        return -1;
+       int dist[][] = new int[m][n];
+       for(int i=0;i<m;i++)
+       {
+           for(int j=0;j<n;j++)
+           {
+               dist[i][j] = Integer.MAX_VALUE;
+           }
+       }
+       int sx=source[0],sy=source[1];
+       dist[sx][sy]=0;
+       int tx = target[0], ty = target[1];
+       PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+       pq.offer(new int[]{0,sx,sy});
+       while(!pq.isEmpty())
+       {
+           int pop[] = pq.poll();
+           int w = pop[0];
+           int x = pop[1];
+           int y = pop[2];
+           int dr[] = {-1,0,1,0};
+           int dc[] = {0,-1,0,1};
+           for(int i=0;i<4;i++)
+           {
+               int nr = x+dr[i];
+               int nc = y+dc[i];
+               if(nr>=0 &&nr<m && nc>=0 && nc<n && grid[nr][nc]==1 && 1+dist[x][y]<dist[nr][nc])
+               {
+                   dist[nr][nc] = 1+dist[x][y];
+                   pq.add(new int[]{dist[nr][nc],nr,nc});
+               }
+           }
+       }
+       return dist[tx][ty] != Integer.MAX_VALUE ? dist[tx][ty]:-1;
     }
 }
