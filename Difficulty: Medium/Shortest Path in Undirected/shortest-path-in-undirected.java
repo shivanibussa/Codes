@@ -43,42 +43,40 @@ class GFG {
 
 class Solution 
 {
-    
     public int[] shortestPath(ArrayList<ArrayList<Integer>> adj, int src) 
     {
-        int V = adj.size();
-        int dist[] = new int[V];
-        int visited[] = new int[V];
-        Queue<Integer>q = new LinkedList<>();
-        
-        for(int i=0;i<V;i++)
-        {
-            dist[i] = Integer.MAX_VALUE;
-        }
-        
-        dist[src]=0;
-        q.add(src);
-        visited[src]=1;
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            for(int it:adj.get(pop))
-            {
-                if(1+dist[pop]<dist[it])
-                {
-                    dist[it] = 1+dist[pop];
-                    q.add(it);
-                }
-                
-            }
-        }
-        for(int i=0;i<V;i++)
-        {
-            if(dist[i]==Integer.MAX_VALUE)
-            {
-                dist[i]=-1;
-            }
-        }
-        return dist;
+         int V = adj.size();
+         int dist[] = new int[V];
+         Queue<int[]> q = new LinkedList<>();
+         
+         for(int i=0;i<V;i++)
+         {
+             dist[i]=Integer.MAX_VALUE;
+         }
+         dist[src]=0;
+         q.add(new int[]{src,0});
+         while(!q.isEmpty())
+         {
+             int pops[] = q.poll();
+             int node = pops[0];
+             int distance = pops[1];
+             for(int neigh:adj.get(node))
+             {
+                 if(1+distance<dist[neigh])
+                 {
+                     dist[neigh] = 1+distance;
+                     q.add(new int[]{neigh,dist[neigh]});
+                 }
+             }
+         }
+         for(int i=0;i<V;i++)
+         {
+             if(dist[i]==Integer.MAX_VALUE)
+             {
+                 dist[i]=-1;
+             }
+         }
+         return dist;
+         
     }
 }
