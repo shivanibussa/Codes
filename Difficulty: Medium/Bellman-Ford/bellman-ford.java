@@ -59,33 +59,31 @@ class Solution
     {
         int dist[] = new int[V];
         for(int i=0;i<V;i++)
-        {
-            dist[i] = (int)(1e8);
-        }
+            dist[i] = (int)1e8;
         dist[src]=0;
         for(int i=0;i<V-1;i++)
         {
-            for(int j=0;j<edges.length;j++)
+            for(int it[]:edges)
             {
-                int u = edges[j][0];
-                int v = edges[j][1];
-                int wt = edges[j][2];
-                if(dist[u]!=(int)(1e8) && dist[u]+wt<dist[v])
+                int u = it[0];
+                int v = it[1];
+                int wt = it[2];
+                
+                if(dist[u]!=(int)1e8 && wt+dist[u]<dist[v])
                 {
                     dist[v] = dist[u]+wt;
                 }
             }
         }
-        for(int j=0;j<edges.length;j++)
+        for(int i=0;i<edges.length;i++)
         {
-            int u = edges[j][0];
-            int v = edges[j][1];
-            int wt = edges[j][2];
-            if(dist[u]!=(int)(1e8) && dist[u]+wt<dist[v])
+            int u = edges[i][0];
+            int v = edges[i][1];
+            int wt = edges[i][2];
+            
+            if(dist[u]!=(int)1e8 && wt+dist[u]<dist[v])
             {
-                int temp[] = new int[1];
-                temp[0] = -1;
-                return temp;
+                return new int[]{-1};
             }
         }
         return dist;
