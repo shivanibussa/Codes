@@ -35,6 +35,9 @@ public class Main {
 }
 // } Driver Code Ends
 
+
+// User function Template for Java
+
 class Solution 
 {
     static int spanningTree(int V, int E, List<List<int[]>> adj) 
@@ -42,33 +45,31 @@ class Solution
         PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
         int visited[] = new int[V];
         int mwt=0;
-            
         pq.offer(new int[]{0,0});
-        
         while(!pq.isEmpty())
         {
-            int pops[] = pq.poll();
-            int wt = pops[0];
-            int u = pops[1];
+            int pop[] = pq.poll();
+            int wt = pop[0];
+            int node = pop[1];
             
-            if(visited[u]==0)
+            if(visited[node]==0)
             {
-                visited[u]=1;
-                mwt+=wt;
-                for(int it[]:adj.get(u))
+             
+                visited[node] = 1;
+                 mwt+=wt;
+                for(int it[]: adj.get(node))
                 {
-                    int w = it[0];
-                    int neigh = it[1];
-                    
+                    int wts = it[1];
+                    int neigh = it[0];
+                   
                     if(visited[neigh]==0)
                     {
-                        pq.offer(new int[]{w,neigh});
+                        pq.offer(new int[]{wts,neigh});
+                        
                     }
                 }
             }
-            
         }
         return mwt;
     }
-    
 }
