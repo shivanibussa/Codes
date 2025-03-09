@@ -42,9 +42,7 @@ class Solution {
       int findCity(int m, int n, int[][] edges,int distanceThreshold)
       {
          int dist[][] = new int[m][m];
-
-        // Initialize distance matrix
-        for (int i = 0; i < m; i++) {
+         for (int i = 0; i < m; i++) {
             for (int j = 0; j < m; j++) {
                 dist[i][j] = (i == j) ? 0 : Integer.MAX_VALUE;
             }
@@ -58,20 +56,19 @@ class Solution {
             dist[u][v] = wt;
             dist[v][u] = wt;
         }
-
-        // Floyd-Warshall algorithm
-        for (int k = 0; k < m; k++) {
-            for (int i = 0; i < m; i++) {
-                for (int j = 0; j < m; j++) {
-                    if (dist[i][k] != Integer.MAX_VALUE && dist[k][j] != Integer.MAX_VALUE) {
-                        dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
-                    }
-                }
-            }
-        }
-
-        // Find the city with the smallest number of reachable cities
-        int city = -1;
+         for(int k=0;k<m;k++)
+         {
+             for(int i=0;i<m;i++)
+             {
+                 for(int j=0;j<m;j++)
+                 {
+                     if(dist[i][k]!=Integer.MAX_VALUE && dist[k][j]!=Integer.MAX_VALUE)
+                        dist[i][j] = Math.min(dist[i][j],(dist[i][k]+dist[k][j]));
+                 }
+             }
+         }
+         
+         int city = -1;
         int cnt = m;
 
         for (int i = 0; i < m; i++) {
@@ -86,7 +83,6 @@ class Solution {
                 city = i;
             }
         }
-
-        return city;
+         return city;
       }
 }
