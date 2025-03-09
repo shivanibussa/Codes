@@ -37,41 +37,38 @@ System.out.println("~");
 
 class Solution 
 {
-    int minimumMultiplications(int[] arr, int src, int end) 
+    int minimumMultiplications(int[] arr, int start, int end) 
     {
-        
-        if(src==end)
+        if(start==end)
             return 0;
-        Queue<int[]> q = new LinkedList<>();
         int dist[] = new int[100000];
+        Queue<int[]> q = new LinkedList<>();
+        q.add(new int[]{start,0});
         for(int i=0;i<100000;i++)
         {
             dist[i] = Integer.MAX_VALUE;
         }
-        dist[src]=0;
-        q.offer(new int[]{src,0});
-        int mod = 100000;
+        dist[start] = 0;
         
+        int mod = 100000;
         while(!q.isEmpty())
         {
             int pop[] = q.poll();
             int a = pop[0];
-            int steps = pop[1];
-            
+            int s = pop[1];
             for(int i=0;i<arr.length;i++)
             {
                 int pro = (a*arr[i])%mod;
-                if(dist[pro]>1+steps)
+                if(dist[pro]>1+s)
                 {
-                    dist[pro]=1+steps;
+                    dist[pro] = 1+s;
                     if(pro==end)
-                    {
-                        return 1+steps;
-                    }
-                    q.offer(new int[]{pro,steps+1});
+                        return dist[pro];
+                    q.add(new int[]{pro,dist[pro]});
                 }
             }
         }
         return -1;
+        
     }
 }
