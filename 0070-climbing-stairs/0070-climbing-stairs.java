@@ -2,15 +2,16 @@ class Solution
 {
     public int climbStairs(int n) 
     {
-        int stair[] = new int[n];
+        int prev1 =1,prev2=2,curr=0;
         if(n==1)
             return 1;
-        stair[0] = 1;
-        stair[1] = 2;
         for(int i=2;i<n;i++)
         {
-            stair[i] = stair[i-1]+stair[i-2];
+            curr = prev1+prev2;
+            prev1 = prev2;
+            prev2 = curr;
+           
         }
-        return stair[n-1];
+        return prev2;
     }
 }
