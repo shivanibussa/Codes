@@ -201,6 +201,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
+| [2384-root-equals-sum-of-children](https://github.com/shivanibussa/Codes/tree/master/2384-root-equals-sum-of-children) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -250,6 +251,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
+| [2384-root-equals-sum-of-children](https://github.com/shivanibussa/Codes/tree/master/2384-root-equals-sum-of-children) |
 ## Merge Sort
 |  |
 | ------- |
