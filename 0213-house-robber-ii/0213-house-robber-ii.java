@@ -1,30 +1,26 @@
 class Solution 
 {
-    public int solve (int nums[],int s, int e)
+    public int rob(int[] nums,int s, int e) 
     {
-        int prev = nums[s];
-        int prev2 =0;
+        int prev1 = nums[s];
+        int prev2 = 0,curr=0;
         for(int i=s+1;i<=e;i++)
         {
-            int take = nums[i];
+            int pick = nums[i];
             if(i>1)
-                take+=prev2;
-            int non_take = prev;
-            int curri = Math.max(take,non_take);
-
-            prev2 = prev;
-            prev = curri;
+                pick +=prev2;
+            int not_pick = prev1;
+            curr = Math.max(pick,not_pick);
+            prev2 = prev1;
+            prev1 = curr;
         }
-        return prev;
+        return prev1;
     }
     public int rob(int[] nums) 
     {
         int n = nums.length;
-        if (n == 1) return nums[0];
-
-        int ans1 = solve(nums,0,n-2);
-        int ans2 = solve(nums,1,n-1);
-
-        return Math.max(ans1,ans2);
+        if(n==1)
+            return nums[0];
+        return Math.max(rob(nums,0,n-2),rob(nums,1,n-1));
     }
 }
