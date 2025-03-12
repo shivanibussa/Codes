@@ -15,14 +15,12 @@ class Solution
         TreeNode curr = root;
         while(curr!=null)
         {
-            int value = curr.val;
-            if(p.val<value && q.val<value)
+            if(curr.val>p.val && curr.val>q.val)
                 curr = curr.left;
-            else if(p.val>value && q.val>value)
+            else if(curr.val<p.val && curr.val<q.val)
                 curr = curr.right;
             else
                 return curr;
-
         }
         return curr;
     }
