@@ -133,7 +133,21 @@ class Node{
 */
 class Solution
 {
- 
+    public static int f(Node root)
+    {
+        if(root==null)
+            return 0;
+        
+        int left = f(root.left);
+        int right = f(root.right);
+        if(left==-1 || right==-1)
+            return -1;
+        if(root.left == null && root.right == null)
+            return root.data;
+        if(left+right==root.data)
+            return root.data;
+        return -1;
+    }
     public static int isSumProperty(Node root)
     {
         if(root==null)
@@ -141,23 +155,5 @@ class Solution
         if(f(root)!=-1)
             return 1;
         return 0;
-    }
-    public static int f(Node root)
-    {
-        if(root==null)
-        {
-            return 0;
-        }
-        int left = f(root.left);
-        int right = f(root.right);
-        if(left==-1 || right==-1)
-            return -1;
-        if (root.left == null && root.right == null) {
-            return root.data;
-        }
-        if(left+right==root.data)
-            return root.data;
-        return -1;
-        
     }
 }
