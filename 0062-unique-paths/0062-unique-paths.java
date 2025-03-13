@@ -1,34 +1,25 @@
-import java.util.* ;
-import java.io.*; 
-public class Solution 
+class Solution 
 {
-	public static int uniquePaths(int m, int n) 
-	{
-		
-		int dp[] = new int[n];
-		for(int i=0;i<m;i++)
+    public int uniquePaths(int m, int n) 
+    {
+        int dp[][] = new int[m][n];
+        for(int i=0;i<m;i++)
         {
-            int temp[] = new int[n];
             for(int j=0;j<n;j++)
             {
                 if(i==0 && j==0)
-                {
-                    temp[0]=1;
-                    // continue;
-                }
+                    dp[i][j]=1;
                 else
                 {
                     int up=0,left=0;
                     if(i>0)
-                        up = dp[j];
+                        up = dp[i-1][j];
                     if(j>0)
-                        left = temp[j-1];
-                    temp[j] = up+left;
+                        left = dp[i][j-1];
+                    dp[i][j] = up+left;
                 }
             }
-            dp = temp;
         }
-
-        return dp[n-1];
-	}
+        return dp[m-1][n-1];   
+    }
 }
