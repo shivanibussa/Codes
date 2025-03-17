@@ -1,24 +1,21 @@
-import java.util.*;
-import java.util.Arrays;
-class Solution 
+class Solution
 {
-    public int lengthOfLIS(int[] nums) 
+    public int lengthOfLIS(int[] arr) 
     {
-        ArrayList<Integer> subsequence = new ArrayList<>();
-        for(int num:nums)
+        int n = arr.length;
+        int dp[][] = new int[n+1][n+1];
+        for(int i=n-1;i>=0;i--)
         {
-            int idx = Collections.binarySearch(subsequence,num);
-            if(idx<0)
+            for(int j=i-1;j>=-1;j--)
             {
-                idx = -(idx+1);
+                int len = 0+dp[i+1][j+1];
+                if(j==-1 || arr[i]>arr[j])
+                    len = Math.max(len,1+dp[i+1][i+1]);
+
+                dp[i][j+1] = len;
+
             }
-            if(idx<subsequence.size())
-            {
-                subsequence.set(idx,num);
-            }
-            else
-                subsequence.add(num);
         }
-        return subsequence.size();
+        return dp[0][0];
     }
 }
