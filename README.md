@@ -60,6 +60,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
+| [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2292-counting-words-with-a-given-prefix](https://github.com/shivanibussa/Codes/tree/master/2292-counting-words-with-a-given-prefix) |
@@ -102,6 +103,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
+| [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -411,6 +413,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/shivanibussa/Codes/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
+| [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/shivanibussa/Codes/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 ## Simulation
 |  |
