@@ -15,13 +15,13 @@ class Solution
             {
                 if(i>j)
                     continue;
-                int mini = Integer.MAX_VALUE;
+                int minCost = Integer.MAX_VALUE;
                 for(int k=i;k<=j;k++)
                 {
                     int cost = newCuts[j+1]-newCuts[i-1]+dp[i][k-1]+dp[k+1][j];
-                    mini = Math.min(mini,cost);
+                    minCost = Math.min(cost,minCost);
                 }
-                dp[i][j] = mini;
+                dp[i][j] = minCost;
             }
         }
         return dp[1][c];
