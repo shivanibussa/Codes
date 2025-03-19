@@ -31,85 +31,78 @@ public class Main {
 
 
 // User function Template for Java
-class DisjointSet {
-    ArrayList<Integer> parent;
+class DisjointSet{
+    
     ArrayList<Integer> size;
-
-    DisjointSet(int n) {
-        parent = new ArrayList<>();
+    ArrayList<Integer> parent;
+    
+    DisjointSet(int n)
+    {
         size = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            parent.add(i);
+        parent = new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
             size.add(1);
+            parent.add(i);
         }
     }
-
-    public int findUparent(int node) {
-        if (node == parent.get(node))
+    
+    public int findUparent(int node)
+    {
+        if(node==parent.get(node))
             return node;
         int root = findUparent(parent.get(node));
-        parent.set(node, root); // Path compression
+        parent.set(node,root);
         return root;
     }
-
-    public void UnionBySize(int u, int v) {
-        int ulp_u = findUparent(u); // Ultimate parent of u
-        int ulp_v = findUparent(v); // Ultimate parent of v
-
-        if (ulp_u == ulp_v) return; // Already in the same set
-
-        if (size.get(ulp_u) < size.get(ulp_v)) {
-            parent.set(ulp_u, ulp_v);
-            size.set(ulp_v, size.get(ulp_v) + size.get(ulp_u));
-        } else {
-            parent.set(ulp_v, ulp_u);
-            size.set(ulp_u, size.get(ulp_u) + size.get(ulp_v));
+    
+    public void UnionBySize(int u,int v)
+    {
+        int ulp_u = findUparent(u);
+        int ulp_v = findUparent(v);
+        if(ulp_u==ulp_v)
+            return;
+        if(size.get(ulp_u)<size.get(ulp_v))
+        {
+            parent.set(ulp_u,ulp_v);
+            size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
+        }
+        else
+        {
+            parent.set(ulp_v,ulp_u);
+            size.set(ulp_u,size.get(ulp_u)+size.get(ulp_v));
         }
     }
 }
-
-class Edge implements Comparable<Edge> {
-    int src, dest, weight;
-
-    Edge(int src, int dest, int weight) {
-        this.src = src;
-        this.dest = dest;
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Edge compareEdge) {
-        return this.weight - compareEdge.weight;
-    }
-}
-
-class Solution {
-    static int kruskalsMST(int V, int[][] edgeList) {
-        // Create a list of edges
-        List<Edge> edges = new ArrayList<>();
-        for (int i = 0; i < edgeList.length; i++) {
-            edges.add(new Edge(edgeList[i][0], edgeList[i][1], edgeList[i][2]));
-        }
-
-        // Sort edges based on weight
-        Collections.sort(edges);
-
-        // Initialize Disjoint Set
+class Solution 
+{
+    
+    static int kruskalsMST(int V, int[][] edges) 
+    {
+     
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        int mst=0;
         DisjointSet ds = new DisjointSet(V);
-        int mstWt = 0;
-
-        // Process edges
-        for (Edge edge : edges) {
-            int u = edge.src;
-            int v = edge.dest;
-            int wt = edge.weight;
-
-            // Check if adding this edge creates a cycle
-            if (ds.findUparent(u) != ds.findUparent(v)) {
-                mstWt += wt; // Add weight of edge to MST
-                ds.UnionBySize(u, v); // Union the two sets
+        for(int i=0;i<edges.length;i++)
+        {
+            int a = edges[i][0];
+            int b = edges[i][1];
+            int wt = edges[i][2];
+            pq.offer(new int[]{wt,a,b});
+        }
+        while(!pq.isEmpty())
+        {
+            int pop[] = pq.poll();
+            int wt = pop[0];
+            int u = pop[1];
+            int v = pop[2];
+            
+            if(ds.findUparent(u) != ds.findUparent(v))
+            {
+                mst+=wt;
+                ds.UnionBySize(u,v);
             }
         }
-        return mstWt; // Return total weight of MST
+        return mst;
     }
 }
