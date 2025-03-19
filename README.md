@@ -62,6 +62,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1121-partition-array-for-maximum-sum](https://github.com/shivanibussa/Codes/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/shivanibussa/Codes/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
@@ -365,6 +366,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/shivanibussa/Codes/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
 | [2606-difference-between-ones-and-zeros-in-row-and-column](https://github.com/shivanibussa/Codes/tree/master/2606-difference-between-ones-and-zeros-in-row-and-column) |
 ## Graph
@@ -419,6 +421,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/shivanibussa/Codes/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/shivanibussa/Codes/tree/master/1250-longest-common-subsequence) |
+| [1402-count-square-submatrices-with-all-ones](https://github.com/shivanibussa/Codes/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/shivanibussa/Codes/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
