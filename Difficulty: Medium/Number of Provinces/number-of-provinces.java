@@ -33,40 +33,45 @@ System.out.println("~");
 
 //User function Template for Java
 class DisjointSet{
-    ArrayList<Integer> parent = new ArrayList<>();
-    ArrayList<Integer> size = new ArrayList<>();
+    
+    ArrayList<Integer> size;
+    ArrayList<Integer> parent;
+    
     DisjointSet(int n)
     {
+        size = new ArrayList<>();
+        parent = new ArrayList<>();
         for(int i=0;i<n;i++)
         {
-            parent.add(i);
             size.add(1);
+            parent.add(i);
         }
     }
     
     public int findUparent(int node)
     {
         if(node==parent.get(node))
-        {
             return node;
-        }
-        parent.set(node,findUparent(parent.get(node)));
-        return parent.get(node);
+        int root = findUparent(parent.get(node));
+        parent.set(node,root);
+        return root;
     }
     
-    public void UnionBySize(int u, int v)
+    public void UnionBySize(int u,int v)
     {
         int ulp_u = findUparent(u);
         int ulp_v = findUparent(v);
-        if(size.get(ulp_u) < size.get(ulp_v))
+        if(ulp_u==ulp_v)
+            return;
+        if(size.get(ulp_u)<size.get(ulp_v))
         {
             parent.set(ulp_u,ulp_v);
-            size.set(ulp_v, (size.get(ulp_v)+size.get(ulp_u)));
+            size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
         }
         else
         {
             parent.set(ulp_v,ulp_u);
-            size.set(ulp_u, (size.get(ulp_v)+size.get(ulp_u)));
+            size.set(ulp_u,size.get(ulp_u)+size.get(ulp_v));
         }
     }
 }
@@ -75,10 +80,10 @@ class Solution
     static int numProvinces(ArrayList<ArrayList<Integer>> adj, int V) 
     {
         DisjointSet ds = new DisjointSet(V);
-        int cnt=0;
-        for(int i=0;i<V;i++)
+        int cnt = 0;
+        for(int i=0;i<adj.size();i++)
         {
-            for(int j=0;j<V;j++)
+            for(int j=0;j<adj.get(i).size();j++)
             {
                 if(adj.get(i).get(j)==1)
                 {
@@ -88,8 +93,9 @@ class Solution
         }
         for(int i=0;i<V;i++)
         {
-            if(ds.parent.get(i)==i)
-            cnt++;
+            if(i==ds.parent.get(i))
+                cnt++;
+                
         }
         return cnt;
     }
