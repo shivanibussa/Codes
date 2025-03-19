@@ -31,6 +31,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
+| [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0120-triangle](https://github.com/shivanibussa/Codes/tree/master/0120-triangle) |
@@ -359,6 +360,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
+| [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
@@ -391,6 +393,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
+| [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0115-distinct-subsequences](https://github.com/shivanibussa/Codes/tree/master/0115-distinct-subsequences) |
 | [0120-triangle](https://github.com/shivanibussa/Codes/tree/master/0120-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/shivanibussa/Codes/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -462,6 +465,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Stack
 |  |
 | ------- |
+| [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0094-binary-tree-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0094-binary-tree-inorder-traversal) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/shivanibussa/Codes/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0144-binary-tree-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0144-binary-tree-preorder-traversal) |
@@ -479,6 +483,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Monotonic Stack
 |  |
 | ------- |
+| [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 ## Iterator
 |  |
