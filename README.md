@@ -85,6 +85,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [0984-most-stones-removed-with-same-row-or-column](https://github.com/shivanibussa/Codes/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
@@ -314,6 +315,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [0984-most-stones-removed-with-same-row-or-column](https://github.com/shivanibussa/Codes/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/shivanibussa/Codes/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
@@ -358,6 +360,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0801-is-graph-bipartite](https://github.com/shivanibussa/Codes/tree/master/0801-is-graph-bipartite) |
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [0984-most-stones-removed-with-same-row-or-column](https://github.com/shivanibussa/Codes/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/shivanibussa/Codes/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
 ## Matrix
@@ -387,6 +390,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0820-find-eventual-safe-states](https://github.com/shivanibussa/Codes/tree/master/0820-find-eventual-safe-states) |
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
+| [0984-most-stones-removed-with-same-row-or-column](https://github.com/shivanibussa/Codes/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/shivanibussa/Codes/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
