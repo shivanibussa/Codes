@@ -7,6 +7,7 @@ import java.io.*;
 
 
 // } Driver Code Ends
+
 //User function Template for Java
 class DisjointSet
 {
@@ -56,53 +57,52 @@ class Solution
     
     public List<Integer> numOfIslands(int rows, int cols, int[][] operators) 
     {
-        DisjointSet ds = new DisjointSet(rows*cols+1);
         int visited[][] = new int[rows][cols];
-        ArrayList<Integer> ans = new ArrayList<>();
+        DisjointSet ds = new DisjointSet(rows*cols);
+        ArrayList<Integer> res = new ArrayList<>();
         int cnt=0;
-        int n = operators.length;
-        for(int i=0;i<n;i++)
+        
+        for(int i=0;i<operators.length;i++)
         {
             int r = operators[i][0];
             int c = operators[i][1];
+            
             if(visited[r][c]==1)
             {
-                ans.add(cnt);
+                res.add(cnt);
                 continue;
-                
             }
-           
-            cnt++;
+            
             visited[r][c]=1;
+            cnt++;
             int dr[] = {-1,0,1,0};
             int dc[] = {0,-1,0,1};
-            for(int k=0;k<4;k++)
+            
+            for(int j=0;j<4;j++)
             {
-                int nr = dr[k]+r;
-                int nc = dc[k]+c;
-                
-                if(nr>=0 && nc>=0 && nr<rows && nc<cols)
+                int nr = r+dr[j];
+                int nc = c+dc[j];
+                if(nr>=0 && nr<rows && nc>=0 && nc<cols)
                 {
                     if(visited[nr][nc]==1)
                     {
-                        int neighbor = nr*cols+nc;
-                        int node = r*cols+c;
-                        if(ds.findUparent(neighbor)!=ds.findUparent(node))
+                        int node = r*cols+c, adjNode = nr*cols+nc;
+                        if(ds.findUparent(node)!=ds.findUparent(adjNode))
                         {
                             cnt--;
-                            ds.UnionBySize(node,neighbor);
+                            ds.UnionBySize(node,adjNode);
                         }
-                        
                     }
-                }
+                }                
+                
             }
-            ans.add(cnt);
+            res.add(cnt);
         }
-        
-        return ans;
+        return res;
     }
     
 }
+
 
 //{ Driver Code Starts.
 
