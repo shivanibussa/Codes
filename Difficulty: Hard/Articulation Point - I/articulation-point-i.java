@@ -40,42 +40,20 @@ System.out.println("~");
 
 class Solution
 {
-    static int timer =0;
-    public ArrayList<Integer> articulationPoints(int n,ArrayList<ArrayList<Integer>> adj)
+    private int timer=0;
+    public void dfs(int node,int parent,int[] vis,int[] low, int[] tin,int[] mark,ArrayList<ArrayList<Integer>> adj)
     {
-       int visited[] = new int[n];
-        int tin[] = new int[n];
-        int low[] = new int[n];
-        int mark[] = new int[n];
-        for(int i=0;i<n;i++)
-        {
-            if(visited[i]==0)
-            {
-                dfs(i,-1,visited,tin,low,mark,adj);
-            }
-        }
-        ArrayList<Integer> ans = new ArrayList<>();
-        for(int i=0;i<n;i++)
-        {
-            if(mark[i]==1)
-                ans.add(i);
-        }
-        if(ans.size()==0)
-            ans.add(-1);
-        return ans;
-    }
-    public void dfs(int node,int parent,int visited[],int tin[],int low[],int mark[], ArrayList<ArrayList<Integer>> adj)
-    {
-        visited[node]=1;
-        tin[node]=low[node] = timer;
-        timer+=1;
+        vis[node]=1;
+        low[node]=tin[node]=timer;
+        timer++;
         int child=0;
-        
         for(int it:adj.get(node))
         {
-            if(visited[it]==0)
+            if(it==parent)
+                continue;
+            if(vis[it]==0)
             {
-                dfs(it,node,visited,tin,low,mark,adj);
+                dfs(it,node,vis,low,tin,mark,adj);
                 low[node] = Math.min(low[node],low[it]);
                 
                 if(low[it]>=tin[node] && parent!=-1)
@@ -90,9 +68,29 @@ class Solution
             }
         }
         if(child>1 && parent==-1)
-        {
             mark[node]=1;
-        }
-        
+    }
+    public ArrayList<Integer> articulationPoints(int V,ArrayList<ArrayList<Integer>> adj)
+    {
+       int vis[] = new int[V];
+       int tin[] = new int[V];
+       int low[] = new int[V];
+       int mark[] = new int[V];
+       ArrayList<Integer> ans = new ArrayList<>();
+       for(int i=0;i<V;i++)
+       {
+           if(vis[i]==0)
+            {
+                dfs(i,-1,vis,low,tin,mark,adj);
+            }
+       }
+       for(int i=0;i<V;i++)
+       {
+           if(mark[i]==1)
+            ans.add(i);
+       }
+       if(ans.size()==0)
+            ans.add(-1);
+        return ans;
     }
 }
