@@ -24,27 +24,29 @@ System.out.println("~");
 }
 // } Driver Code Ends
 
-class DisjointSet
-{
-    ArrayList<Integer> parent = new ArrayList<>();
-    ArrayList<Integer> size = new ArrayList<>();
+class DisjointSet{
+    
+    ArrayList<Integer> size;
+    ArrayList<Integer> parent;
+    
     DisjointSet(int n)
     {
+        size = new ArrayList<>();
+        parent = new ArrayList<>();
         for(int i=0;i<n;i++)
         {
-            parent.add(i);
             size.add(1);
+            parent.add(i);
         }
     }
     
     public int findUparent(int node)
     {
         if(node==parent.get(node))
-        {
             return node;
-        }
-        parent.set(node,findUparent(parent.get(node)));
-        return parent.get(node);
+        int root = findUparent(parent.get(node));
+        parent.set(node,root);
+        return root;
     }
     
     public void UnionBySize(int u,int v)
@@ -56,48 +58,42 @@ class DisjointSet
         if(size.get(ulp_u)<size.get(ulp_v))
         {
             parent.set(ulp_u,ulp_v);
-            size.set(ulp_v,(size.get(ulp_u)+size.get(ulp_v)));
+            size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
         }
         else
         {
             parent.set(ulp_v,ulp_u);
-            size.set(ulp_u,(size.get(ulp_u)+size.get(ulp_v)));
+            size.set(ulp_u,size.get(ulp_u)+size.get(ulp_v));
         }
     }
-    
-    
 }
 class Solution 
 {
 
     int maxRemove(int[][] stones, int n) 
     {
-        int maxrow = 0;
-        int maxcol = 0;
         
+        int maxRow = 0,maxCol=0,cnt=0;
         for(int i=0;i<n;i++)
         {
-            maxrow = Math.max(maxrow,stones[i][0]);
-            maxcol = Math.max(maxcol,stones[i][1]);
+            maxRow = Math.max(maxRow,stones[i][0]);
+            maxCol = Math.max(maxCol,stones[i][1]);
         }
-        DisjointSet ds = new DisjointSet(maxrow+maxcol+2);
-        
-        HashMap<Integer,Integer> hm = new HashMap<>();
+        DisjointSet ds = new DisjointSet(maxRow + maxCol + 2);
+        HashSet<Integer> hs = new HashSet<>();
         for(int i=0;i<n;i++)
         {
-            int noderow = stones[i][0];
-            int nodecol = stones[i][1]+maxrow+1;
-            ds.UnionBySize(noderow,nodecol);
-            hm.put(noderow,1);
-            hm.put(nodecol,1);
+            int stone_x = stones[i][0];
+            int stone_y = stones[i][1]+maxRow+1;
+            ds.UnionBySize(stone_x,stone_y);
+            hs.add(stone_x);
+            hs.add(stone_y);
         }
-        int cnt=0;
-        for(Map.Entry<Integer,Integer> entry:hm.entrySet())
+        
+        for(int it:hs)
         {
-            if(ds.findUparent(entry.getKey())==entry.getKey())
-            {
+            if(it==ds.findUparent(it))
                 cnt++;
-            }
         }
         return n-cnt;
     }
