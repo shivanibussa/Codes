@@ -149,6 +149,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## String
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
 | [0115-distinct-subsequences](https://github.com/shivanibussa/Codes/tree/master/0115-distinct-subsequences) |
@@ -184,6 +185,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 ## Data Stream
@@ -399,6 +401,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Dynamic Programming
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0062-unique-paths](https://github.com/shivanibussa/Codes/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
