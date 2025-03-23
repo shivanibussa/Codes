@@ -1,50 +1,52 @@
-class Solution 
-{
-    public boolean canFinish(int N, int[][] prerequisites) 
-    {
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        int p = prerequisites.length;
-        Queue<Integer> q = new LinkedList<>();
-        ArrayList<Integer> res = new ArrayList<>();
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        List<List<Integer>> adjLst = new ArrayList<>();
 
-        for(int i=0;i<N;i++)
-        {
-            adj.add(new ArrayList<>());
+        for(int i = 0; i < numCourses; i++){
+            adjLst.add(new ArrayList<>());
         }
-        for(int i=0;i<p;i++)
-        {
-            int u = prerequisites[i][0];
-            int v = prerequisites[i][1];
-            adj.get(u).add(v);
+
+        //fill the adjList iterating over prereq
+        for(int[] prereqiste : prerequisites){
+            adjLst.get(prereqiste[1]).add(prereqiste[0]);
         }
-        int inorder[] = new int[N];
-        for(int i=0;i<N;i++)
-        {
-            for(int it:adj.get(i))
-            {
-                inorder[it]++;
+
+        //array to track the visited nodes 
+        int[] visitState = new int[numCourses];
+
+        //perform dfs on the graph 
+        for(int course = 0; course < numCourses;course++){
+            if(visitState[course] == 0){
+                //mechanism to detect cycle - if it has cycle we can terminate the funciton 
+                if(hasCycle(course, adjLst, visitState)) return false;
             }
         }
-        for(int i=0;i<N;i++)
-        {
-            if(inorder[i]==0)
-            {
-                q.offer(i);
-            }
-        }
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            res.add(pop);
-            for(int it:adj.get(pop))
-            {
-                inorder[it]--;
-                if(inorder[it]==0)
-                {
-                    q.offer(it);
+        return true;   
+    }
+
+        //helper function to detect cycle
+        private boolean hasCycle(int course, List<List<Integer>> adjList, int[] visitState){
+            
+                
+            //mark that course as visited 
+            visitState[course] = 1;
+            //explore the connected edges
+            for(int neighbor : adjList.get(course)){
+
+                //if this neighbor is already in visitState arr 
+                if(visitState[neighbor] == 1){
+                    return true;
+                }
+                //if we havent found the visited state 
+                if(visitState[neighbor] == 0){
+                    if(hasCycle(neighbor, adjList, visitState)){
+                        return true;
+                    }
                 }
             }
+            //some sort of flag to set the curr node as complete 
+            visitState[course] = 2;
+            return false;
         }
-        return res.size()==N;
-    }
+ 
 }
