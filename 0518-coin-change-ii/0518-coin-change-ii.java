@@ -2,29 +2,19 @@ class Solution
 {
     public int change(int amount, int[] coins) 
     {
-        
         int n = coins.length;
-        int dp[] = new int[amount+1];
-        for(int j=0;j<=amount;j++)
-        {
-            if(j%coins[0]==0)
-                dp[j] = 1;
-        }
-        for(int i=1;i<n;i++)
-        {
-            int temp[] = new int[amount+1];
-            temp[0] = 1;
-            for(int j=0;j<=amount;j++)
-            {
-                int not_take = dp[j];
-                int take = 0;
-                if(coins[i]<=j)
-                    take = temp[j-coins[i]];
+        int dp[] = new int[amount + 1];
+        
+        dp[0] = 1; // Base case: One way to make amount 0 (using no coins)
 
-                temp[j] = take+not_take;
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = coins[i]; j <= amount; j++) 
+            {
+                dp[j] += dp[j - coins[i]];
             }
-            dp=temp;
         }
+
         return dp[amount];
     }
 }
