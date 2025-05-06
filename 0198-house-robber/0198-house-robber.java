@@ -8,9 +8,9 @@ class Solution
         for(int i=1;i<n;i++)
         {
             int not_take = 0+dp[i-1];
-            int take = Integer.MIN_VALUE;
+            int take = nums[i];
             if(i>1)
-                take = nums[i]+dp[i-2];
+                take += dp[i-2];
             dp[i] = Math.max(take,not_take);
         }
         return dp[n-1];
