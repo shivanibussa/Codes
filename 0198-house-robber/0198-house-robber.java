@@ -4,18 +4,26 @@ class Solution
     {
         int n = nums.length;
         int dp[] = new int[n];
-        int prev1 = nums[0];
-        int prev2 = 0,curr=0;
+        dp[0] = nums[0];
         for(int i=1;i<n;i++)
         {
-            int pick = nums[i];
+            int not_take = 0+dp[i-1];
+            int take = Integer.MIN_VALUE;
             if(i>1)
-                pick +=prev2;
-            int not_pick = prev1;
-            curr = Math.max(pick,not_pick);
-            prev2 = prev1;
-            prev1 = curr;
+                take = nums[i]+dp[i-2];
+            dp[i] = Math.max(take,not_take);
         }
-        return prev1;
+        return dp[n-1];
+    }
+    public int f(int nums[],int n)
+    {
+        if(n==0)
+            return nums[0];
+        if(n<0)
+            return 0;
+        int not_take = 0+f(nums,n-1);
+        int take = nums[n]+f(nums,n-2);
+
+        return Math.max(take,not_take);
     }
 }
