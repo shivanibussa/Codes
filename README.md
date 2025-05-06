@@ -54,6 +54,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
 | [0518-coin-change-ii](https://github.com/shivanibussa/Codes/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
+| [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/shivanibussa/Codes/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/shivanibussa/Codes/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
@@ -82,6 +83,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
+| [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
@@ -524,4 +526,8 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/shivanibussa/Codes/tree/master/0673-number-of-longest-increasing-subsequence) |
+## Prefix Sum
+|  |
+| ------- |
+| [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
 <!---LeetCode Topics End-->
