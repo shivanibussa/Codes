@@ -9,7 +9,7 @@ class Solution
         {
             int not_take = 0+dp[i-1];
             int take = nums[i];
-            if(i>1)
+            if(i>=2)
                 take += dp[i-2];
             dp[i] = Math.max(take,not_take);
         }
