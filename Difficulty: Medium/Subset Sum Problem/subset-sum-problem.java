@@ -28,34 +28,47 @@ class GFG {
 // } Driver Code Ends
 
 
-// User function Template for Java
-
 class Solution 
 {
-
-    static Boolean isSubsetSum(int arr[], int k) 
+    static Boolean isSubsetSum(int arr[], int sum) 
     {
         int n = arr.length;
-        boolean dp[][] = new boolean[n][k+1];
-        
+        boolean dp[][] = new boolean[n][sum+1];
         for(int i=0;i<n;i++)
             dp[i][0] = true;
-        
-        if(arr[0]<=k)
+            
+        if(arr[0]<=sum)
             dp[0][arr[0]] = true;
+            
             
         for(int i=1;i<n;i++)
         {
-            for(int target=1;target<=k;target++)
+            for(int j=1;j<sum+1;j++)
             {
-                boolean not_take = dp[i-1][target];
+                boolean not_take = dp[i-1][j];
                 boolean take = false;
-                if(arr[i]<=target)
-                    take = dp[i-1][target-arr[i]];
+                if(j>=arr[i])
+                    take = dp[i-1][j-arr[i]];
                     
-                dp[i][target] = take || not_take;
+                dp[i][j] = take || not_take;
             }
         }
-        return dp[n-1][k];
+        return dp[n-1][sum];
+    }
+    static boolean f(int arr[],int target,int i)
+    {
+        if(target==0)
+            return true;
+        
+        if(i==0)
+            return arr[i]==target?true:false;
+            
+        
+        boolean not_take = f(arr,target,i-1);
+        boolean take = false;
+        if(arr[i]<=target)
+            take = f(arr,target-arr[i],i-1);
+            
+        return take||not_take;
     }
 }
