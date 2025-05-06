@@ -61,6 +61,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1121-partition-array-for-maximum-sum](https://github.com/shivanibussa/Codes/tree/master/1121-partition-array-for-maximum-sum) |
@@ -377,6 +378,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
+| [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/shivanibussa/Codes/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
@@ -432,6 +434,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0673-number-of-longest-increasing-subsequence](https://github.com/shivanibussa/Codes/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/shivanibussa/Codes/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
+| [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
 | [1121-partition-array-for-maximum-sum](https://github.com/shivanibussa/Codes/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/shivanibussa/Codes/tree/master/1170-shortest-common-supersequence) |
