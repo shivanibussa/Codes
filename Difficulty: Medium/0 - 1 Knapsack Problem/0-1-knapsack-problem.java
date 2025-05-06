@@ -33,31 +33,46 @@ public class GFG {
 // } Driver Code Ends
 
 
-class Solution 
-{
-    static int knapsack(int W, int val[], int wt[]) 
-    {
-        int n = val.length;
-        int dp[][] = new int[n][W+1];
-        for(int i=0;i<=W;i++)
+class Solution {
+    static int knapsack(int W, int val[], int wt[]) {
+        // code here
+        int n = wt.length;
+        int dp[] = new int[[W+1];
+        for(int j=0;j<=W;j++)
         {
-            if(i>=wt[0])
-            {
-                dp[0][i] = val[0];
-            }
+            if(j>=wt[0])
+                dp[0][j] = val[0];
         }
         for(int i=1;i<n;i++)
         {
             for(int j=0;j<=W;j++)
             {
-                int not_take = dp[i-1][j];
+                int not_take = 0+dp[i-1][j];
                 int take = Integer.MIN_VALUE;
                 if(j>=wt[i])
                     take = val[i]+dp[i-1][j-wt[i]];
                     
                 dp[i][j] = Math.max(take,not_take);
+                
             }
         }
         return dp[n-1][W];
+    }
+    static int f(int W, int val[],int wt[],int n)
+    {
+        if(n==0)
+        {
+            if(W>=wt[0])
+                return val[0];
+            else
+                return 0;
+        }
+        int not_take = 0+f(W,val,wt,n-1);
+        int take = Integer.MIN_VALUE;
+        if(W>=wt[n])
+            take = val[n]+f(W-wt[n],val,wt,n-1);
+            
+        return Math.max(take,not_take);
+        
     }
 }
