@@ -31,17 +31,18 @@ class GFG {
 
 class Solution 
 {
-    static int knapSack(int val[], int wt[], int capacity) 
+    static int knapSack(int val[], int wt[], int W) 
     {
         int n = val.length;
-        int dp[][] = new int[n][capacity+1];
-        for(int i=0;i<=capacity;i++)
+        int dp[][] = new int[n][W+1];
+        for(int j=0;j<=W;j++)
         {
-                dp[0][i] = (i/wt[0])*val[0];
+            if(j>=wt[0])
+                dp[0][j] = val[0]*(j/wt[0]);
         }
         for(int i=1;i<n;i++)
         {
-            for(int j=0;j<=capacity;j++)
+            for(int j=0;j<=W;j++)
             {
                 int not_take = dp[i-1][j];
                 int take = Integer.MIN_VALUE;
@@ -51,6 +52,22 @@ class Solution
                 dp[i][j] = Math.max(take,not_take);
             }
         }
-        return dp[n-1][capacity];
+       return dp[n-1][W];
+    }
+    static int f(int val[],int wt[],int W,int ind)
+    {
+        if(ind==0)
+        {
+            if(W>=wt[0])
+                return val[0]*(W/wt[0]);
+            else
+                return 0;
+        }
+        int not_take = 0+f(val,wt,W,ind-1);
+        int take = Integer.MIN_VALUE;
+        if(W>=wt[ind])
+            take = val[ind]+f(val,wt,W-wt[ind],ind);
+            
+        return Math.max(take,not_take);
     }
 }
