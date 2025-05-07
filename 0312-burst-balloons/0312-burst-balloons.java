@@ -1,29 +1,42 @@
 class Solution 
 {
-    public int maxCoins(int[] nums) 
+    public int maxCoins(int[] nums)
     {
         int n = nums.length;
-        int newNums[] = new int[n+2];
-        System.arraycopy(nums, 0, newNums, 1, n);
-        int nc = newNums.length;
-        newNums[0]=1;
-        newNums[nc-1]=1;
+        int newnums[] = new int[n+2];
+        System.arraycopy(nums,0,newnums,1,n);
+        newnums[0] = 1;
+        newnums[n+1] = 1;
+        // return f(newnums,1,n);
         int dp[][] = new int[n+2][n+2];
         for(int i=n;i>=1;i--)
         {
+            
             for(int j=1;j<=n;j++)
             {
                 if(i>j)
                     continue;
-                int maxP = Integer.MIN_VALUE;
+                int max = Integer.MIN_VALUE;
                 for(int k=i;k<=j;k++)
                 {
-                    int points = newNums[i-1]*newNums[k]*newNums[j+1] + dp[i][k-1]+dp[k+1][j];
-                    maxP = Math.max(maxP,points);
+                    int points = newnums[i-1]*newnums[k]*newnums[j+1]+dp[i][k-1]+dp[k+1][j];
+                    max = Math.max(max,points);
                 }
-                dp[i][j] = maxP;
+                dp[i][j] = max;
             }
         }
         return dp[1][n];
     }
+    public int f(int newnums[],int i,int j)
+    {
+        if(i>j)
+            return 0;
+        int maxi = Integer.MIN_VALUE;
+        for(int k = i;k<=j;k++)
+        {
+            int points = newnums[i-1]*newnums[k]*newnums[j+1]+f(newnums,i,k-1)+f(newnums,k+1,j);
+            maxi = Math.max(maxi,points);
+        }
+        return maxi;   
+        }
 }
