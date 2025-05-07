@@ -1,36 +1,37 @@
 class Solution 
 {
-    public int findNumberOfLIS(int[] nums) 
+    public int findNumberOfLIS(int[] arr) 
     {
-        int n = nums.length;
-        int dp[] = new int[n+1];
-        int counts[] = new int[n+1];
-        int maxCount=0,maxi=1;
-        for(int i=0;i<n;i++){
-            dp[i]=1;counts[i]=1;
-            }
+        int n = arr.length,maxi=1;
+        int dp[] = new int[n];
+        int cnt[] = new int[n];
+        int cnts=0;
         for(int i=0;i<n;i++)
         {
+            dp[i]=1;
+            cnt[i]=1;
             for(int j=0;j<i;j++)
             {
-                if(nums[i]>nums[j]){
-                    if(dp[j]+1>dp[i])
-                    {
-                        dp[i] = 1+dp[j];
-                        counts[i]=counts[j];
-                    }
-                    else if(dp[j]+1==dp[i])
-                    {
-                        counts[i]+=counts[j];
-                    }
-                    
+                if(arr[i]>arr[j] && dp[j]+1>dp[i])
+                {
+                    dp[i] = 1+dp[j];
+                    cnt[i] = cnt[j];
+                }
+                else if(arr[i]>arr[j] && dp[j]+1==dp[i])
+                {
+                    cnt[i]+=cnt[j];
                 }
             }
-            maxi=Math.max(maxi,dp[i]);
+            maxi = Math.max(maxi,dp[i]);
         }
         for(int i=0;i<n;i++)
-            if(maxi==dp[i])
-                maxCount+=counts[i];
-        return maxCount;
+        {
+            if(dp[i]==maxi)
+            {
+                cnts+=cnt[i];
+            }
+        }
+        return cnts;
+
     }
 }
