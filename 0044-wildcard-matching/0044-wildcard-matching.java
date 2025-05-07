@@ -1,36 +1,39 @@
-import java.util.Arrays;
-
-class Solution {
-    public boolean solve(int index1, int index2, String text, String pattern, int[][] dp) {
-        if (index1 < 0 && index2 < 0) return true;
-        if (index2 < 0 && index1 >= 0) return false;
-        if (index1 < 0 && index2 >= 0) {
-            for (int i = 0; i <= index2; i++) {
-                if (pattern.charAt(i) != '*') return false;
-            }
-            return true;
-        }
-        if (dp[index1][index2] != -1) {
-            return dp[index1][index2] == 1;
-        }
-
-        if (text.charAt(index1) == pattern.charAt(index2) || pattern.charAt(index2) == '?') {
-            dp[index1][index2] = solve(index1 - 1, index2 - 1, text, pattern, dp) ? 1 : 0;
-        } else if (pattern.charAt(index2) == '*') {
-            dp[index1][index2] = (solve(index1 - 1, index2, text, pattern, dp) || solve(index1, index2 - 1, text, pattern, dp)) ? 1 : 0;
-        } else {
-            dp[index1][index2] = 0;
-        }
-        return dp[index1][index2] == 1;
-    }
-
-    public boolean isMatch(String s, String p) {
-        int n1 = s.length();
-        int n2 = p.length();
-        int[][] dp = new int[n1][n2];
+class Solution 
+{
+    public boolean isMatch(String s, String p) 
+    {
+        int m = s.length(),n=p.length();
+        int dp[][] = new int[m+1][n+1];
         for (int[] row : dp) {
             Arrays.fill(row, -1);
         }
-       return  solve(n1-1,n2-1,s,p,dp);
+        return f(m-1,n-1,s,p,dp);
+    }
+    public boolean f(int i,int j,String s,String p,int dp[][])
+    {
+        if(j<0 && i<0)
+            return true;
+        if(i>=0 && j<0)
+            return false;
+        if(i<0 && j>=0)
+        {
+            for(int ind=0;ind<=j;ind++)
+            {
+                if(p.charAt(ind)!='*')
+                    return false;
+            }
+            return true;
+        }
+        if(dp[i][j]!=-1)
+            return dp[i][j]==1?true:false;
+
+        if(s.charAt(i)==p.charAt(j) || p.charAt(j)=='?')
+            dp[i][j] = f(i-1,j-1,s,p,dp)?1:0; 
+        else if(p.charAt(j)=='*')
+            dp[i][j] = f(i-1,j,s,p,dp)||f(i,j-1,s,p,dp)?1:0;
+        else
+            dp[i][j] = 0;
+
+        return dp[i][j]==1;
     }
 }
