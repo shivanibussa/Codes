@@ -3,21 +3,20 @@ class Solution
     public int lengthOfLIS(int[] nums) 
     {
         int n = nums.length;
-        int dp[] = new int[n+1];
-        for(int i=n-1;i>=0;i--)
+        int dp[] = new int[n],maxi=1;
+        for(int i=0;i<n;i++)
         {
-            int temp[] = new int[n+1];
-            for(int j=i-1;j>=-1;j--)
+            dp[i] = 1;
+        }
+        for(int i=1;i<n;i++)
+        {
+            for(int j=0;j<i;j++)
             {
-                int len=0;
-                len = 0+dp[j+1];
-                if(j==-1 || nums[i]>nums[j])
-                    len = Math.max(len,1+dp[i+1]);
-
-                temp[j+1] = len;
+            if(nums[i]>nums[j])
+                dp[i] = Math.max(dp[i],1+dp[j]);
             }
-            dp = temp;
-        }        
-        return dp[0];
+            maxi = Math.max(dp[i],maxi);
+        }
+        return maxi;
     }
 }
