@@ -3,23 +3,25 @@ class Solution
     public int maxProfit(int[] prices) 
     {
         int n = prices.length;
-        int dp[][] = new int[n+1][2];
+        int dp[] = new int[2];
 
         for(int i=n-1;i>=0;i--)
         {
+            int temp[] = new int[2];
             for(int j=0;j<2;j++)
             {
                 if(j==1)
                 {
-                    dp[i][j] = Math.max(-prices[i]+dp[i+1][0],dp[i+1][1]);
+                    temp[j] = Math.max(-prices[i]+dp[0],dp[1]);
                 }
                 else
                 {
-                    dp[i][j] = Math.max(prices[i]+dp[i+1][1],dp[i+1][0]);
+                    temp[j] = Math.max(prices[i]+dp[1],dp[0]);
                 }
             }
+            dp=temp;
         }
-        return dp[0][1];
+        return dp[1];
     }
     public int f(int prices[],int buy,int i)
     {
