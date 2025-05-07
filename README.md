@@ -52,6 +52,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
+| [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 | [0518-coin-change-ii](https://github.com/shivanibussa/Codes/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
@@ -430,6 +431,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0322-coin-change](https://github.com/shivanibussa/Codes/tree/master/0322-coin-change) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
+| [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/shivanibussa/Codes/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
@@ -500,6 +502,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
+| [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 ## Bit Manipulation
 |  |
 | ------- |
