@@ -1,35 +1,45 @@
 class Solution 
 {
-    public int maxProfit(int k, int[] prices) 
+    public int maxProfit(int ki, int[] prices) 
     {
         int n = prices.length;
-        int dp[][] = new int[2][k+1];
-        for(int j=0;j<2;j++)
-            dp[j][0] = 0;
-        
-        for(int j=0;j<2;j++)
-            for(int cap=0;cap<=k;cap++)
-                dp[j][cap]=0;
-
+        int dp[][] = new int [2][ki+1];
         for(int i=n-1;i>=0;i--)
         {
-            int curr[][] = new int[2][k+1];
+            int temp[][] = new int[2][ki+1];
             for(int j=0;j<2;j++)
             {
-                for(int cap=1;cap<=k;cap++)
+                for(int k=ki;k>0;k--)
                 {
                     if(j==1)
-                    {
-                        curr[j][cap] = Math.max(-prices[i]+dp[0][cap],dp[1][cap]);
-                    }
+                        temp[j][k] = Math.max(-prices[i]+dp[0][k],0+dp[1][k]);
                     else
-                    {
-                        curr[j][cap] = Math.max(prices[i]+dp[1][cap-1],dp[0][cap]);
-                    }
+                        temp[j][k] = Math.max(prices[i]+dp[1][k-1],0+dp[0][k]);
                 }
             }
-            dp = curr;
+            dp = temp;
         }
-        return dp[1][k];
+        return dp[1][ki];
     }
+    public int f(int prices[],int i,int buy,int cap)
+    {
+        if(i==prices.length)
+            return 0;
+
+        if(cap==0)
+            return 0;
+
+        int profit = 0;
+        if(buy==1)
+        {
+            profit = Math.max(-prices[i]+f(prices,i+1,0,cap),0+f(prices,i+1,1,cap));
+        }
+        else
+        {
+            profit = Math.max(prices[i]+f(prices,i+1,1,cap-1),0+f(prices,i+1,0,cap));
+        }
+
+        return profit;
+    }
+
 }
