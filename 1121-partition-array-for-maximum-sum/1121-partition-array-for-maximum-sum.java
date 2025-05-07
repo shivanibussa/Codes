@@ -4,19 +4,32 @@ class Solution
     {
         int n = arr.length;
         int dp[] = new int[n+1];
+        
         for(int i=n-1;i>=0;i--)
         {
-            int maxSum=Integer.MIN_VALUE;
-            int len=0,maxi=Integer.MIN_VALUE;
+            int len=0,max = Integer.MIN_VALUE,maxP=0;
             for(int j=i;j<Math.min(i+k,n);j++)
             {
                 len++;
-                maxi = Math.max(maxi,arr[j]);
-                int sum = len*maxi+dp[j+1];
-                maxSum = Math.max(maxSum,sum);
+                max = Math.max(max,arr[j]);
+                int points = (max*len)+dp[j+1];
+                maxP = Math.max(maxP,points);
             }
-            dp[i] = maxSum;
+            dp[i] = maxP;
         }
         return dp[0];
+    }
+    public int f(int arr[],int i,int k)
+    {
+        int n = arr.length;
+        int len=0,max = Integer.MIN_VALUE,maxP=0;
+        for(int j=i;j<Math.min(i+k,n);j++)
+        {
+            len++;
+            max = Math.max(max,arr[j]);
+            int points = (max*len)+f(arr,j+1,k);
+            maxP = Math.max(maxP,points);
+        }
+        return maxP;
     }
 }
