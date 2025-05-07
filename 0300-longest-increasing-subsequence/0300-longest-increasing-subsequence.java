@@ -1,22 +1,34 @@
-import java.util.*;
-import java.util.Arrays;
-class Solution
+class Solution 
 {
-    public int lengthOfLIS(int[] arr) 
+    public int lengthOfLIS(int[] nums) 
     {
-        ArrayList<Integer> al = new ArrayList<>();
-        for(int num:arr)
+        int n = nums.length;
+        int dp[][] = new int[n+1][n+1];
+
+        for(int i=n-1;i>=0;i--)
         {
-            int idx = Collections.binarySearch(al,num);
-            if(idx<0)
+            for(int j=i-1;j>=-1;j--)
             {
-                idx = -(idx+1);
+                int len = 0+dp[i+1][j+1];
+                if(j== -1 || nums[i]>nums[j])
+                {
+                    len = Math.max(len,1+dp[i+1][i+1]);
+                }
+                dp[i][j+1] = len;
             }
-            if(idx<al.size())
-                al.set(idx,num);
-            else
-                al.add(num);
         }
-        return al.size();
+        return dp[0][0];
+    }
+    public int f(int nums[],int i,int prev_ind, int n)
+    {
+        if(i==n)
+            return 0;
+
+        int len=0;
+        len = 0+f(nums,i+1,prev_ind,n);
+        if(prev_ind==-1 || nums[i]>nums[prev_ind])
+            len = Math.max(len,1+f(nums,i+1,i,n));
+
+        return len;
     }
 }
