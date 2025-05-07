@@ -3,30 +3,49 @@ class Solution
     public int minCut(String s) 
     {
         int n = s.length();
-        int dp[] = new int[n+2];
+        int dp[] = new int[n+1];
         for(int i=n-1;i>=0;i--)
         {
-            int minCuts = Integer.MAX_VALUE;
+            int mini = Integer.MAX_VALUE;
             for(int j=i;j<n;j++)
             {
-                if(isPalindrome(i,j,s)==true){
-                    int ways = 1+dp[j+1];
-                    minCuts = Math.min(minCuts,ways);
+                if(isPalindrome(i,j,s))
+                {
+                    int cost = 1+dp[j+1];
+                    mini = Math.min(cost,mini);
                 }
             }
-            dp[i] = minCuts;
+            dp[i] = mini;
         }
         return dp[0]-1;
     }
-    boolean isPalindrome(int f,int s,String str)
+    public int f(String s,int i,int n)
     {
-        while(f<s)
+        if(i==n)
+            return 0;
+
+        int mini = Integer.MAX_VALUE;
+        for(int j=i;j<n;j++)
         {
-            if(str.charAt(f)!=str.charAt(s))
-               return false;
-            f++;
-            s--;
             
+            if(isPalindrome(i,j,s))
+            {
+                int cost = 1+f(s,j+1,n);
+                mini = Math.min(cost,mini);
+            }
+        }
+        return mini;
+    }
+    public boolean isPalindrome(int f,int e,String s)
+    {
+        while(f<e)
+        {
+            if(s.charAt(f)!=s.charAt(e))
+            {
+                return false;
+            }
+            f++;
+            e--;
         }
         return true;
     }
