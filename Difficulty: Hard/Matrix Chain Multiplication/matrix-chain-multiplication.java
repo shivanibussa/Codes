@@ -20,26 +20,44 @@ class Geeks {
 // } Driver Code Ends
 
 
-// User function Template for Java
-
-class Solution {
-    static int matrixMultiplication(int arr[]) {
-        // code here
+class Solution 
+{
+    static int matrixMultiplication(int arr[]) 
+    {
         int n = arr.length;
+        if (n <= 2) return 0; 
         int dp[][] = new int[n][n];
+        for(int i=1;i<n;i++)
+            dp[i][i] = 0;
+            
         for(int i=n-1;i>=1;i--)
         {
+            
             for(int j=i+1;j<n;j++)
             {
-                int mini = (int)1e+9;
+                int mini = Integer.MAX_VALUE;
                 for(int k=i;k<j;k++)
                 {
-                    int steps = (arr[i-1]*arr[k]*arr[j])+dp[i][k]+dp[k+1][j];
+                    int steps = arr[i-1]*arr[k]*arr[j]+dp[i][k]+dp[k+1][j];
                     mini = Math.min(mini,steps);
                 }
                 dp[i][j] = mini;
             }
+            
         }
-        return dp[1][n-1];
+        return dp[1][n-1];   
+    }
+    static int f(int arr[],int i,int j)
+    {
+        if(i==j)
+            return 0;
+            
+        int mini = Integer.MAX_VALUE;
+        for(int k=i;k<j-1;k++)
+        {
+            int steps = arr[i-1]*arr[k]*arr[j]+f(arr,i,k)+f(arr,k,j);
+            mini = Math.min(mini,steps);
+        }
+        return mini;
     }
 }
