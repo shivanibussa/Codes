@@ -26,20 +26,29 @@ class GFG {
 
 class Solution 
 {
-    public int longestCommonSubstr(String t1, String t2) 
+    public int longestCommonSubstr(String s1, String s2) 
     {
-        int m = t1.length(),n=t2.length();
-        int dp[][] = new int[t1.length()+1][t2.length()+1];
-        int maxi=0;
-        for(int i=1;i<=t1.length();i++)
+        int m = s1.length(), n= s2.length(),maxi=0;
+        int dp[][] = new int[m+1][n+1];
+        for(int i=1;i<m+1;i++)
         {
-            for(int j=1;j<=t2.length();j++)
+            for(int j=1;j<n+1;j++)
             {
-                if(t1.charAt(i-1)==t2.charAt(j-1))
+                if(s1.charAt(i-1)==s2.charAt(j-1))
                 {
                     dp[i][j] = 1+dp[i-1][j-1];
-                    maxi = Math.max(maxi,dp[i][j]);
                 }
+                else
+                {
+                    dp[i][j] = 0;
+                }
+            }
+        }
+        for(int i=0;i<m+1;i++)
+        {
+            for(int j=0;j<n+1;j++)
+            {
+                maxi = Math.max(maxi,dp[i][j]);
             }
         }
         return maxi;
