@@ -38,51 +38,57 @@ System.out.println("~");
 
 class Solution 
 {
+    public void bfs(int r,int c,int grid[][],int visited[][],ArrayList<String>al,int r0,int c0)
+    {
+        int rows = grid.length, cols = grid[0].length;
+        Queue<int[]> q = new LinkedList<>();
+        visited[r][c] = 1;
+        q.offer(new int[]{r,c});
+        int dr[] = {-1,0,1,0};
+        int dc[] = {0,-1,0,1};
+        
+        while(!q.isEmpty())
+        {
+            int pop[] = q.poll();
+            int x=pop[0],y=pop[1];
+            al.add(toString(x-r0,y-c0));
+            for(int k=0;k<4;k++)
+            {
+                int nr = x+dr[k];
+                int nc = y+dc[k];
+                
+                if(nr>=0 && nr<rows && nc>=0 && nc<cols && grid[nr][nc]==1 && visited[nr][nc]==0)
+                {
+                    q.offer(new int[]{nr,nc});
+                    visited[nr][nc]=1;
+                }
+            }
+        }
+    }
+    
+    public String toString(int x,int y)
+    {
+        return Integer.toString(x)+" "+Integer.toString(y);
+    }
 
     int countDistinctIslands(int[][] grid) 
     {
         int m = grid.length, n = grid[0].length;
-        boolean visited[][] = new boolean[m][n];
+        int visited[][] = new int[m][n];
         HashSet<ArrayList<String>> hs = new HashSet<>();
-        
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
             {
-                if(grid[i][j]==1 && !visited[i][j])
+                if(grid[i][j]==1 && visited[i][j] ==0)
                 {
-                    ArrayList<String> arr = new ArrayList<>();
-                    dfs(i,j,grid,visited,arr,i,j);
-                    hs.add(arr);
+                    ArrayList<String> temp = new ArrayList<>();
+                    bfs(i,j,grid,visited,temp,i,j);
+                    hs.add(temp);
                 }
             }
         }
-        
         return hs.size();
-    }
-    public void dfs(int row,int col, int[][] grid, boolean[][] visited,ArrayList<String> arr,
-    int row0, int col0)
-    {
-        visited[row][col] = true;
-        arr.add(toString(row-row0,col-col0));
-        int dr[] = {-1,0,1,0};
-        int dc[] = {0,-1,0,1};
         
-        for(int i=0;i<4;i++)
-        {
-            int nr = row+dr[i];
-            int nc = col+dc[i];
-            
-            if(nr>=0 && nr<grid.length && nc>=0 && nc<grid[0].length && 
-            grid[nr][nc]==1 && !visited[nr][nc])
-            {
-                dfs(nr,nc,grid,visited,arr,row0,col0);
-            }
-        }
-        
-    }
-    public String toString(int r,int c)
-    {
-        return Integer.toString(r)+" "+Integer.toString(c);
     }
 }
