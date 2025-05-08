@@ -47,32 +47,25 @@ class Solution
         {
             if(color[i]==-1)
             {
-                if(bfs(i,adj,color)==false)
+                if(dfs(i,adj,color,0)==false)
                     return false;
             }
         }
         return true;
     }
-    public boolean bfs(int node, List<List<Integer>> adj, int color[])
+    public boolean dfs(int node, List<List<Integer>> adj, int color[],int col)
     {
-        Queue<Integer> q= new LinkedList<>();
-        q.add(node);
-        color[node]=0;
-        while(!q.isEmpty())
+        color[node]=col;
+        for(int it:adj.get(node))
         {
-            int pop = q.poll();
-            
-            for(int it:adj.get(pop))
+            if(color[it]==-1)
             {
-                if(color[it]==-1)
-                {
-                    q.add(it);
-                    color[it] = 1-color[pop];
-                }
-                else if(color[it]==color[pop])
-                {
+                if(dfs(it,adj,color,1-col)==false)
                     return false;
-                }
+            }
+            else if(color[node]==color[it])
+            {
+                return false;
             }
         }
         return true;
