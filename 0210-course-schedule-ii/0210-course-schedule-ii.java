@@ -38,7 +38,8 @@ class Solution {
         }
         if(c!=V)
             return new int[]{};
-        return al;
+        else
+            return al;
         
     }
 }
