@@ -1,69 +1,81 @@
 //{ Driver Code Starts
+// Initial Template for Java
 import java.io.*;
-import java.lang.*;
 import java.util.*;
 
 class GFG {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine().trim());
-        while (T-- > 0) {
-            String[] s = br.readLine().trim().split(" ");
-            int V = Integer.parseInt(s[0]);
-            int E = Integer.parseInt(s[1]);
-            ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-            for (int i = 0; i < V; i++) adj.add(i, new ArrayList<Integer>());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int tc = sc.nextInt();
+        while (tc-- > 0) {
+            int V = sc.nextInt();
+            int E = sc.nextInt();
+            int[][] edges = new int[E][2];
             for (int i = 0; i < E; i++) {
-                String[] S = br.readLine().trim().split(" ");
-                int u = Integer.parseInt(S[0]);
-                int v = Integer.parseInt(S[1]);
-                adj.get(u).add(v);
-                adj.get(v).add(u);
+                edges[i][0] = sc.nextInt();
+                edges[i][1] = sc.nextInt();
             }
-            Solution obj = new Solution();
-            boolean ans = obj.isCycle(adj);
-            if (ans)
-                System.out.println("1");
-            else
-                System.out.println("0");
 
+            Solution obj = new Solution();
+            boolean ans = obj.isCycle(V, edges);
+            System.out.println(ans ? "true" : "false");
             System.out.println("~");
         }
+        sc.close();
     }
 }
+
 // } Driver Code Ends
 
 
 class Solution 
 {
-    public boolean isCycle(ArrayList<ArrayList<Integer>> adj) 
+    public boolean isCycle(int V, int[][] edges) 
     {
-        int V = adj.size();
-        boolean visited[] = new boolean[V];
+        List<List<Integer>> adj = new ArrayList<>();
+        int visited[] = new int[V];
         for(int i=0;i<V;i++)
         {
-            if(!visited[i])
+            adj.add(new ArrayList<>());
+        }
+        for(int pair[]:edges)
+        {
+            int a = pair[0];
+            int b = pair[1];
+            adj.get(a).add(b);
+            adj.get(b).add(a);
+        }
+        
+        for(int i=0;i<V;i++)
+        {
+            if(visited[i]!=1)
             {
-                boolean bool = dfs(i,-1,visited,adj);
-                if(bool==true)
+                if(bfs(i,adj,visited)==true)
                     return true;
             }
         }
         return false;
+        
     }
-    public boolean dfs(int z,int p,boolean visited[],ArrayList<ArrayList<Integer>> adj)
+    public boolean bfs(int node,List<List<Integer>> adj,int visited[])
     {
-        visited[z]=true;
-        for(int neighbor:adj.get(z))
+        Queue<int[]> q = new LinkedList<int[]>();
+        q.add(new int[]{node,-1});
+        visited[node] = 1;
+        while(!q.isEmpty())
         {
-            if(!visited[neighbor])
+            int pop[] = q.poll();
+            int n = pop[0];
+            int parent = pop[1];
+            for(int nv:adj.get(n))
             {
-                if(dfs(neighbor,z,visited,adj)==true)
+                if(visited[nv]==1 && nv!=parent)
                     return true;
-            }
-            else if(visited[neighbor]==true && neighbor!=p)
-            {
-                return true;
+                else if(visited[nv]==0)
+                {
+                    q.offer(new int[]{nv,n});
+                    visited[nv]=1;
+                }
             }
         }
         return false;
