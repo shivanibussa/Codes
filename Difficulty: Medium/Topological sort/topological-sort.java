@@ -4,31 +4,30 @@ import java.lang.*;
 import java.util.*;
 
 class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(read.readLine());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
 
         while (t-- > 0) {
+            int V = sc.nextInt();
+            int E = sc.nextInt();
+            int x = V;
             ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-            int vertices = Integer.parseInt(read.readLine());
-            int edges = Integer.parseInt(read.readLine());
+            for (int i = 0; i < V; i++) adj.add(i, new ArrayList<Integer>());
 
-            for (int i = 0; i < vertices; i++) adj.add(i, new ArrayList<Integer>());
-
-            int p = 0;
-            for (int i = 1; i <= edges; i++) {
-                String s[] = read.readLine().trim().split("\\s+");
-                int u = Integer.parseInt(s[0]);
-                int v = Integer.parseInt(s[1]);
-                adj.get(u).add(v);
+            int[][] edges = new int[E][2];
+            for (int i = 0; i < E; i++) {
+                edges[i][0] = sc.nextInt();
+                edges[i][1] = sc.nextInt();
+                adj.get(edges[i][0]).add(edges[i][1]);
             }
 
-            ArrayList<Integer> res = new Solution().topologicalSort(adj);
+            ArrayList<Integer> res = new Solution().topoSort(V, edges);
 
-            if (check(adj, vertices, res) == true)
-                System.out.println("1");
+            if (check(adj, x, res) == true)
+                System.out.println("true");
             else
-                System.out.println("0");
+                System.out.println("false");
             System.out.println("~");
         }
     }
@@ -56,39 +55,47 @@ class Main {
 
 class Solution 
 {
-    static ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj) 
+    public static ArrayList<Integer> topoSort(int V, int[][] edges) 
     {
-        int V = adj.size();
-        int indegree[] = new int[V];
-        Queue<Integer> q = new LinkedList<>();
-        ArrayList<Integer> arr = new ArrayList<>();
+        List<List<Integer>> adj = new ArrayList<>();
+        ArrayList<Integer> al = new ArrayList<>();
+        Stack<Integer> st = new Stack<>();
+        int visited[] = new int[V];
+        
+        for(int i =0;i<V;i++)
+            adj.add(new ArrayList<>());
+            
+        for(int pair[]:edges)
+        {
+            int a = pair[0], b = pair[1];
+            adj.get(a).add(b);
+        }
         
         for(int i=0;i<V;i++)
         {
-            for(int it:adj.get(i))
+            if(visited[i]==0)
             {
-                indegree[it]++;
+                dfs(i,adj,visited,st);
             }
         }
-        for(int i=0;i<V;i++)
+        while(!st.isEmpty())
         {
-            if(indegree[i]==0)
-                q.add(i);
+            al.add(st.pop());
         }
+        return al;
         
-        while(!q.isEmpty())
+    }
+    public static void dfs(int node, List<List<Integer>> adj, int visited[], Stack<Integer> st)
+    {
+        visited[node]=1;
+        
+        for(int nv:adj.get(node))
         {
-            int pop = q.poll();
-            arr.add(pop);
-            for(int it:adj.get(pop))
+            if(visited[nv]==0)
             {
-                indegree[it]--;
-                if(indegree[it]==0)
-                {
-                    q.add(it);
-                }
+                dfs(nv,adj,visited,st);
             }
         }
-        return arr;
+        st.push(node);
     }
 }
