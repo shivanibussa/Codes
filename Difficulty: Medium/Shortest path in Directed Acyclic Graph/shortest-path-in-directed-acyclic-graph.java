@@ -30,68 +30,70 @@ class Main {
 // } Driver Code Ends
 
 
+// User function Template for Java
 class Solution 
 {
-
     public int[] shortestPath(int V, int E, int[][] edges) 
     {
-        ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
-        Stack<Integer> st = new Stack<>();
-        boolean visited[] = new boolean[V];
+        List<List<int[]>> adj = new ArrayList<>();
         int dist[] = new int[V];
-        
+        Stack<Integer> st = new Stack<>();
+        int visited[] = new int[V];
         for(int i=0;i<V;i++)
         {
             adj.add(new ArrayList<>());
+            dist[i] = Integer.MAX_VALUE;
         }
-        for(int i=0;i<edges.length;i++)
+            
+        for(int pair[]:edges)
         {
-            int u = edges[i][0];
-            int v = edges[i][1];
-            int wt = edges[i][2];
+            int u = pair[0], v = pair[1], wt = pair[2];
             adj.get(u).add(new int[]{v,wt});
         }
         for(int i=0;i<V;i++)
         {
-            if(!visited[i])
+            if(visited[i]==0)
             {
-                dfs(i,adj,st,visited);
+                dfs(adj,i,visited,st);
             }
         }
         
-        for(int i=0;i<V;i++)
-            dist[i] = Integer.MAX_VALUE;
-        dist[0] = 0;
+        dist[0]=0;
         while(!st.isEmpty())
         {
             int pop = st.pop();
-            for(int i=0;i<adj.get(pop).size();i++)
+            
+            for(int it[]:adj.get(pop))
             {
-                int node = adj.get(pop).get(i)[0];
-                int weight = adj.get(pop).get(i)[1];
+                int nv = it[0];
+                int wt = it[1];
                 
-                if(dist[pop] != Integer.MAX_VALUE && dist[pop] + weight < dist[node])
-                    dist[node] = dist[pop]+weight;
+                if(dist[pop]!=Integer.MAX_VALUE && wt+dist[pop]<dist[nv])
+                {
+                    dist[nv] = dist[pop]+wt;
+                }
             }
         }
         for(int i=0;i<V;i++)
         {
             if(dist[i]==Integer.MAX_VALUE)
             {
-                dist[i]=-1;
+                dist[i] = -1;
             }
         }
         return dist;
     }
-    public void dfs(int node, ArrayList<ArrayList<int[]>> adj,Stack<Integer> st, boolean visited[])
+    public void dfs(List<List<int[]>> adj, int node,int visited[],Stack<Integer> st)
     {
-        visited[node] = true;
-        for(int i=0;i<adj.get(node).size();i++)
+        visited[node]=1;
+        Q
+        for(int it[]:adj.get(node))
         {
-            int neighbor = adj.get(node).get(i)[0];
-            if(!visited[neighbor])
+            int nv = it[0];
+            int w = it[1];
+            if(visited[nv]==0)
             {
-                dfs(neighbor,adj,st,visited);
+                dfs(adj,nv,visited,st);
             }
         }
         st.push(node);
