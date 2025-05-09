@@ -1,95 +1,87 @@
 //{ Driver Code Starts
-import java.io.*;
-import java.lang.*;
 import java.util.*;
 
-class iPair {
-    int first, second;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    iPair(int first, int second) {
-        this.first = first;
-        this.second = second;
-    }
-}
+        int t = Integer.parseInt(sc.nextLine());
 
-class DriverClass {
-    public static void main(String args[]) throws IOException {
-        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(read.readLine());
         while (t-- > 0) {
-            String str[] = read.readLine().trim().split(" ");
-            int V = Integer.parseInt(str[0]);
-            int E = Integer.parseInt(str[1]);
+            int V = Integer.parseInt(sc.nextLine());
+            int E = Integer.parseInt(sc.nextLine());
 
-            ArrayList<ArrayList<iPair>> adj = new ArrayList<ArrayList<iPair>>();
-            for (int i = 0; i < V; i++) {
-                adj.add(new ArrayList<iPair>());
+            List<int[]> edgeList = new ArrayList<>();
+
+            for (int i = 0; i < E; i++) {
+                String[] parts = sc.nextLine().split(" ");
+                int u = Integer.parseInt(parts[0]);
+                int v = Integer.parseInt(parts[1]);
+                int w = Integer.parseInt(parts[2]);
+                edgeList.add(new int[] {u, v, w});
+                edgeList.add(new int[] {v, u, w});
             }
 
-            int i = 0;
-            while (i++ < E) {
-                String S[] = read.readLine().trim().split(" ");
-                int u = Integer.parseInt(S[0]);
-                int v = Integer.parseInt(S[1]);
-                int w = Integer.parseInt(S[2]);
-                iPair t1 = new iPair(v, w);
-                iPair t2 = new iPair(u, w);
-                adj.get(u).add(t1);
-                adj.get(v).add(t2);
+            int[][] edges = new int[edgeList.size()][3];
+            for (int i = 0; i < edgeList.size(); i++) {
+                edges[i] = edgeList.get(i);
             }
 
-            int src = Integer.parseInt(read.readLine());
+            int src = Integer.parseInt(sc.nextLine());
 
-            Solution ob = new Solution();
+            Solution obj = new Solution();
+            int[] res = obj.dijkstra(V, edges, src);
 
-            ArrayList<Integer> res = ob.dijkstra(adj, src);
-
-            for (i = 0; i < V; i++) System.out.print(res.get(i) + " ");
+            for (int val : res) {
+                System.out.print(val + " ");
+            }
             System.out.println();
-
             System.out.println("~");
         }
+
+        sc.close();
     }
 }
+
 // } Driver Code Ends
 
 
-/*
-class iPair {
-    int first, second;
-
-    iPair(int first, int second) {
-        this.first = first;
-        this.second = second;
-    }
-}
-*/
-
-
+// User function Template for Java
 class Solution 
 {
-    ArrayList<Integer> dijkstra(ArrayList<ArrayList<iPair>> adj, int src) 
+    public int[] dijkstra(int V, int[][] edges, int src) 
     {
+        List<List<int[]>> adj = new ArrayList<>();
+        int dist[] = new int[V];
         PriorityQueue<int[]> q = new PriorityQueue<>((a,b)->a[0]-b[0]);
-        int V = adj.size();
-        ArrayList<Integer> dist= new ArrayList<>();
         for(int i=0;i<V;i++)
-            dist.add(Integer.MAX_VALUE);
-        dist.set(src,0);
-        
+        {
+            adj.add(new ArrayList<>());
+            dist[i] = Integer.MAX_VALUE;
+        }
+        for(int edge[]:edges)
+        {
+            int a = edge[0];
+            int b = edge[1];
+            int wt = edge[2];
+            
+            adj.get(a).add(new int[]{b,wt});
+        }
+        dist[src] = 0;
         q.add(new int[]{0,src});
         while(!q.isEmpty())
         {
-            int[] pop = q.poll();
-            int d = pop[0];
-            int n = pop[1];
-            for(iPair neigh:adj.get(n))
+            int popz[] = q.poll();
+            int pop = popz[1];
+            for(int it[]:adj.get(pop))
             {
-                int neighN = neigh.first;
-                if(d+neigh.second<dist.get(neighN))
+                int nv = it[0];
+                int w = it[1];
+                
+                if(dist[pop]+w<dist[nv])
                 {
-                    dist.set(neighN, d+neigh.second);
-                    q.add(new int[]{dist.get(neighN),neighN});
+                    dist[nv] = w+dist[pop];
+                    q.offer(new int[]{dist[nv],nv});
                 }
             }
         }
