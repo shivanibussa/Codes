@@ -42,34 +42,29 @@ class Solution
 {
     static int spanningTree(int V, int E, List<List<int[]>> adj) 
     {
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        int res=0;
         int visited[] = new int[V];
-        int mwt=0;
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> a[0]-b[0]);
         pq.offer(new int[]{0,0});
         while(!pq.isEmpty())
         {
-            int pop[] = pq.poll();
-            int wt = pop[0];
-            int node = pop[1];
-            
-            if(visited[node]==0)
+            int pair[] = pq.poll();
+            int wt = pair[0];
+            int n = pair[1];
+            if(visited[n]==1)
+                continue;
+             visited[n]=1;
+             res+=wt;
+            for(int it[]:adj.get(n))
             {
-             
-                visited[node] = 1;
-                 mwt+=wt;
-                for(int it[]: adj.get(node))
+                int nv = it[0];
+                int w = it[1];
+                if(visited[nv]==0)
                 {
-                    int wts = it[1];
-                    int neigh = it[0];
-                   
-                    if(visited[neigh]==0)
-                    {
-                        pq.offer(new int[]{wts,neigh});
-                        
-                    }
+                   pq.offer(new int[]{w,nv});
                 }
             }
         }
-        return mwt;
+        return res;
     }
 }
