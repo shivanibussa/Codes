@@ -9,62 +9,69 @@ import java.util.*;
 
 class Solution 
 {
-    public void dfs(int node,int visited[],ArrayList<ArrayList<Integer>> adj,Stack<Integer> st)
+    public void dfs(int node,ArrayList<ArrayList<Integer>> adj,Stack<Integer> st, boolean visited[])
     {
-        visited[node]=1;
+        visited[node] = true;
         for(int it:adj.get(node))
         {
-            if(visited[it]==0)
-            dfs(it,visited,adj,st);
+            if(!visited[it])
+            {
+                dfs(it,adj,st,visited);
+            }
+            
         }
         st.push(node);
     }
-    public void dfs3(int node,int visited[],ArrayList<ArrayList<Integer>> adjT)
+    public void dfs2(int node,ArrayList<ArrayList<Integer>> adj, boolean visited[])
     {
-        visited[node]=1;
-        for(int it:adjT.get(node))
+        visited[node] = true;
+        for(int it:adj.get(node))
         {
-            if(visited[it]==0)
-            dfs3(it,visited,adjT);
+            if(!visited[it])
+            {
+                dfs2(it,adj,visited);
+            }
+            
         }
     }
     public int kosaraju(ArrayList<ArrayList<Integer>> adj) 
     {
-        int V = adj.size();
+        int V = adj.size(),scc=0;
+        boolean visited[] = new boolean[V];
+        ArrayList<ArrayList<Integer>> adjT = new ArrayList<>();
         Stack<Integer> st = new Stack<>();
-        int visited[] = new int[V];
-        for(int i=0;i<V;i++)
+        for(int i=0;i<adj.size();i++)
         {
-            if(visited[i]==0)
+            if(!visited[i])
             {
-                dfs(i,visited,adj,st);
+                dfs(i,adj,st,visited);
             }
         }
-        ArrayList<ArrayList<Integer>> adjT = new ArrayList<>();
-        for(int i=0;i<V;i++)
-            adjT.add(new ArrayList<>());
         for(int i=0;i<V;i++)
         {
-            visited[i]=0;
+            adjT.add(new ArrayList<>());
+            visited[i] = false;
+        }
+        
+        for(int i=0;i<V;i++)
+        {
             for(int it:adj.get(i))
             {
                 adjT.get(it).add(i);
             }
         }
         
-        int scc=0;
         while(!st.isEmpty())
         {
-            int node = st.pop();
-            if(visited[node]==0)
+            int i = st.pop();
+            if(!visited[i])
             {
                 scc++;
-                dfs3(node,visited,adjT);
+                dfs2(i,adjT,visited);
             }
         }
         return scc;
     }
-    
 }
 
 
