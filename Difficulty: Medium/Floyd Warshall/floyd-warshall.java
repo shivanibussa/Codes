@@ -17,7 +17,7 @@ class GFG {
                 for (int j = 0; j < n; j++) matrix[i][j] = Integer.parseInt(s[j]);
             }
             Solution obj = new Solution();
-            obj.shortestDistance(matrix);
+            obj.floydWarshall(matrix);
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     System.out.print(matrix[i][j] + " ");
@@ -33,40 +33,23 @@ class GFG {
 // } Driver Code Ends
 
 
+// User function template for JAVA
 
-
-class Solution 
-{
-    public void shortestDistance(int[][] mat) 
+class Solution {
+    public void floydWarshall(int[][] dist) 
     {
-        int m = mat.length;
-       for(int i=0;i<m;i++)
-       {
-           for(int j=0;j<m;j++)
-           {
-               if(mat[i][j]==-1)
-                mat[i][j] = (int)1e8;
-                if(i==j)
-                    mat[i][j] = 0;
-           }
-       }
-       for(int k=0;k<m;k++)
-       {
-           for(int i=0;i<m;i++)
-           {
-               for(int j=0;j<m;j++)
-               {
-                   mat[i][j] = Math.min(mat[i][j],(mat[i][k]+mat[k][j]));
-               }
-           }
-       }
-       for(int i=0;i<m;i++)
-       {
-           for(int j=0;j<m;j++)
-           {
-               if(mat[i][j]==(int)1e8)
-                mat[i][j] = -1;
-           }
-       }
+        int n = dist.length;
+        for(int via=0;via<n;via++)
+        {
+            for(int i=0;i<n;i++)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    if(dist[i][via]!=1e8 && dist[via][j]!=1e8)
+                    dist[i][j] = Math.min(dist[i][j],dist[i][via]+dist[via][j]);
+                }
+            }
+        }
+        
     }
 }
