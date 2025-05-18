@@ -82,6 +82,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
+| [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
@@ -160,6 +161,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0115-distinct-subsequences](https://github.com/shivanibussa/Codes/tree/master/0115-distinct-subsequences) |
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
+| [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
@@ -184,6 +186,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/shivanibussa/Codes/tree/master/0173-binary-search-tree-iterator) |
+| [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
@@ -533,4 +536,8 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
+## Trie
+|  |
+| ------- |
+| [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 <!---LeetCode Topics End-->
