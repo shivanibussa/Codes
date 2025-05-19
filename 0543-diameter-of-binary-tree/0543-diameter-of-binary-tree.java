@@ -13,21 +13,22 @@
  *     }
  * }
  */
-class Solution {
-    private int maxh =0;
+class Solution 
+{
+    public int maxh=Integer.MIN_VALUE;
+    public int diameterOfBinaryTree(TreeNode root) 
+    {
+        int res = f(root);
+        return maxh;
+    }
     public int f(TreeNode root)
     {
         if(root==null)
             return 0;
-        int left = f(root.left);
-        int right = f(root.right);
-        maxh = Math.max(maxh,left+right);
-        return 1+Math.max(left,right);
-    }
-    public int diameterOfBinaryTree(TreeNode root) {
-        if(root==null)
-            return 0;
-        f(root);
-        return maxh;
+
+        int lh = f(root.left);
+        int rh = f(root.right);
+        maxh = Math.max(maxh,lh+rh);
+        return 1+Math.max(lh,rh);
     }
 }
