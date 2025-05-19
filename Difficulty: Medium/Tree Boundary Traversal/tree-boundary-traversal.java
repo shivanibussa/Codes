@@ -104,32 +104,31 @@ class Solution
 {
     ArrayList<Integer> boundaryTraversal(Node root) 
     {
-        ArrayList<Integer> al = new ArrayList<>();
-        if(root ==null)
-	    return al;
-	    if (!isLeaf(root)) 
-	        al.add(root.data);
-        addLeftBoundary(root,al);
-        addLeaves(root,al);
-        addRightBoundary(root,al);
-        return al;
+        ArrayList<Integer> res = new ArrayList<>();
+        if(root==null)
+            return res;
+            
+        if (!isLeaf(root)) res.add(root.data);
+        addLeft(root,res);
+        addLeave(root,res);
+        addRight(root,res);
+        return res;
     }
-    public static boolean isLeaf(Node root)
+    
+    public boolean isLeaf(Node root)
     {
         if(root.left==null && root.right==null)
             return true;
         return false;
     }
     
-    public static void addLeftBoundary(Node node, ArrayList<Integer> al)
+    public void addLeft(Node root,ArrayList<Integer> res)
     {
-        Node curr = node.left;
+        Node curr = root.left;
         while(curr!=null)
         {
             if(!isLeaf(curr))
-            {
-                al.add(curr.data);
-            }
+                res.add(curr.data);
             if(curr.left!=null)
                 curr = curr.left;
             else
@@ -137,33 +136,30 @@ class Solution
         }
     }
     
-    public static void addRightBoundary(Node node, ArrayList<Integer> al)
+    public void addRight(Node root,ArrayList<Integer> res)
     {
-        Node curr = node.right;
-        ArrayList<Integer> temp = new ArrayList<>();
+        Node curr = root.right;
+        ArrayList temp = new ArrayList<>();
         while(curr!=null)
         {
             if(!isLeaf(curr))
-            {
                 temp.add(curr.data);
-            }
             if(curr.right!=null)
                 curr = curr.right;
             else
                 curr = curr.left;
         }
         Collections.reverse(temp);
-        al.addAll(temp);
+        res.addAll(temp);
     }
     
-    public static void addLeaves(Node node, ArrayList<Integer> al)
+    public void addLeave(Node root,ArrayList<Integer> res)
     {
-        if(isLeaf(node))
-            al.add(node.data);
-        if(node.left!=null)
-            addLeaves(node.left,al);
-        if(node.right!=null)
-            addLeaves(node.right,al);
+        if(isLeaf(root))
+        res.add(root.data);
+        if(root.left!=null)
+            addLeave(root.left,res);
+        if(root.right!=null)
+            addLeave(root.right,res);
     }
-    
 }
