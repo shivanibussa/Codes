@@ -41,13 +41,4 @@ class Solution
         }
         return res;
     }
-    public void inorder(ArrayList<Integer> res, TreeNode root)
-    {
-        if(root==null)
-            return;
-
-        inorder(res,root.left);
-        res.add(root.val);
-        inorder(res,root.right);
-    }
 }
