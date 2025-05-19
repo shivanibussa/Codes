@@ -24,19 +24,22 @@ class Solution
         q.add(root);
         while(!q.isEmpty())
         {
-            int size = q.size();
-            List<Integer> temp = new ArrayList<>();
-            for(int i=0;i<size;i++)
+            int s = q.size();
+            ArrayList<Integer> temp = new ArrayList<>();
+            for(int i=0;i<s;i++)
             {
-                TreeNode pop = q.poll();
-                temp.add(pop.val);
-                if(pop.left!=null)
-                    q.add(pop.left);
-                if(pop.right!=null)
-                    q.add(pop.right);
+                TreeNode node = q.poll();
+                temp.add(node.val);
+                if(node.left!=null){
+                    q.offer(node.left);
+                }
+                if(node.right!=null){
+                    q.offer(node.right);
+                }    
             }
             res.add(temp);
         }
         return res;
+
     }
 }
