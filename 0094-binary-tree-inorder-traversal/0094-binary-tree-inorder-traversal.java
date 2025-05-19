@@ -18,7 +18,27 @@ class Solution
     public List<Integer> inorderTraversal(TreeNode root) 
     {
         ArrayList<Integer> res = new ArrayList<>();
-        inorder(res,root);
+        Stack<TreeNode> st = new Stack<>();
+        if(root==null)
+            return res;
+        TreeNode curr = root;
+        while(true)
+        {
+            if(curr!=null)
+            {
+                st.add(curr);
+                curr = curr.left;
+            }
+            else
+            {
+                if(st.isEmpty())
+                    break;
+
+                TreeNode pop = st.pop();
+                res.add(pop.val);
+                curr = pop.right;
+            }
+        }
         return res;
     }
     public void inorder(ArrayList<Integer> res, TreeNode root)
