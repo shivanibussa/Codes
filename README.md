@@ -52,6 +52,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 | [0518-coin-change-ii](https://github.com/shivanibussa/Codes/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
@@ -85,6 +86,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
@@ -510,6 +512,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0222-count-complete-tree-nodes](https://github.com/shivanibussa/Codes/tree/master/0222-count-complete-tree-nodes) |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 ## Monotonic Stack
 |  |
 | ------- |
@@ -540,4 +543,5 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 <!---LeetCode Topics End-->
