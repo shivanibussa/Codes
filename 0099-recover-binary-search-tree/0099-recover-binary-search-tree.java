@@ -13,17 +13,18 @@
  *     }
  * }
  */
-class Solution {
-    private TreeNode first;
-    private TreeNode second;
-    private TreeNode mid;
-    private TreeNode prev;
-    private void inorder(TreeNode root)
+class Solution 
+{
+    TreeNode prev;
+    TreeNode first;
+    TreeNode second;
+    TreeNode mid;
+    public void inorder(TreeNode root)
     {
         if(root==null)
             return;
         inorder(root.left);
-        if(prev!=null &&(root.val<prev.val))
+        if(prev != null && root.val<prev.val)
         {
             if(first==null)
             {
@@ -35,16 +36,12 @@ class Solution {
                 second = root;
             }
         }
-        prev=root;
+        prev = root;
         inorder(root.right);
-
     }
     public void recoverTree(TreeNode root) 
     {
-        first=null;
-        second=null;
-        mid=null;
-        prev=null;
+        prev = null;first=null;second=null;mid=null;
         inorder(root);
         if(first!=null && second!=null)
         {
@@ -58,5 +55,6 @@ class Solution {
             first.val = mid.val;
             mid.val = temp;
         }
+        
     }
 }
