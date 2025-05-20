@@ -17,26 +17,26 @@ class Solution
 {
     public TreeNode buildTree(int[] inorder, int[] postorder) 
     {
-        HashMap<Integer, Integer> inMap = new HashMap<>();
-        for(int i=0;i<inorder.length;i++)
+        HashMap<Integer,Integer> hm = new HashMap<>();
+        int n = postorder.length;
+        for(int i=0;i<n;i++)
         {
-            inMap.put(inorder[i],i);
+            hm.put(inorder[i],i);
         }
-        TreeNode root = helper(postorder,0,postorder.length-1,inorder,0,inorder.length-1,inMap);
-        return root;
+
+        return helper(postorder,0,n-1,inorder,0,n-1,hm);
     }
-    
-    public TreeNode helper(int[] postorder, int poststart, int postend, int[] inorder,int instart, int inend, HashMap<Integer, Integer> inMap)
+
+    public TreeNode helper(int postorder[],int ps,int pe,int inorder[],int is,int ie,HashMap<Integer,Integer> hm)
     {
-        if(poststart>postend || instart>inend)
+        if(ps>pe || is>ie)
             return null;
         
-        int inRoot = inMap.get(postorder[postend]);
-        TreeNode root = new TreeNode(postorder[postend]);
-        int numsleft = inRoot-instart;
-        root.left = helper(postorder,poststart,numsleft+poststart-1,inorder,instart,inRoot-1,inMap);
-        root.right = helper(postorder,poststart+numsleft,postend-1,inorder,inRoot+1,inend,inMap);
+        TreeNode root = new TreeNode(postorder[pe]);
+        int inroot = hm.get(root.val);
+        int numsLeft = inroot-is;
+        root.left = helper(postorder,ps,ps+numsLeft-1,inorder,is,inroot-1,hm);
+        root.right = helper(postorder,ps+numsLeft,pe-1,inorder,inroot+1,ie,hm);
         return root;
-
     }
 }
