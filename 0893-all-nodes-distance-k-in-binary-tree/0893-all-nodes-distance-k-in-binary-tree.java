@@ -9,49 +9,47 @@
  */
 class Solution 
 {
-    public void parentFeed(HashMap<TreeNode,TreeNode> parents,TreeNode root)
+    public void parentsFeed(HashMap<TreeNode,TreeNode> parents, TreeNode root)
     {
         Queue<TreeNode> q = new LinkedList<>();
-        q.offer(root);
+        q.add(root);
         while(!q.isEmpty())
         {
-            TreeNode node = q.poll();
-            if(node.left!=null)
+            TreeNode pop = q.poll();
+            if(pop.left!=null)
             {
-                q.offer(node.left);
-                parents.put(node.left,node);
+                q.offer(pop.left);
+                parents.put(pop.left,pop);
             }
-            if(node.right!=null)
+            if(pop.right!=null)
             {
-                q.offer(node.right);
-                parents.put(node.right,node);
+                q.offer(pop.right);
+                parents.put(pop.right,pop);
             }
-        }
-        for(Map.Entry<TreeNode,TreeNode> es:parents.entrySet())
-        {
-            System.out.println(es.getKey().val+"->"+es.getValue().val);
         }
     }
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) 
     {
         HashMap<TreeNode,TreeNode> parents = new HashMap<>();
-        parentFeed(parents,root);
-        ArrayList<Integer> res = new ArrayList<>();
-        int curr=0;
+        parentsFeed(parents,root);
+        ArrayList<Integer> res =new ArrayList<>();
         Queue<TreeNode> q = new LinkedList<>();
         HashMap<TreeNode,Boolean> visited = new HashMap<>();
+        int curr=0;
+
         q.offer(target);
-        visited.put(target,true);
         while(!q.isEmpty())
         {
-            int size=q.size();
+            int s = q.size();
             if(curr==k)
                 break;
+            
             curr++;
-            for(int i=0;i<size;i++)
+            for(int i=0;i<s;i++)
             {
                 TreeNode pop = q.poll();
                 visited.put(pop,true);
+
                 if(pop.left!=null && visited.get(pop.left)==null)
                 {
                     q.offer(pop.left);
@@ -62,7 +60,7 @@ class Solution
                     q.offer(pop.right);
                     visited.put(pop.right,true);
                 }
-                if(parents.get(pop)!=null && visited.get(parents.get(pop))==null)
+                if(parents.get(pop)!=null  && visited.get(parents.get(pop))==null)
                 {
                     q.offer(parents.get(pop));
                     visited.put(parents.get(pop),true);
@@ -71,10 +69,8 @@ class Solution
         }
         while(!q.isEmpty())
         {
-            TreeNode p = q.poll();
-            res.add(p.val);
+            res.add(q.poll().val);
         }
-
         return res;
     }
 }
