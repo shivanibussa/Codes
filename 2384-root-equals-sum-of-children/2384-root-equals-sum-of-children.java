@@ -15,6 +15,10 @@
  */
 class Solution 
 {
+    public boolean checkTree(TreeNode root) 
+    {
+        return f(root)==root.val;
+    }
     public int f(TreeNode root)
     {
         if(root.left==null && root.right==null)
@@ -23,9 +27,5 @@ class Solution
         int left = f(root.left);
         int right = f(root.right);
         return left+right;
-    }
-    public boolean checkTree(TreeNode root) 
-    {
-        return f(root)==root.val;
     }
 }
