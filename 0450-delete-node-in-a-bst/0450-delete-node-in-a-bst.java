@@ -22,45 +22,47 @@ class Solution
             return null;
         if(root.val==key)
             return helper(root);
-        while(root!=null)
+
+        while(curr!=null)
         {
-            if(root.val>key)
+            if(curr.val>key)
             {
-                if(root.left!=null && root.left.val == key)
-                    root.left = helper(root.left);
+                if(curr.left!=null && curr.left.val==key)
+                    curr.left = helper(curr.left);
                 else
-                    root = root.left;
+                    curr = curr.left;
             }
             else
             {
-                if(root.right!=null && root.right.val == key)
-                    root.right = helper(root.right);
+                if(curr.right!=null && curr.right.val==key)
+                    curr.right = helper(curr.right);
                 else
-                    root = root.right;
+                    curr = curr.right;
             }
-            
+        }
+        return root;
+    }
+
+    public TreeNode helper(TreeNode node)
+    {
+        if(node.left==null)
+            return node.right;
+        else if(node.right==null)
+            return node.left;
+        else 
+        {
+            TreeNode rightbranch = node.right;
+            TreeNode lastchild = findLast(node.left);
+            lastchild.right = rightbranch;
+            return node.left;
+        }
+    }
+    public TreeNode findLast(TreeNode curr)
+    {
+        while(curr.right!=null)
+        {
+            curr = curr.right;
         }
         return curr;
     }
-        public  TreeNode helper(TreeNode node)
-        {
-            if(node.left==null)
-                return node.right;
-            else if(node.right==null)
-                return node.left;
-            else
-            {
-                TreeNode rightChild = node.right;
-                TreeNode lastChild = findLast(node.left);
-                lastChild.right = rightChild;
-                return node.left;
-            }
-        }
-        public TreeNode findLast(TreeNode root)
-        {
-            while(root.right!=null)
-                root= root.right;
-            return root;
-        }
-    
 }
