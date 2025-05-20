@@ -8,6 +8,7 @@ import java.util.Queue;
 
 
 // } Driver Code Ends
+
 // User function Template for Java
 
 /*
@@ -25,48 +26,52 @@ class Node{
 class Pair
 {
     Node node;
-    int vaxis;
-    Pair(Node node,int vaxis)
+    int axis;
+    
+    Pair(Node node,int axis)
     {
-        this.node=node;
-        this.vaxis=vaxis;
+        this.node = node;
+        this.axis = axis;
     }
 }
 class Solution 
 {
-    
     static ArrayList<Integer> topView(Node root) 
     {
-       TreeMap<Integer,Integer> tm = new TreeMap<>();
-       Queue<Pair> q = new LinkedList<>();
-       q.add(new Pair(root,0));
-       ArrayList<Integer> res = new ArrayList<>();
-       while(!q.isEmpty())
-       {
-           Pair pops = q.poll();
-           Node node = pops.node;
-           int axis = pops.vaxis;
+        TreeMap<Integer,Integer> hm = new TreeMap<>();
+        Queue<Pair> q = new LinkedList<>();
+        ArrayList<Integer> res = new ArrayList<>();
+        q.add(new Pair(root,0));
         
-           if(!tm.containsKey(axis))
-           {
-              tm.put(axis,node.data);
-           }
-           if(node.left!=null)
-           {
-               q.offer(new Pair(node.left,axis-1));
-           }
-           if(node.right!=null)
-           {
-               q.offer(new Pair(node.right,axis+1));
-           }
-       }
-       for(int node:tm.values())
-       {
-           res.add(node);
-       }
-       return res;
+        while(!q.isEmpty())
+        {
+            Pair pop = q.poll();
+            Node node = pop.node;
+            int line = pop.axis;
+            
+            if(!hm.containsKey(line))
+            {
+                hm.put(line,node.data);
+            }
+            
+            if(node.left!=null)
+            {
+                q.add(new Pair(node.left,line-1));
+            }
+            if(node.right!=null)
+            {
+                q.add(new Pair(node.right,line+1));
+            }
+        }
+        
+        for(int value:hm.values())
+        {
+            res.add(value);
+        }
+        return res;
     }
 }
+
 
 //{ Driver Code Starts.
 
