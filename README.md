@@ -98,6 +98,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
+| [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/shivanibussa/Codes/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 ## Greedy
 |  |
 | ------- |
@@ -241,6 +242,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [2384-root-equals-sum-of-children](https://github.com/shivanibussa/Codes/tree/master/2384-root-equals-sum-of-children) |
+| [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/shivanibussa/Codes/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -293,6 +295,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [2384-root-equals-sum-of-children](https://github.com/shivanibussa/Codes/tree/master/2384-root-equals-sum-of-children) |
+| [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/shivanibussa/Codes/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 ## Merge Sort
 |  |
 | ------- |
@@ -336,6 +339,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/shivanibussa/Codes/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1300-critical-connections-in-a-network](https://github.com/shivanibussa/Codes/tree/master/1300-critical-connections-in-a-network) |
+| [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/shivanibussa/Codes/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/shivanibussa/Codes/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
 ## Breadth-First Search
 |  |
@@ -367,6 +371,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0922-possible-bipartition](https://github.com/shivanibussa/Codes/tree/master/0922-possible-bipartition) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
+| [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/shivanibussa/Codes/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/shivanibussa/Codes/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
 ## Union Find
 |  |
