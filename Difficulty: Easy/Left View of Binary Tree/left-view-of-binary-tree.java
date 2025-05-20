@@ -124,24 +124,23 @@ class Node
         left = right = null;
     }
 }*/
-class Solution {
-    
+class Solution 
+{
     ArrayList<Integer> leftView(Node root) 
     {
-        
         ArrayList<Integer> res = new ArrayList<>();
-        if(root==null)
-            return res;
         f(root,0,res);
         return res;
     }
-    public static void f(Node node,int level, ArrayList<Integer> res)
+    public void f(Node root,int level,ArrayList<Integer> res)
     {
-        if(node==null)
+        if(root==null)
             return;
+            
         if(level==res.size())
-            res.add(node.data);
-        f(node.left,level+1,res);
-        f(node.right,level+1,res);
+            res.add(root.data);
+            
+        f(root.left,level+1,res);
+        f(root.right,level+1,res);
     }
 }
