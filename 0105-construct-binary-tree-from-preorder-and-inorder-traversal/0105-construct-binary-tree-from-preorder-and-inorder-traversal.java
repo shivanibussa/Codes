@@ -18,22 +18,23 @@ class Solution
     public TreeNode buildTree(int[] preorder, int[] inorder) 
     {
         HashMap<Integer,Integer> hm = new HashMap<>();
-        int n = inorder.length;
-        for(int i=0;i<n;i++)
+        for(int i=0;i<inorder.length;i++)
+        {
             hm.put(inorder[i],i);
-
-        return buildTree(preorder,0,preorder.length-1,inorder,0,inorder.length-1,hm);
+        }
+        int n = preorder.length;
+        return helper(inorder,0,n-1,preorder,0,n-1,hm);
     }
-    public TreeNode buildTree(int preorder[],int prestart,int prend,int inorder[],int instart,int inend, HashMap<Integer,Integer> hm )
+    public TreeNode helper(int inorder[],int is,int ie,int preorder[],int ps,int pe,HashMap<Integer,Integer> hm)
     {
-        if(prestart>prend || instart>inend)
+        if(ps>pe || is>ie)
             return null;
-        TreeNode root = new TreeNode(preorder[prestart]);
-        int inn = hm.get(root.val);
-        int numsleft = inn-instart;
-        root.left = buildTree(preorder,prestart+1,prestart+numsleft,inorder,instart,inn-1,hm);
-        root.right = buildTree(preorder,prestart+numsleft+1,prend,inorder,inn+1,inend,hm);
-
+        
+        TreeNode root = new TreeNode(preorder[ps]);
+        int inroot = hm.get(preorder[ps]);
+        int numsLeft = inroot - is;
+        root.left = helper(inorder,is,inroot-1,preorder,ps+1,ps+numsLeft,hm);
+        root.right = helper(inorder,inroot+1,ie,preorder,ps+numsLeft+1,pe,hm);
         return root;
-    }
+    } 
 }
