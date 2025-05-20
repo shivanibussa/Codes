@@ -5,9 +5,10 @@ class MedianFinder
 
     public MedianFinder() 
     {
-       min = new PriorityQueue<>(Collections.reverseOrder());
-       max = new PriorityQueue<>();
+        min = new PriorityQueue<>(Collections.reverseOrder());
+        max = new PriorityQueue<>();
     }
+    
     public void addNum(int num) 
     {
         min.add(num);
@@ -20,20 +21,17 @@ class MedianFinder
             min.add(max.poll());
         }
     }
+    
     public double findMedian() 
     {
         if(min.size()==max.size())
         {
-            return (double) (min.peek()+max.peek())/2;
+            return (double)(min.peek()+max.peek())/2;
         }
         else if(min.size()>max.size())
-        {
-            return (double) min.peek();
-        }
+            return (double)min.peek();
         else
-        {
-            return (double) max.peek();
-        }
+            return (double)max.peek();
     }
 }
 
