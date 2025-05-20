@@ -25,9 +25,7 @@ class Solution
     {
         if(p==null || q==null)
             return p==q;
-        if(p.val!=q.val)
-            return false;
-        return f(p.left,q.right)&& f(q.left,p.right);
-    }
 
+        return (p.val==q.val) && f(p.left,q.right) && f(p.right,q.left);
+    }
 }
