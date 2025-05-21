@@ -3,28 +3,30 @@ class Solution
     public int minFallingPathSum(int[][] matrix) 
     {
         int m = matrix.length, n = matrix[0].length,min = Integer.MAX_VALUE;
-        int dp[][] = new int[m][n];
+        int dp[] = new int[n];
 
         for(int j=0;j<n;j++)
         {
-            dp[0][j] = matrix[0][j];
+            dp[j] = matrix[0][j];
         }
 
         for(int i=1;i<m;i++)
         {
+            int temp[] = new int[n];
             for(int j=0;j<n;j++)
             {
-                int up = dp[i-1][j],ld = Integer.MAX_VALUE,rd = Integer.MAX_VALUE;
+                int up = dp[j],ld = Integer.MAX_VALUE,rd = Integer.MAX_VALUE;
                 if(j-1>=0)
-                    ld = dp[i-1][j-1];
+                    ld = dp[j-1];
                 if(j+1<=n-1)
-                    rd = dp[i-1][j+1];
-                dp[i][j] = matrix[i][j]+Math.min(up,Math.min(ld,rd));
+                    rd = dp[j+1];
+                temp[j] = matrix[i][j]+Math.min(up,Math.min(ld,rd));
             }
+            dp = temp;
         }
         for(int j=0;j<n;j++)
         {
-            min = Math.min(min,dp[m-1][j]);
+            min = Math.min(min,dp[j]);
         }
         return min;
     }
