@@ -13,12 +13,8 @@ class Solution
         {
             for(int j=i;j>=0;j--)
             {
-                int down = Integer.MAX_VALUE, diag = Integer.MAX_VALUE;
-                if(i+1<n)
-                    down = dp[i+1][j];
-                if(i+1<n && j+1<n)
-                    diag = dp[i+1][j+1];
-
+                int down = dp[i+1][j];
+                int diag = dp[i+1][j+1];
                 dp[i][j] = Math.min(down,diag)+triangle.get(i).get(j);
             }
         }
