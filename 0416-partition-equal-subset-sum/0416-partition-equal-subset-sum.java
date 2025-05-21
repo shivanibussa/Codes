@@ -1,33 +1,36 @@
 class Solution 
 {
-    public boolean canPartition(int[] nums) 
+    public boolean canPartition(int[] arr) 
     {
-        int sum=0,len = nums.length;
-        for(int n:nums)
-            sum+=n;
+        int n = arr.length,sum=0;
+        for(int i=0;i<n;i++)
+        {
+            sum+=arr[i];
+        }
         if(sum%2!=0)
             return false;
         sum = sum/2;
+        boolean dp[] = new boolean[sum+1];
+        for(int i=0;i<n;i++)
+            dp[0] = true;
+        if(arr[0]<=sum)
+            dp[arr[0]] = true;
 
-        boolean dp[][] = new boolean[len][sum+1];
-        for(int i=0;i<len;i++)
-            dp[i][0] = true;
-
-        if(nums[0]<=sum)
-            dp[0][nums[0]] = true;
-
-        for(int i=1;i<len;i++)
+        for(int i=1;i<n;i++)
         {
-            for(int j=1;j<sum+1;j++)
+            boolean temp[] = new boolean[sum+1];
+            temp[0] = true;
+            for(int j=1;j<=sum;j++)
             {
-                boolean not_take = dp[i-1][j];
                 boolean take = false;
-                if(j>=nums[i])
-                    take = dp[i-1][j-nums[i]];
+                boolean not_take = dp[j];
+                if(j>=arr[i])
+                    take = dp[j-arr[i]];
 
-                dp[i][j] = take || not_take;
+                temp[j] = take||not_take;
             }
+            dp = temp;
         }
-        return dp[len-1][sum];
+        return dp[sum];
     }
 }
