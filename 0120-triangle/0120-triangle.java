@@ -3,22 +3,24 @@ class Solution
     public int minimumTotal(List<List<Integer>> triangle) 
     {
         int n = triangle.size();
-        int dp[][] = new int[n][n];
+        int dp[] = new int[n];
 
         for(int j=0;j<n;j++)
         {
-            dp[n-1][j] = triangle.get(n-1).get(j);
+            dp[j] = triangle.get(n-1).get(j);
         }
         for(int i=n-2;i>=0;i--)
         {
+            int temp[] = new int[n];
             for(int j=i;j>=0;j--)
             {
-                int down = dp[i+1][j];
-                int diag = dp[i+1][j+1];
-                dp[i][j] = Math.min(down,diag)+triangle.get(i).get(j);
+                int down = dp[j];
+                int diag = dp[j+1];
+                temp[j] = Math.min(down,diag)+triangle.get(i).get(j);
             }
+            dp = temp;
         }
-        return dp[0][0];
+        return dp[0];
     }
     public int f(int i,int j,List<List<Integer>> triangle)
     {
