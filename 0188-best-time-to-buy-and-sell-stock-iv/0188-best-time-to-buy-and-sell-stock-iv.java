@@ -3,7 +3,7 @@ class Solution
     public int maxProfit(int ki, int[] prices) 
     {
         int n = prices.length;
-        int dp[][] = new int [2][ki+1];
+        int dp[][] = new int[2][ki+1];
         for(int i=n-1;i>=0;i--)
         {
             int temp[][] = new int[2][ki+1];
@@ -12,9 +12,13 @@ class Solution
                 for(int k=ki;k>0;k--)
                 {
                     if(j==1)
+                    {
                         temp[j][k] = Math.max(-prices[i]+dp[0][k],0+dp[1][k]);
+                    }
                     else
-                        temp[j][k] = Math.max(prices[i]+dp[1][k-1],0+dp[0][k]);
+                    {
+                        temp[j][k] = Math.max(prices[i]+dp[1][k-1],dp[0][k]);
+                    }
                 }
             }
             dp = temp;
