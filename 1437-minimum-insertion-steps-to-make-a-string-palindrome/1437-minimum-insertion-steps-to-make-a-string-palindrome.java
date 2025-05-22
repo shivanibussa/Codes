@@ -22,7 +22,7 @@ class Solution
             }
         }
         int lcs = dp[m][n];
-        return ((m+n)-(2*lcs))/2;
+        return n-lcs;
     
     }
 }
