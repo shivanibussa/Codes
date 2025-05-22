@@ -1,32 +1,37 @@
 class Solution 
 {
-    public int findTargetSumWays(int[] arr, int target) 
+    public int findTargetSumWays(int[] arr, int d) 
     {
         int sum=0,n=arr.length;
         for(int no:arr)
             sum+=no;
-        int s = (sum-target)/2;
-        if( (sum-target)<0 || (sum-target)%2==1)
-			return 0;
-        int dp[][] = new int[n][s+1];
-        for(int i=0;i<n;i++)
-			dp[i][0] = 1;
-		if (arr[0] == 0)
-            dp[0][0] = 2;
-        else if (arr[0] <= s)
-            dp[0][arr[0]] = 1;
+
+        if((sum-d)%2!=0 || sum-d<0)
+            return 0;
+        
+        sum = (sum-d)/2;
+
+        int dp[] = new int[sum+1];
+        
+        if(arr[0]<=sum)
+            dp[arr[0]] = 1;
+        
+        dp[0] = (arr[0] == 0) ? 2 : 1;  
         for(int i=1;i<n;i++)
         {
-            for(int j=0;j<=s;j++)
+            int temp[] = new int[sum+1];
+            for(int j=0;j<=sum;j++)
             {
-                int not_take = dp[i-1][j];
-                int take = 0;
+                int not_take = dp[j];
+                int take= 0;
                 if(j>=arr[i])
-                    take = dp[i-1][j-arr[i]];
-
-                dp[i][j] = take+not_take;
+                    take = dp[j-arr[i]];
+                    
+                temp[j] = take+not_take;
             }
+            dp = temp;
         }
-        return dp[n-1][s];
+        return dp[sum];
+
     }
 }
