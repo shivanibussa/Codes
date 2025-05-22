@@ -1,17 +1,17 @@
 class Solution 
 {
-    public int minInsertions(String s) 
+    public int minInsertions(String s1) 
     {
-        StringBuilder sb = new StringBuilder(s);
-        sb = sb.reverse();
-        String t = sb.toString();
-        int m = s.length() , n = t.length();
+        StringBuilder sb = new StringBuilder(s1);
+        sb.reverse();
+        String s2 = sb.toString();
+        int m = s1.length(), n=s2.length();
         int dp[][] = new int[m+1][n+1];
-        for(int i=1;i<m+1;i++)
+        for(int i=1;i<=m;i++)
         {
-            for(int j=1;j<n+1;j++)
+            for(int j=1;j<=n;j++)
             {
-                if(s.charAt(i-1)==t.charAt(j-1))
+                if(s1.charAt(i-1)==s2.charAt(j-1))
                 {
                     dp[i][j] = 1+dp[i-1][j-1];
                 }
@@ -21,6 +21,8 @@ class Solution
                 }
             }
         }
-        return n-dp[m][n];
+        int lcs = dp[m][n];
+        return ((m+n)-(2*lcs))/2;
+    
     }
 }
