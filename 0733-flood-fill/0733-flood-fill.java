@@ -21,7 +21,7 @@ class Solution
                 int nr = dr[k]+r;
                 int nc = c+dc[k];
 
-                if(nr>=0 && nc>=0 && nr<m && nc<n && image[nr][nc]!=color && image [nr][nc]==col && visited[nr][nc]==false)
+                if(nr>=0 && nc>=0 && nr<m && nc<n && image [nr][nc]==col && visited[nr][nc]==false)
                 {
                     visited[nr][nc] = true;
                     image[nr][nc] = color;
