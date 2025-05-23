@@ -25,7 +25,7 @@ class Solution
             int pop = q.poll();
             for(int i=0;i<V;i++)
             {
-                if(adj[pop][i]==1 && visited[i]==false)
+                if(visited[i]==false && adj[pop][i]==1)
                 {
                     visited[i]=true;
                     q.add(i);
