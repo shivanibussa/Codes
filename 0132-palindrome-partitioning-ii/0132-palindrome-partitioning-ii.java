@@ -2,50 +2,47 @@ class Solution
 {
     public int minCut(String s) 
     {
-        int n = s.length();
-        int dp[] = new int[n+1];
-        for(int i=n-1;i>=0;i--)
+        int dp[] = new int[s.length()+2];
+        for(int i=s.length()-1;i>=0;i--)
         {
-            int mini = Integer.MAX_VALUE;
-            for(int j=i;j<n;j++)
+            int minC = Integer.MAX_VALUE;
+            for(int j=i;j<s.length();j++)
             {
-                if(isPalindrome(i,j,s))
+                if(CheckP(i,j,s)==true)
                 {
-                    int cost = 1+dp[j+1];
-                    mini = Math.min(cost,mini);
+                    int cuts =  1+dp[j+1];
+                    minC = Math.min(cuts,minC);
                 }
             }
-            dp[i] = mini;
+            dp[i] = minC;
         }
         return dp[0]-1;
     }
-    public int f(String s,int i,int n)
+    public int f(String s,int i)
     {
-        if(i==n)
+        if(i==s.length())
             return 0;
-
-        int mini = Integer.MAX_VALUE;
-        for(int j=i;j<n;j++)
+        int minC = Integer.MAX_VALUE;
+        for(int j=i;j<s.length();j++)
         {
-            
-            if(isPalindrome(i,j,s))
+            if(CheckP(i,j,s)==true)
             {
-                int cost = 1+f(s,j+1,n);
-                mini = Math.min(cost,mini);
+                int cuts =  1+f(s,j+1);
+                minC = Math.min(cuts,minC);
             }
         }
-        return mini;
+        return minC;
     }
-    public boolean isPalindrome(int f,int e,String s)
+    public boolean CheckP(int st,int e,String s)
     {
-        while(f<e)
+        while(st<e)
         {
-            if(s.charAt(f)!=s.charAt(e))
+            if(s.charAt(st)==s.charAt(e))
             {
-                return false;
+                st++;e--;
             }
-            f++;
-            e--;
+            else
+                return false;
         }
         return true;
     }
