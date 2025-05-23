@@ -8,10 +8,10 @@ class Solution
         {
             for(int j=i-1;j>=-1;j--)
             {
-                int not_take = dp[i+1][j+1];
                 int take = Integer.MIN_VALUE;
+                int not_take = dp[i+1][j+1];
                 if(j==-1 || nums[i]>nums[j])
-                        take = 1+dp[i+1][i+1];
+                    take = 1+dp[i+1][i+1];
 
                 dp[i][j+1] = Math.max(take,not_take);
             }
