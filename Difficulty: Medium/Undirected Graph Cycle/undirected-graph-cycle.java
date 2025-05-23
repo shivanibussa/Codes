@@ -1,80 +1,51 @@
-//{ Driver Code Starts
-// Initial Template for Java
-import java.io.*;
-import java.util.*;
-
-class GFG {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int tc = sc.nextInt();
-        while (tc-- > 0) {
-            int V = sc.nextInt();
-            int E = sc.nextInt();
-            int[][] edges = new int[E][2];
-            for (int i = 0; i < E; i++) {
-                edges[i][0] = sc.nextInt();
-                edges[i][1] = sc.nextInt();
-            }
-
-            Solution obj = new Solution();
-            boolean ans = obj.isCycle(V, edges);
-            System.out.println(ans ? "true" : "false");
-            System.out.println("~");
-        }
-        sc.close();
-    }
-}
-
-// } Driver Code Ends
-
-
 class Solution 
 {
-    public boolean isCycle(int V, int[][] edges) 
+    public boolean isCycle(int V, int[][] edges)
     {
-        List<List<Integer>> adj = new ArrayList<>();
-        int visited[] = new int[V];
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        boolean visited[] = new boolean[V];
         for(int i=0;i<V;i++)
-        {
             adj.add(new ArrayList<>());
-        }
-        for(int pair[]:edges)
+        for(int i=0;i<edges.length;i++)
         {
-            int a = pair[0];
-            int b = pair[1];
+            int a = edges[i][0];
+            int b = edges[i][1];
+            
             adj.get(a).add(b);
             adj.get(b).add(a);
         }
         
         for(int i=0;i<V;i++)
         {
-            if(visited[i]!=1)
+            if(visited[i]==false)
             {
-                if(bfs(i,adj,visited)==true)
+                if(bfs(adj,visited,i))
                     return true;
             }
         }
-        return false;
         
+        return false;
     }
-    public boolean bfs(int node,List<List<Integer>> adj,int visited[])
+    
+    public boolean bfs(ArrayList<ArrayList<Integer>> adj,boolean visited[],int node)
     {
-        Queue<int[]> q = new LinkedList<int[]>();
+        Queue<int[]> q = new LinkedList<>();
+        visited[node] = true;
         q.add(new int[]{node,-1});
-        visited[node] = 1;
         while(!q.isEmpty())
         {
             int pop[] = q.poll();
-            int n = pop[0];
-            int parent = pop[1];
-            for(int nv:adj.get(n))
+            int popn = pop[0], parent = pop[1];
+            for(int it:adj.get(popn))
             {
-                if(visited[nv]==1 && nv!=parent)
-                    return true;
-                else if(visited[nv]==0)
+                if(visited[it]==false)
                 {
-                    q.offer(new int[]{nv,n});
-                    visited[nv]=1;
+                    q.add(new int[]{it,popn});
+                    visited[it] = true;
+                }
+                else if(visited[it]==true && it!=parent)
+                {
+                    return true;
                 }
             }
         }
