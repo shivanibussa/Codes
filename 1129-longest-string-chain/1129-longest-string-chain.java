@@ -1,35 +1,33 @@
 class Solution 
 {
-    public int longestStrChain(String[] words) 
+    public int longestStrChain(String[] s) 
     {
-        Arrays.sort(words,(a,b)->a.length()-b.length());
-        int maxi=1;
-        int n = words.length;
+        Arrays.sort(s,(a,b)->a.length()-b.length());
+        int n = s.length,maxi=1;
         int dp[] = new int[n];
-        dp[0]=1;
+        for(int i=0;i<n;i++)
+            dp[i]=1;
         for(int i=1;i<n;i++)
         {
-            dp[i] = 1;
             for(int j=0;j<i;j++)
             {
-                if(compare(words[i],words[j]) && 1+dp[j]>dp[i])
+                if(Check(s[i],s[j]) && 1+dp[j]>dp[i])
                 {
                     dp[i] = 1+dp[j];
                 }
+                maxi = Math.max(maxi,dp[i]);
             }
-            maxi = Math.max(maxi,dp[i]);
-        }
+        }       
         return maxi;
     }
-    public boolean compare(String s1, String s2) 
+    boolean Check(String s1, String s2)
     {
-        if(s1.length()!=s2.length()+1)
+        int f=0,s=0,m=s1.length(),n=s2.length();
+        if(m-n!=1)
             return false;
-
-        int f=0,s=0;
-        while(f<s1.length())
+        while(f<m)
         {
-            if(s<s2.length()&& s1.charAt(f)==s2.charAt(s))
+            if(s<n && s1.charAt(f)==s2.charAt(s))
             {
                 f++;
                 s++;
