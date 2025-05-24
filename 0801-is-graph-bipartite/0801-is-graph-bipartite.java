@@ -11,33 +11,27 @@ class Solution
         {
             if(color[i]==-1)
             {
-                if(bfs(i,color,graph)==false)
+                if(dfs(i,color,graph,0)==false)
                     return false;
             }
         }
         return true;
     }
-    public boolean bfs(int node,int color[],int graph[][])
+    public boolean dfs(int node,int color[],int graph[][],int col)
     {
-        color[node] = 1;
-        Queue<Integer> q = new LinkedList<Integer>();
-        q.add(node);
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            for(int it:graph[pop])
+        color[node] = col;
+            for(int it:graph[node])
             {
                 if(color[it]==-1)
                 {
-                    color[it] = 1-color[pop];
-                    q.add(it);
+                    if(dfs(it,color,graph,1-col)==false)
+                        return false;
                 }
-                else if(color[it]==color[pop])
+                else if(color[it]==color[node])
                 {
                     return false;
                 }
             }
-        }
         return true;
     }
 }
