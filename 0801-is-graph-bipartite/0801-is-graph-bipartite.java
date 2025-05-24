@@ -2,39 +2,35 @@ class Solution
 {
     public boolean isBipartite(int[][] graph) 
     {
-        int n = graph.length;
-        int color[] = new int[n];
-        
-        for(int i=0;i<n;i++)
-            color[i]=-1;
-        for(int i=0;i<n;i++)
+        int V = graph.length;
+        int color[] = new int[V];
+        Queue<Integer> q = new LinkedList<>();
+        for(int i=0;i<V;i++)
+            color[i] = -1;
+        for(int i=0;i<V;i++)
         {
             if(color[i]==-1)
             {
-                if(bipartite(i,color,graph)==false)
+                if(bfs(i,color,graph)==false)
                     return false;
             }
-
         }
         return true;
-        
     }
-     public boolean bipartite(int node,int color[],int[][] graph)
-     {
-        Queue<Integer> q = new LinkedList<>();
+    public boolean bfs(int node,int color[],int graph[][])
+    {
+        color[node] = 1;
+        Queue<Integer> q = new LinkedList<Integer>();
         q.add(node);
-        color[node]=1;
-
         while(!q.isEmpty())
         {
             int pop = q.poll();
-
             for(int it:graph[pop])
             {
                 if(color[it]==-1)
                 {
+                    color[it] = 1-color[pop];
                     q.add(it);
-                    color[it]=1-color[pop];
                 }
                 else if(color[it]==color[pop])
                 {
@@ -43,7 +39,5 @@ class Solution
             }
         }
         return true;
-     }   
     }
-
-    
+}
