@@ -2,7 +2,7 @@ class Pair
 {
     String word;
     int steps;
-    Pair(String word, int steps)
+    Pair(String word,int steps)
     {
         this.word = word;
         this.steps = steps;
@@ -14,31 +14,28 @@ class Solution
     {
         HashSet<String> hs = new HashSet<>();
         Queue<Pair> q = new LinkedList<>();
-        q.offer(new Pair(beginWord,1));
+        q.add(new Pair(beginWord,0));
+        for(String w:wordList)
+            hs.add(w);
         hs.remove(beginWord);
-        for(int i=0;i<wordList.size();i++)
-        {
-            hs.add(wordList.get(i));
-        }
+
         while(!q.isEmpty())
         {
-            Pair p = q.poll();
-            String w = p.word;
-            int s = p.steps;
-            if(w.equals(endWord))
-            {
-                return s;
-            }
-            for(int i=0;i<w.length();i++)
+            Pair pop = q.poll();
+            String rw = pop.word;
+            int steps = pop.steps;
+            if(rw.equals(endWord))
+                return steps+1;
+            for(int i=0;i<rw.length();i++)
             {
                 for(char ch='a';ch<='z';ch++)
                 {
-                    char chars[] = w.toCharArray();
-                    chars[i] = ch;
-                    String nw = new String(chars);
+                    char chs[] = rw.toCharArray();
+                    chs[i] = ch;
+                    String nw = new String(chs);
                     if(hs.contains(nw))
                     {
-                        q.offer(new Pair(nw,s+1));
+                        q.add(new Pair(nw,steps+1));
                         hs.remove(nw);
                     }
                 }
