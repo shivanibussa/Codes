@@ -31,44 +31,62 @@ class Main {
 
 
 // User function Template for Java
+
+/*
+USING KAHN's ALGORITHM
+*/
 class Solution 
 {
     public int[] shortestPath(int V, int E, int[][] edges) 
     {
         List<List<int[]>> adj = new ArrayList<>();
         int dist[] = new int[V];
-        Stack<Integer> st = new Stack<>();
-        int visited[] = new int[V];
+        Queue<Integer> q = new LinkedList<>();
+        ArrayList<Integer> al = new ArrayList<>();
+        int indegree[] = new int[V];
         for(int i=0;i<V;i++)
         {
             adj.add(new ArrayList<>());
-            dist[i] = Integer.MAX_VALUE;
+            dist[i] = (int)1e8;
         }
             
         for(int pair[]:edges)
         {
             int u = pair[0], v = pair[1], wt = pair[2];
             adj.get(u).add(new int[]{v,wt});
+            indegree[v]++;
         }
         for(int i=0;i<V;i++)
         {
-            if(visited[i]==0)
+            if(indegree[i]==0)
             {
-                dfs(adj,i,visited,st);
+                q.offer(i);
             }
         }
         
-        dist[0]=0;
-        while(!st.isEmpty())
+        while(!q.isEmpty())
         {
-            int pop = st.pop();
-            
+            int pop = q.poll();
+            al.add(pop);
+            for(int it[]:adj.get(pop))
+            {
+                int a = it[0];
+                int wt = it[1];
+                indegree[a]--;
+                if(indegree[a]==0)
+                    q.offer(a);
+            }
+        }
+        dist[0]=0;
+        for(int i=0;i<al.size();i++)
+        {
+            int pop = al.get(i);
             for(int it[]:adj.get(pop))
             {
                 int nv = it[0];
                 int wt = it[1];
                 
-                if(dist[pop]!=Integer.MAX_VALUE && wt+dist[pop]<dist[nv])
+                if(wt+dist[pop]<dist[nv])
                 {
                     dist[nv] = dist[pop]+wt;
                 }
@@ -76,26 +94,27 @@ class Solution
         }
         for(int i=0;i<V;i++)
         {
-            if(dist[i]==Integer.MAX_VALUE)
+            if(dist[i]==(int)1e8)
             {
                 dist[i] = -1;
             }
         }
         return dist;
     }
-    public void dfs(List<List<int[]>> adj, int node,int visited[],Stack<Integer> st)
-    {
-        visited[node]=1;
-        Q
-        for(int it[]:adj.get(node))
-        {
-            int nv = it[0];
-            int w = it[1];
-            if(visited[nv]==0)
-            {
-                dfs(adj,nv,visited,st);
-            }
-        }
-        st.push(node);
-    }
+    // public void dfs(List<List<int[]>> adj, int node,int visited[],Stack<Integer> st)
+    // {
+    //     visited[node]=1;
+    //     Queue<Integer> q = new LinkedList<>();
+    //     q.offer(node);
+    //     for(int it[]:adj.get(node))
+    //     {
+    //         int nv = it[0];
+    //         int w = it[1];
+    //         if(visited[nv]==0)
+    //         {
+    //             q.add()
+    //         }
+    //     }
+    //     st.push(node);
+    // }
 }
