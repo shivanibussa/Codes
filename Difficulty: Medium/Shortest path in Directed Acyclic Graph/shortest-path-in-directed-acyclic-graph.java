@@ -1,120 +1,65 @@
-//{ Driver Code Starts
-import java.io.*;
-import java.lang.*;
-import java.util.*;
-
-class Main {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        while (T-- > 0) {
-            int n = sc.nextInt();
-            int m = sc.nextInt();
-            int[][] edge = new int[m][3];
-            for (int i = 0; i < m; i++) {
-                edge[i][0] = sc.nextInt();
-                edge[i][1] = sc.nextInt();
-                edge[i][2] = sc.nextInt();
-            }
-            Solution obj = new Solution();
-            int res[] = obj.shortestPath(n, m, edge);
-            for (int i = 0; i < n; i++) {
-                System.out.print(res[i] + " ");
-            }
-            System.out.println();
-
-            System.out.println("~");
-        }
-    }
-}
-// } Driver Code Ends
-
-
 // User function Template for Java
-
-/*
-USING KAHN's ALGORITHM
-*/
 class Solution 
 {
+
     public int[] shortestPath(int V, int E, int[][] edges) 
     {
-        List<List<int[]>> adj = new ArrayList<>();
-        int dist[] = new int[V];
-        Queue<Integer> q = new LinkedList<>();
-        ArrayList<Integer> al = new ArrayList<>();
+        ArrayList<ArrayList<int[]>>adj = new ArrayList<>();
         int indegree[] = new int[V];
+        int dist[] = new int[V];
+        Queue<Integer>q = new LinkedList<>();
+        ArrayList<Integer> al = new ArrayList<>();
+        
         for(int i=0;i<V;i++)
         {
             adj.add(new ArrayList<>());
-            dist[i] = (int)1e8;
+            dist[i] = (int)1e9;
         }
-            
-        for(int pair[]:edges)
+        for(int i=0;i<E;i++)
         {
-            int u = pair[0], v = pair[1], wt = pair[2];
-            adj.get(u).add(new int[]{v,wt});
-            indegree[v]++;
+            int a = edges[i][0], b = edges[i][1], wt = edges[i][2];
+            adj.get(a).add(new int[]{b,wt});
+            indegree[b]++;
         }
         for(int i=0;i<V;i++)
         {
             if(indegree[i]==0)
             {
-                q.offer(i);
+                q.add(i);
             }
         }
-        
         while(!q.isEmpty())
         {
             int pop = q.poll();
             al.add(pop);
+            
             for(int it[]:adj.get(pop))
             {
-                int a = it[0];
-                int wt = it[1];
-                indegree[a]--;
-                if(indegree[a]==0)
-                    q.offer(a);
+                int node = it[0];
+                indegree[node]--;
+                if(indegree[node]==0)
+                {
+                    q.add(node);
+                }
             }
         }
         dist[0]=0;
-        for(int i=0;i<al.size();i++)
+        for(int vertex:al)
         {
-            int pop = al.get(i);
-            for(int it[]:adj.get(pop))
+            for(int it[]:adj.get(vertex))
             {
-                int nv = it[0];
-                int wt = it[1];
-                
-                if(wt+dist[pop]<dist[nv])
+                int nv = it[0],wt = it[1];
+                if(dist[vertex]+wt<dist[nv])
                 {
-                    dist[nv] = dist[pop]+wt;
+                    dist[nv] = wt+dist[vertex];
                 }
             }
         }
         for(int i=0;i<V;i++)
         {
-            if(dist[i]==(int)1e8)
-            {
-                dist[i] = -1;
-            }
+            if(dist[i]==(int)1e9)
+                dist[i]=-1;
         }
         return dist;
     }
-    // public void dfs(List<List<int[]>> adj, int node,int visited[],Stack<Integer> st)
-    // {
-    //     visited[node]=1;
-    //     Queue<Integer> q = new LinkedList<>();
-    //     q.offer(node);
-    //     for(int it[]:adj.get(node))
-    //     {
-    //         int nv = it[0];
-    //         int w = it[1];
-    //         if(visited[nv]==0)
-    //         {
-    //             q.add()
-    //         }
-    //     }
-    //     st.push(node);
-    // }
 }
