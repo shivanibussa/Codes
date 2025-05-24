@@ -1,91 +1,45 @@
-//{ Driver Code Starts
-import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int t = Integer.parseInt(sc.nextLine());
-
-        while (t-- > 0) {
-            int V = Integer.parseInt(sc.nextLine());
-            int E = Integer.parseInt(sc.nextLine());
-
-            List<int[]> edgeList = new ArrayList<>();
-
-            for (int i = 0; i < E; i++) {
-                String[] parts = sc.nextLine().split(" ");
-                int u = Integer.parseInt(parts[0]);
-                int v = Integer.parseInt(parts[1]);
-                int w = Integer.parseInt(parts[2]);
-                edgeList.add(new int[] {u, v, w});
-                edgeList.add(new int[] {v, u, w});
-            }
-
-            int[][] edges = new int[edgeList.size()][3];
-            for (int i = 0; i < edgeList.size(); i++) {
-                edges[i] = edgeList.get(i);
-            }
-
-            int src = Integer.parseInt(sc.nextLine());
-
-            Solution obj = new Solution();
-            int[] res = obj.dijkstra(V, edges, src);
-
-            for (int val : res) {
-                System.out.print(val + " ");
-            }
-            System.out.println();
-            System.out.println("~");
-        }
-
-        sc.close();
-    }
-}
-
-// } Driver Code Ends
-
-
-// User function Template for Java
 class Solution 
 {
     public int[] dijkstra(int V, int[][] edges, int src) 
     {
-        List<List<int[]>> adj = new ArrayList<>();
+        ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
         int dist[] = new int[V];
-        PriorityQueue<int[]> q = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->a[0]-b[0]);
+        
         for(int i=0;i<V;i++)
         {
             adj.add(new ArrayList<>());
-            dist[i] = Integer.MAX_VALUE;
+            dist[i] = (int)1e9;
         }
-        for(int edge[]:edges)
+        
+        for(int i=0;i<edges.length;i++)
         {
-            int a = edge[0];
-            int b = edge[1];
-            int wt = edge[2];
-            
-            adj.get(a).add(new int[]{b,wt});
+            int u = edges[i][0], v = edges[i][1], wt = edges[i][2];
+            adj.get(u).add(new int[]{v,wt});
         }
-        dist[src] = 0;
-        q.add(new int[]{0,src});
-        while(!q.isEmpty())
+        dist[src]=0;
+        pq.add(new int[]{0,src});
+        while(!pq.isEmpty())
         {
-            int popz[] = q.poll();
-            int pop = popz[1];
-            for(int it[]:adj.get(pop))
+            int pop[] = pq.poll();
+            int wt = pop[0], vertex = pop[1];
+            for(int it[]:adj.get(vertex))
             {
-                int nv = it[0];
-                int w = it[1];
-                
-                if(dist[pop]+w<dist[nv])
+                int nv = it[0], d = it[1];
+                if(dist[vertex]+d<dist[nv])
                 {
-                    dist[nv] = w+dist[pop];
-                    q.offer(new int[]{dist[nv],nv});
+                    dist[nv] = dist[vertex]+d;
+                    pq.offer(new int[]{dist[nv],nv});
                 }
             }
         }
+        for(int i=0;i<V;i++)
+        {
+            if(dist[i]==(int)1e9)
+            {
+                dist[i] = -1;
+            }
+        }
         return dist;
-        
     }
 }
