@@ -39,9 +39,9 @@ class Solution
                 int nv = it[0];
                 int neiW = it[1];
 
-                if(dist[nv]>neiW+dist[ver])
+                if(dist[nv]>neiW+w)
                 {
-                    dist[nv] = neiW+dist[ver];
+                    dist[nv] = neiW+w;
                     ways[nv] = ways[(int)ver];
                     q.add(new long[]{dist[nv],nv});
                 }
