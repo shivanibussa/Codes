@@ -1,43 +1,50 @@
-class DisjointSet{
-    
-    ArrayList<Integer> size;
+class DisjointSet
+{
     ArrayList<Integer> parent;
-    
-    DisjointSet(int n)
+    ArrayList<Integer> size;
+    public DisjointSet(int V)
     {
-        size = new ArrayList<>();
         parent = new ArrayList<>();
-        for(int i=0;i<n;i++)
+        size = new ArrayList<>();
+
+
+        for(int i=0;i<V;i++)
         {
-            size.add(1);
             parent.add(i);
+            size.add(1);
         }
     }
-    
-    public int findUparent(int node)
+
+
+    public int getUparent(int node)
     {
         if(node==parent.get(node))
             return node;
-        int root = findUparent(parent.get(node));
-        parent.set(node,root);
-        return root;
+
+
+        int ulp_u = getUparent(parent.get(node));
+        parent.set(node,ulp_u);
+        return parent.get(node);
     }
-    
-    public void UnionBySize(int u,int v)
+
+
+    public void unionBySize(int u,int v)
     {
-        int ulp_u = findUparent(u);
-        int ulp_v = findUparent(v);
+        int ulp_u = getUparent(u);
+        int ulp_v = getUparent(v);
         if(ulp_u==ulp_v)
             return;
-        if(size.get(ulp_u)<size.get(ulp_v))
-        {
-            parent.set(ulp_u,ulp_v);
-            size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
-        }
-        else
+
+
+        if(size.get(ulp_u)>size.get(ulp_v))
         {
             parent.set(ulp_v,ulp_u);
             size.set(ulp_u,size.get(ulp_u)+size.get(ulp_v));
+        }
+        else
+        {
+            parent.set(ulp_u,ulp_v);
+            size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
         }
     }
 }
@@ -47,44 +54,49 @@ class Solution
     {
         int n = accounts.size();
         DisjointSet ds = new DisjointSet(n);
-        HashMap<String,Integer> mailMap = new HashMap<>();
-        for(int i=0;i<accounts.size();i++)
+        HashMap<String,Integer> map = new HashMap<>();
+        for(int i=0;i<n;i++)
         {
             for(int j=1;j<accounts.get(i).size();j++)
             {
-                String email = accounts.get(i).get(j);
-                if(!mailMap.containsKey(email))
+                String mail = accounts.get(i).get(j);
+                if(!map.containsKey(mail))
                 {
-                    mailMap.put(email,i);
+                    map.put(mail,i);
                 }
                 else
                 {
-                    ds.UnionBySize(i,mailMap.get(email));
+                    ds.unionBySize(i,map.get(mail));
                 }
             }
         }
-
-        ArrayList<String> merged[] = new ArrayList[n];
+        ArrayList<String>[] sorted = new ArrayList[n];
         for(int i=0;i<n;i++)
-            merged[i] = (new ArrayList<String>());
-        for(Map.Entry<String,Integer> es: mailMap.entrySet())
         {
-            String mail = es.getKey();
-            int id = es.getValue();
-            merged[ds.findUparent(id)].add(mail);
+            sorted[i] = new ArrayList<>();
         }
-        List<List<String>> accountsRes = new ArrayList<>();
+
+        for(Map.Entry<String,Integer> es:map.entrySet())
+        {
+            String email = es.getKey();
+            int node = ds.getUparent(es.getValue());
+            sorted[node].add(email);
+        }
+        List<List<String>> res = new ArrayList<>();
+
         for(int i=0;i<n;i++)
         {
-            if(merged[i].size()==0)
+            if(sorted[i].size()==0)
                 continue;
+
+            Collections.sort(sorted[i]);
             ArrayList<String> temp = new ArrayList<>();
             temp.add(accounts.get(i).get(0));
-            Collections.sort(merged[i]);
-            temp.addAll(merged[i]);
-            accountsRes.add(temp);
-        }
-        return accountsRes;
+            for(String it:sorted[i])
+                temp.add(it);
 
+            res.add(temp);
+        }
+        return res;
     }
 }
