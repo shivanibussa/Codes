@@ -1,108 +1,64 @@
-//{ Driver Code Starts
-// Initial Template for Java
-import java.util.*;
-
-
-// } Driver Code Ends
-
-// User function Template for Java
-
 class Solution 
 {
-    public void dfs(int node,ArrayList<ArrayList<Integer>> adj,Stack<Integer> st, boolean visited[])
-    {
-        visited[node] = true;
-        for(int it:adj.get(node))
-        {
-            if(!visited[it])
-            {
-                dfs(it,adj,st,visited);
-            }
-            
-        }
-        st.push(node);
-    }
-    public void dfs2(int node,ArrayList<ArrayList<Integer>> adj, boolean visited[])
-    {
-        visited[node] = true;
-        for(int it:adj.get(node))
-        {
-            if(!visited[it])
-            {
-                dfs2(it,adj,visited);
-            }
-            
-        }
-    }
     public int kosaraju(ArrayList<ArrayList<Integer>> adj) 
     {
-        int V = adj.size(),scc=0;
-        boolean visited[] = new boolean[V];
-        ArrayList<ArrayList<Integer>> adjT = new ArrayList<>();
+        int V = adj.size();
+        int visited[] = new int[V];
         Stack<Integer> st = new Stack<>();
-        for(int i=0;i<adj.size();i++)
+        ArrayList<ArrayList<Integer>> adjRev = new ArrayList<>();
+        int cnt=0;
+        for(int i=0;i<V;i++)
         {
-            if(!visited[i])
+            if(visited[i]==0)
             {
-                dfs(i,adj,st,visited);
+                dfs(i,adj,visited,st);
             }
         }
         for(int i=0;i<V;i++)
         {
-            adjT.add(new ArrayList<>());
-            visited[i] = false;
+            adjRev.add(new ArrayList<>());
+            visited[i]=0;
         }
-        
         for(int i=0;i<V;i++)
         {
             for(int it:adj.get(i))
             {
-                adjT.get(it).add(i);
+                adjRev.get(it).add(i);
             }
         }
-        
         while(!st.isEmpty())
         {
-            int i = st.pop();
-            if(!visited[i])
+            int pop = st.pop();
+            if(visited[pop]==0)
             {
-                scc++;
-                dfs2(i,adjT,visited);
+                cnt++;
+                dfs2(pop,adjRev,visited);
             }
         }
-        return scc;
+        return cnt;
     }
-}
-
-
-//{ Driver Code Starts.
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while (t-- > 0) {
-            int V = sc.nextInt();
-            int E = sc.nextInt();
-
-            ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-            for (int i = 0; i < V; i++) {
-                adj.add(new ArrayList<>());
+    public void dfs(int node,ArrayList<ArrayList<Integer>> adj,int visited[],Stack<Integer> st)
+    {
+        visited[node] = 1;
+        for(int it:adj.get(node))
+        {
+            if(visited[it]==0)
+            {
+                dfs(it,adj,visited,st);
             }
-
-            for (int i = 0; i < E; i++) {
-                int u = sc.nextInt();
-                int v = sc.nextInt();
-                adj.get(u).add(v);
-            }
-
-            Solution obj = new Solution();
-            System.out.println(obj.kosaraju(adj));
-
-            System.out.println("~");
         }
-        sc.close();
+        st.push(node);
     }
+    public void dfs2(int node,ArrayList<ArrayList<Integer>> adj,int visited[])
+    {
+        visited[node] = 1;
+        for(int it:adj.get(node))
+        {
+            if(visited[it]==0)
+            {
+                dfs2(it,adj,visited);
+            }
+        }
+    }
+    
 }
-
-// } Driver Code Ends
