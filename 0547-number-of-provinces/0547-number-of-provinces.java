@@ -1,36 +1,80 @@
+class DisjointSet
+{
+    ArrayList<Integer> parent;
+    ArrayList<Integer> size;
+    public DisjointSet(int V)
+    {
+        parent = new ArrayList<>();
+        size = new ArrayList<>();
+
+
+        for(int i=0;i<V;i++)
+        {
+            parent.add(i);
+            size.add(1);
+        }
+    }
+
+
+    public int getUparent(int node)
+    {
+        if(node==parent.get(node))
+            return node;
+
+
+        int ulp_u = getUparent(parent.get(node));
+        parent.set(node,ulp_u);
+        return parent.get(node);
+    }
+
+
+    public void unionBySize(int u,int v)
+    {
+        int ulp_u = getUparent(u);
+        int ulp_v = getUparent(v);
+        if(ulp_u==ulp_v)
+            return;
+
+
+        if(size.get(ulp_u)>size.get(ulp_v))
+        {
+            parent.set(ulp_v,ulp_u);
+            size.set(ulp_u,size.get(ulp_u)+size.get(ulp_v));
+        }
+        else
+        {
+            parent.set(ulp_u,ulp_v);
+            size.set(ulp_v,size.get(ulp_u)+size.get(ulp_v));
+        }
+    }
+}
+
 class Solution 
 {
     public int findCircleNum(int[][] adj) 
     {
-        int V = adj[0].length,cnt=0;
-        boolean visited[] = new boolean[V];  
-        for(int i=0;i<V;i++)
+        int V = adj[0].length,cntC=0;
+        DisjointSet ds  = new DisjointSet(V);
+        for(int i=0;i<adj.length;i++)
         {
-            if(!visited[i])
+            for(int j=0;j<adj[0].length;j++)
             {
-                cnt++;
-                bfs(adj,visited,i);
-            }
-        }
-        return cnt;
-    }
-    public void bfs(int adj[][],boolean visited[],int node)
-    {
-        visited[node]=true;
-        int V = visited.length;
-        Queue<Integer> q = new LinkedList<>();
-        q.add(node);
-        while(!q.isEmpty())
-        {
-            int pop = q.poll();
-            for(int i=0;i<V;i++)
-            {
-                if(visited[i]==false && adj[pop][i]==1)
+                if(adj[i][j]==1)
                 {
-                    visited[i]=true;
-                    q.add(i);
+                    if(ds.getUparent(i)!=ds.getUparent(j))
+                    {
+                        ds.unionBySize(i,j);
+                    }
                 }
             }
         }
+        for(int i=0;i<V;i++)
+        {
+            if(ds.parent.get(i)==i)
+            {
+                cntC++;
+            }
+        }
+        return cntC;
     }
 }
