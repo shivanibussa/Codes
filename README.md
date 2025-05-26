@@ -112,6 +112,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/shivanibussa/Codes/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
@@ -178,6 +179,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
+| [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/shivanibussa/Codes/tree/master/0583-delete-operation-for-two-strings) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
@@ -549,6 +551,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0144-binary-tree-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0145-binary-tree-postorder-traversal) |
 | [0173-binary-search-tree-iterator](https://github.com/shivanibussa/Codes/tree/master/0173-binary-search-tree-iterator) |
+| [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/shivanibussa/Codes/tree/master/0503-next-greater-element-ii) |
 | [0735-asteroid-collision](https://github.com/shivanibussa/Codes/tree/master/0735-asteroid-collision) |
@@ -568,6 +571,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/shivanibussa/Codes/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
+| [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/shivanibussa/Codes/tree/master/0503-next-greater-element-ii) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
