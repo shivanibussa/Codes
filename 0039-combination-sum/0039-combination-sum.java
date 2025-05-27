@@ -1,24 +1,26 @@
-class Solution {
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> ans = new ArrayList<>();
-        findCombinations(candidates, target, 0, new ArrayList<>(), ans);
-        return ans;
+class Solution 
+{
+    public List<List<Integer>> combinationSum(int[] candidates, int target) 
+    {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> al = new ArrayList<>();
+        f(res,al,candidates,target,0);
+        return res;
     }
-
-    public void findCombinations(int[] arr, int target, int ind, List<Integer> ds, List<List<Integer>> ans) {
-        if (target == 0) {
-            ans.add(new ArrayList<>(ds));
+    public void f(List<List<Integer>> res, List<Integer> al,int candidates[],int target,int ind)
+    {
+        
+        if(target==0)
+        {
+            res.add(new ArrayList<>(al));
             return;
         }
-        if (ind == arr.length || target < 0) {
-            return;
-        }
 
-        if (target >= arr[ind]) {
-            ds.add(arr[ind]);
-            findCombinations(arr, target - arr[ind], ind, ds, ans);
-            ds.remove(ds.size() - 1);
-        }
-        findCombinations(arr, target, ind + 1, ds, ans);
+        if(ind==candidates.length || target<0)
+            return;
+        al.add(candidates[ind]);
+        f(res,al,candidates,target-candidates[ind],ind);
+        al.remove(al.size()-1);
+        f(res,al,candidates,target,ind+1);
     }
 }
