@@ -31,6 +31,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
+| [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
 | [0084-largest-rectangle-in-histogram](https://github.com/shivanibussa/Codes/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -567,11 +568,13 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
+| [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
 | [0222-count-complete-tree-nodes](https://github.com/shivanibussa/Codes/tree/master/0222-count-complete-tree-nodes) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 ## Monotonic Stack
