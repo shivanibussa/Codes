@@ -34,6 +34,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
 | [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
+| [0079-word-search](https://github.com/shivanibussa/Codes/tree/master/0079-word-search) |
 | [0084-largest-rectangle-in-histogram](https://github.com/shivanibussa/Codes/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0090-subsets-ii](https://github.com/shivanibussa/Codes/tree/master/0090-subsets-ii) |
@@ -182,6 +183,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
+| [0079-word-search](https://github.com/shivanibussa/Codes/tree/master/0079-word-search) |
 | [0115-distinct-subsequences](https://github.com/shivanibussa/Codes/tree/master/0115-distinct-subsequences) |
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
@@ -330,6 +332,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/shivanibussa/Codes/tree/master/0079-word-search) |
 | [0094-binary-tree-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0094-binary-tree-inorder-traversal) |
 | [0098-validate-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0098-validate-binary-search-tree) |
 | [0099-recover-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0099-recover-binary-search-tree) |
@@ -431,6 +434,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
+| [0079-word-search](https://github.com/shivanibussa/Codes/tree/master/0079-word-search) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
@@ -576,6 +580,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0039-combination-sum](https://github.com/shivanibussa/Codes/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
 | [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
+| [0079-word-search](https://github.com/shivanibussa/Codes/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/shivanibussa/Codes/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
