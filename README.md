@@ -94,6 +94,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Hash Table
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -182,6 +183,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## String
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
@@ -639,6 +641,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Sliding Window
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0239-sliding-window-maximum](https://github.com/shivanibussa/Codes/tree/master/0239-sliding-window-maximum) |
 ## Monotonic Queue
 |  |
