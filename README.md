@@ -175,6 +175,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
+| [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
 | [0115-distinct-subsequences](https://github.com/shivanibussa/Codes/tree/master/0115-distinct-subsequences) |
@@ -462,6 +463,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
+| [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0062-unique-paths](https://github.com/shivanibussa/Codes/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
@@ -564,6 +566,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Backtracking
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 ## Bit Manipulation
