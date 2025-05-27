@@ -184,6 +184,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
 | [0115-distinct-subsequences](https://github.com/shivanibussa/Codes/tree/master/0115-distinct-subsequences) |
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
+| [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
@@ -481,6 +482,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/shivanibussa/Codes/tree/master/0123-best-time-to-buy-and-sell-stock-iii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/shivanibussa/Codes/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/shivanibussa/Codes/tree/master/0198-house-robber) |
@@ -575,6 +577,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
 | [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/shivanibussa/Codes/tree/master/0090-subsets-ii) |
+| [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 ## Bit Manipulation
