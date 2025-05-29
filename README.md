@@ -34,6 +34,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
 | [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0051-n-queens](https://github.com/shivanibussa/Codes/tree/master/0051-n-queens) |
+| [0056-merge-intervals](https://github.com/shivanibussa/Codes/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/shivanibussa/Codes/tree/master/0057-insert-interval) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
@@ -140,6 +141,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Sorting
 |  |
 | ------- |
+| [0056-merge-intervals](https://github.com/shivanibussa/Codes/tree/master/0056-merge-intervals) |
 | [0215-kth-largest-element-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0215-kth-largest-element-in-an-array) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
