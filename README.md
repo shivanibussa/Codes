@@ -28,6 +28,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/shivanibussa/Codes/tree/master/0001-two-sum) |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/shivanibussa/Codes/tree/master/0039-combination-sum) |
@@ -100,6 +101,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/shivanibussa/Codes/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
