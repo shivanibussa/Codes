@@ -65,6 +65,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
+| [0435-non-overlapping-intervals](https://github.com/shivanibussa/Codes/tree/master/0435-non-overlapping-intervals) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
@@ -131,6 +132,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0135-candy](https://github.com/shivanibussa/Codes/tree/master/0135-candy) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
+| [0435-non-overlapping-intervals](https://github.com/shivanibussa/Codes/tree/master/0435-non-overlapping-intervals) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0678-valid-parenthesis-string](https://github.com/shivanibussa/Codes/tree/master/0678-valid-parenthesis-string) |
@@ -146,6 +148,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
+| [0435-non-overlapping-intervals](https://github.com/shivanibussa/Codes/tree/master/0435-non-overlapping-intervals) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
@@ -515,6 +518,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0322-coin-change](https://github.com/shivanibussa/Codes/tree/master/0322-coin-change) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/shivanibussa/Codes/tree/master/0416-partition-equal-subset-sum) |
+| [0435-non-overlapping-intervals](https://github.com/shivanibussa/Codes/tree/master/0435-non-overlapping-intervals) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/shivanibussa/Codes/tree/master/0518-coin-change-ii) |
