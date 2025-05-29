@@ -32,6 +32,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/shivanibussa/Codes/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
+| [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0051-n-queens](https://github.com/shivanibussa/Codes/tree/master/0051-n-queens) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
@@ -123,6 +124,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
+| [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/shivanibussa/Codes/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
@@ -484,6 +486,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
+| [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0062-unique-paths](https://github.com/shivanibussa/Codes/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
