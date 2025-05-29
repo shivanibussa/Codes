@@ -127,6 +127,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
+| [0678-valid-parenthesis-string](https://github.com/shivanibussa/Codes/tree/master/0678-valid-parenthesis-string) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/shivanibussa/Codes/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0890-lemonade-change](https://github.com/shivanibussa/Codes/tree/master/0890-lemonade-change) |
@@ -200,6 +201,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/shivanibussa/Codes/tree/master/0583-delete-operation-for-two-strings) |
+| [0678-valid-parenthesis-string](https://github.com/shivanibussa/Codes/tree/master/0678-valid-parenthesis-string) |
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
@@ -511,6 +513,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0583-delete-operation-for-two-strings](https://github.com/shivanibussa/Codes/tree/master/0583-delete-operation-for-two-strings) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/shivanibussa/Codes/tree/master/0673-number-of-longest-increasing-subsequence) |
+| [0678-valid-parenthesis-string](https://github.com/shivanibussa/Codes/tree/master/0678-valid-parenthesis-string) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/shivanibussa/Codes/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
@@ -579,6 +582,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/shivanibussa/Codes/tree/master/0503-next-greater-element-ii) |
+| [0678-valid-parenthesis-string](https://github.com/shivanibussa/Codes/tree/master/0678-valid-parenthesis-string) |
 | [0735-asteroid-collision](https://github.com/shivanibussa/Codes/tree/master/0735-asteroid-collision) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 ## Backtracking
