@@ -14,7 +14,7 @@ class Solution
         r=farthest;
         jumps++;
 
-          if (l > r) break;
+        //   if (l > r) break;
         
     }        
     return jumps;
