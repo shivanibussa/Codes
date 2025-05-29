@@ -1,35 +1,34 @@
-class Solution {
-    public int candy(int[] ratings) {
+class Solution 
+{
+    public int candy(int[] ratings) 
+    {
         int n = ratings.length;
-        int[] left = new int[n];
-        int right = 1;
-        int candy = 0;
-
-        // Fill the left array
+        int left[] = new int[n];
+        int right = 0;
         left[0] = 1;
-        for (int i = 1; i < n; i++) {
-            if (ratings[i] > ratings[i - 1]) {
-                left[i] = left[i - 1] + 1;
-            } else {
+        int candy=0;
+        for(int i=1;i<n;i++)
+        {
+            if(ratings[i]>ratings[i-1])
+                left[i] = 1+left[i-1];
+            else
                 left[i] = 1;
-            }
         }
-
-        // Start with the last child's candy
-        candy += left[n - 1];
-
-        // Traverse from right to left
-        for (int i = n - 2; i >= 0; i--) {
-            int cur;
-            if (ratings[i] > ratings[i + 1]) {
-                cur = right + 1;
-            } else {
+         candy+=left[n-1];
+        right = 1;
+        int cur=0;
+        for(int i=n-2;i>=0;i--)
+        {
+            if(ratings[i]>ratings[i+1])
+            {
+                cur = 1+right;
+                
+            }
+            else
                 cur = 1;
-            }
-            right = cur; // Update right
-            candy += Math.max(left[i], cur);
+            right = cur;
+            candy +=Math.max(left[i],cur);
         }
-
         return candy;
     }
 }
