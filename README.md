@@ -76,6 +76,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0735-asteroid-collision](https://github.com/shivanibussa/Codes/tree/master/0735-asteroid-collision) |
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+| [0890-lemonade-change](https://github.com/shivanibussa/Codes/tree/master/0890-lemonade-change) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
@@ -128,6 +129,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/shivanibussa/Codes/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+| [0890-lemonade-change](https://github.com/shivanibussa/Codes/tree/master/0890-lemonade-change) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
 ## Sorting
 |  |
