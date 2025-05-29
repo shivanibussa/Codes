@@ -29,6 +29,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/shivanibussa/Codes/tree/master/0001-two-sum) |
+| [0004-median-of-two-sorted-arrays](https://github.com/shivanibussa/Codes/tree/master/0004-median-of-two-sorted-arrays) |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/shivanibussa/Codes/tree/master/0039-combination-sum) |
@@ -161,6 +162,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Divide and Conquer
 |  |
 | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/shivanibussa/Codes/tree/master/0004-median-of-two-sorted-arrays) |
 | [0023-merge-k-sorted-lists](https://github.com/shivanibussa/Codes/tree/master/0023-merge-k-sorted-lists) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
@@ -296,6 +298,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Binary Search Tree
 |  |
 | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/shivanibussa/Codes/tree/master/0004-median-of-two-sorted-arrays) |
 | [0098-validate-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0098-validate-binary-search-tree) |
 | [0099-recover-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0099-recover-binary-search-tree) |
 | [0173-binary-search-tree-iterator](https://github.com/shivanibussa/Codes/tree/master/0173-binary-search-tree-iterator) |
