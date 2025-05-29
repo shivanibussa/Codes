@@ -34,6 +34,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
 | [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0051-n-queens](https://github.com/shivanibussa/Codes/tree/master/0051-n-queens) |
+| [0057-insert-interval](https://github.com/shivanibussa/Codes/tree/master/0057-insert-interval) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
 | [0078-subsets](https://github.com/shivanibussa/Codes/tree/master/0078-subsets) |
