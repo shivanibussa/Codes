@@ -10,9 +10,9 @@ class Solution
             if(prevEnd>intervals[i][0])
             {
                 res++;
+                continue;
             }
-            else
-                prevEnd = intervals[i][1];
+            prevEnd = intervals[i][1];
         }
         return res;
     }
