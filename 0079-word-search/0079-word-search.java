@@ -13,16 +13,18 @@ class Solution
         }
         return false;
     }
-    public boolean f(char board[][],int r,int c,String word,int i)
+
+    public boolean f(char board[][],int r,int c,String word,int ind)
     {
-        if(i==word.length())
+        if(ind==word.length())
             return true;
-        if(r<0 || r>=board.length || c<0 || c>=board[0].length || board[r][c]!=word.charAt(i) || board[r][c]=='#')
-            return false;
         
-        board[r][c] = '#';
-        boolean res = f(board,r+1,c,word,i+1) || f(board,r,c+1,word,i+1) ||f(board,r-1,c,word,i+1) || f(board,r,c-1,    word,i+1);
-        board[r][c] = word.charAt(i);
+        if(r<0 || r>=board.length || c<0 || c>=board[0].length || board[r][c]!=word.charAt(ind) || board[r][c]=='#')
+            return false;
+
+        board[r][c]='#';
+        boolean res = f(board,r+1,c,word,ind+1)||f(board,r,c+1,word,ind+1)||f(board,r-1,c,word,ind+1)||f(board,r,c-1,word,ind+1);
+        board[r][c] = word.charAt(ind);
         return res;
     }
 }
