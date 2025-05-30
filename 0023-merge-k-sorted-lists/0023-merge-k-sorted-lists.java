@@ -13,56 +13,49 @@ class Solution
     public ListNode mergeKLists(ListNode[] lists) 
     {
         if(lists.length==0)
-        {
             return null;
-        }
         if(lists.length==1)
-        {
-            ListNode l = lists[0];
-            return l;
-        }
-        ListNode totalLL = mergeTwoLists(lists[0],lists[1]);
+            return lists[0];
+
+        ListNode merged = merge2(lists[0],lists[1]);
         for(int i=2;i<lists.length;i++)
         {
-            totalLL = mergeTwoLists(totalLL,lists[i]);
+            merged = merge2(merged,lists[i]);
         }
-        return totalLL;
+        return merged;
     }
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2)
+
+    public ListNode merge2(ListNode l1,ListNode l2)
     {
-        ListNode temp = new ListNode(0);
-        ListNode ll = temp;
         if(l1==null)
-        {
             return l2;
-        }
         if(l2==null)
-        {
             return l1;
-        }
-        while(l1!=null && l2!=null)
+
+        ListNode temp1 = l1;
+        ListNode temp2 = l2;
+        ListNode dummy = new ListNode(0);
+        ListNode root = dummy;
+        while(temp1!=null && temp2!=null)
         {
-            if(l1.val<l2.val)
+            if(temp1.val<temp2.val)
             {
-                ll.next = l1;
-                l1 = l1.next;
+                root.next = temp1;
+                temp1 = temp1.next;
             }
             else
             {
-                ll.next = l2;
-                l2 = l2.next;
+                root.next = temp2;
+                temp2 = temp2.next;
             }
-            ll = ll.next;
+            root = root.next;
         }
-        if(l2!=null)
-        {
-            ll.next = l2;
-        }
-        if(l1!=null)
-        {
-            ll.next = l1;
-        }
-        return temp.next;
-    }
+        if(temp1!=null)
+            root.next = temp1;
 
+        if(temp2!=null)
+            root.next = temp2;
+
+        return dummy.next;
+    }
 }
