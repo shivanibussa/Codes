@@ -1,26 +1,29 @@
 class Solution 
 {
-    public List<List<Integer>> combinationSum(int[] candidates, int target) 
+    public List<List<Integer>> combinationSum(int[] nums, int target) 
     {
+        Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
-        List<Integer> al = new ArrayList<>();
-        f(res,al,candidates,target,0);
+        List<Integer> temp = new ArrayList<>();
+        f(nums,target,res,temp,0);
         return res;
     }
-    public void f(List<List<Integer>> res, List<Integer> al,int candidates[],int target,int ind)
+
+    public void f(int nums[],int target,List<List<Integer>> res,List<Integer> temp,int ind)
     {
-        
         if(target==0)
         {
-            res.add(new ArrayList<>(al));
+            res.add(new ArrayList<>(temp));
             return;
         }
-
-        if(ind==candidates.length || target<0)
+        if(ind==nums.length)
             return;
-        al.add(candidates[ind]);
-        f(res,al,candidates,target-candidates[ind],ind);
-        al.remove(al.size()-1);
-        f(res,al,candidates,target,ind+1);
+        if(target>=nums[ind])
+        {
+            temp.add(nums[ind]);
+            f(nums,target-nums[ind],res,temp,ind);
+            temp.remove(temp.size()-1);
+            f(nums,target,res,temp,ind+1);
+        }
     }
 }
