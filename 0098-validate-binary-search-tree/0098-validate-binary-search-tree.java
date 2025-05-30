@@ -17,6 +17,8 @@ class Solution
 {
     public boolean isValidBST(TreeNode root) 
     {
+        if(root==null)
+            return true;
         return f(root,Long.MIN_VALUE,Long.MAX_VALUE);
     }
     public boolean f(TreeNode root,long min,long max)
@@ -25,7 +27,7 @@ class Solution
             return true;
         if(root.val<=min || root.val>=max)
             return false;
-        return f(root.left,min,root.val) && f(root.right,root.val,max);
         
+        return f(root.left,min,root.val) && f(root.right,root.val,max);
     }
 }
