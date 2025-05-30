@@ -10,16 +10,16 @@ class Solution
         {
             for(int j=0;j<9;j++)
             {
-                if(board[i][j]=='.')
-                    continue;
-                if(rows.getOrDefault(i,new HashSet<>()).contains(board[i][j]) || cols.getOrDefault(j,new HashSet<>()).contains(board[i][j]) ||
-                squares.getOrDefault((i/3)*3+(j/3),new HashSet<>()).contains(board[i][j]))
+                char ch = board[i][j];
+                if(ch!='.')
                 {
-                    return false;
+                    if(rows.getOrDefault(i,new HashSet<>()).contains(ch)==true || cols.getOrDefault(j,new HashSet<>()).contains(ch)==true || squares.getOrDefault(((3*(i/3))+(j/3)),new HashSet<>()).contains(ch)==true )
+                            return false;
+                        rows.computeIfAbsent(i,k->new HashSet<Character>()).add(ch);
+                        cols.computeIfAbsent(j,k->new HashSet<Character>()).add(ch);
+                        squares.computeIfAbsent((3*(i/3))+(j/3),k->new HashSet<Character>()).add(ch);
+
                 }
-                rows.computeIfAbsent(i,k -> new HashSet<>()).add(board[i][j]);
-                cols.computeIfAbsent(j,k -> new HashSet<>()).add(board[i][j]);
-                squares.computeIfAbsent((i/3)*3+(j/3), k -> new HashSet<>()).add(board[i][j]);
             }
         }
         return true;
