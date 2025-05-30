@@ -15,18 +15,32 @@
  */
 class Solution 
 {
-    public boolean isSameTree(TreeNode p, TreeNode q) 
+    public boolean isSameTree(TreeNode p, TreeNode qn) 
     {
-        if(p==null || q==null)
-            return p==q;
+        if(p==null || qn==null)
+            return p==qn;
 
-        return f(p,q);
-    }
-    public boolean f(TreeNode p,TreeNode q)
-    {
-        if(p==null || q==null)
-            return p==q;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(p);
+        q.add(qn);
+        while(!q.isEmpty())
+        {
+            TreeNode pop1 = q.poll();
+            TreeNode pop2 = q.poll();
 
-        return p.val==q.val && f(p.left,q.left) && f(p.right,q.right);
+            if(pop1==null && pop2==null)
+                continue;
+            if(pop1==null ||pop2==null)
+                return false;
+
+            if(pop1.val!=pop2.val)
+                return false;
+
+            q.offer(pop1.left);
+            q.offer(pop2.left);
+            q.offer(pop1.right);
+            q.offer(pop2.right);  
+        }
+        return true;
     }
 }
