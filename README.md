@@ -202,6 +202,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
+| [0008-string-to-integer-atoi](https://github.com/shivanibussa/Codes/tree/master/0008-string-to-integer-atoi) |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
