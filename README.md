@@ -105,6 +105,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0001-two-sum](https://github.com/shivanibussa/Codes/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0012-integer-to-roman](https://github.com/shivanibussa/Codes/tree/master/0012-integer-to-roman) |
+| [0013-roman-to-integer](https://github.com/shivanibussa/Codes/tree/master/0013-roman-to-integer) |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -205,6 +206,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0008-string-to-integer-atoi](https://github.com/shivanibussa/Codes/tree/master/0008-string-to-integer-atoi) |
 | [0012-integer-to-roman](https://github.com/shivanibussa/Codes/tree/master/0012-integer-to-roman) |
+| [0013-roman-to-integer](https://github.com/shivanibussa/Codes/tree/master/0013-roman-to-integer) |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
@@ -582,6 +584,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0012-integer-to-roman](https://github.com/shivanibussa/Codes/tree/master/0012-integer-to-roman) |
+| [0013-roman-to-integer](https://github.com/shivanibussa/Codes/tree/master/0013-roman-to-integer) |
 | [0062-unique-paths](https://github.com/shivanibussa/Codes/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
