@@ -239,6 +239,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/shivanibussa/Codes/tree/master/0023-merge-k-sorted-lists) |
+| [0061-rotate-list](https://github.com/shivanibussa/Codes/tree/master/0061-rotate-list) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/shivanibussa/Codes/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0146-lru-cache](https://github.com/shivanibussa/Codes/tree/master/0146-lru-cache) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
@@ -255,6 +256,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
+| [0061-rotate-list](https://github.com/shivanibussa/Codes/tree/master/0061-rotate-list) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0455-assign-cookies](https://github.com/shivanibussa/Codes/tree/master/0455-assign-cookies) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/shivanibussa/Codes/tree/master/0653-two-sum-iv-input-is-a-bst) |
