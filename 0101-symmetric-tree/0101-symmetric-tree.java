@@ -40,8 +40,8 @@ class Solution
 
             q.add(pop1.left);
             q.add(pop2.right);
-            q.add(pop1.right);
             q.add(pop2.left);
+            q.add(pop1.right);
         }
         return f(root.left,root.right);
     }
