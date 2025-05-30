@@ -207,6 +207,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0008-string-to-integer-atoi](https://github.com/shivanibussa/Codes/tree/master/0008-string-to-integer-atoi) |
 | [0012-integer-to-roman](https://github.com/shivanibussa/Codes/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/shivanibussa/Codes/tree/master/0013-roman-to-integer) |
+| [0020-valid-parentheses](https://github.com/shivanibussa/Codes/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/shivanibussa/Codes/tree/master/0072-edit-distance) |
@@ -599,6 +600,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Stack
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/shivanibussa/Codes/tree/master/0020-valid-parentheses) |
 | [0084-largest-rectangle-in-histogram](https://github.com/shivanibussa/Codes/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0094-binary-tree-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0094-binary-tree-inorder-traversal) |
