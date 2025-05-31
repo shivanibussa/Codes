@@ -1,59 +1,48 @@
 class Solution 
 {
-    private int gridvis[][];
     public int numIslands(char[][] grid) 
     {
-        int n = grid[0].length,islands=0,m=grid.length;
-        gridvis = new int[m][n];
+        int m = grid.length, n = grid[0].length;
+        int visited[][] = new int[m][n];
+        int cnt=0;
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
             {
-                if(grid[i][j]=='1' && gridvis[i][j]==0)
+                if(grid[i][j]=='1' && visited[i][j]==0)
                 {
-                    bfs(i,j,m,n,grid);
-                    System.out.println(i+" fdhdfgh "+j);
-                    islands++;
+                    bfs(i,j,grid,visited);
+                    cnt++;
                 }
             }
         }
-        return islands;
+        return cnt;
     }
-    public void bfs(int i, int j,int m,int n,char[][] grid)
+    public void bfs(int i,int j,char grid[][],int visited[][])
     {
         Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{i,j});
+        int rows = grid.length,cols = grid[0].length;
+        int dr[] = new int[]{-1,0,1,0};
+        int dc[] = new int[]{0,-1,0,1};
+        visited[i][j] = 1;
+        q.offer(new int[]{i,j});
         while(!q.isEmpty())
         {
-            int pops[] = q.poll();
-            int r = pops[0];
-            int c = pops[1];
-            gridvis[r][c] = 1;
-            if(r>=0 && c>=0 && r<m && c<n)
+            int pop[] = q.poll();
+            int r = pop[0];
+            int c = pop[1];
+
+            for(int k=0;k<4;k++)
             {
-                if(r+1<m &&grid[r+1][c]=='1' && gridvis[r+1][c]==0)
+                int nr = r+dr[k];
+                int nc = c+dc[k];
+
+                if(nr>=0 && nr<rows && nc>=0 && nc<cols && grid[nr][nc]=='1' && visited[nr][nc]==0)
                 {
-                    q.add(new int[]{r+1,c});
-                    gridvis[r+1][c]=1;
-                }
-                if(r-1>=0 && grid[r-1][c]=='1' && gridvis[r-1][c]==0)
-                {
-                    q.add(new int[]{r-1,c});
-                    gridvis[r-1][c]=1;
-                }
-                if(c-1>=0 && grid[r][c-1]=='1' && gridvis[r][c-1]==0)
-                {
-                    q.add(new int[]{r,c-1});
-                    gridvis[r][c-1]=1;
-                }
-                if(c+1<n && grid[r][c+1]=='1' && gridvis[r][c+1]==0)
-                {
-                    q.add(new int[]{r,c+1});
-                    gridvis[r][c+1]=1;
+                    q.offer(new int[]{nr,nc});
+                    visited[nr][nc]=1;
                 }
             }
-
         }
-
     }
 }
