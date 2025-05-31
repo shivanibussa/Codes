@@ -219,6 +219,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
@@ -253,6 +254,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0155-min-stack](https://github.com/shivanibussa/Codes/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/shivanibussa/Codes/tree/master/0173-binary-search-tree-iterator) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
@@ -395,6 +397,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/shivanibussa/Codes/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/shivanibussa/Codes/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
@@ -685,6 +688,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 ## Queue
 |  |
