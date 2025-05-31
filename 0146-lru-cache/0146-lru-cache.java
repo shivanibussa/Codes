@@ -1,17 +1,17 @@
 class Node
 {
+    Node next;
+    Node prev;
     int key;
     int val;
-    Node prev;
-    Node next;
 
-    public Node(int key,int val)
+    Node(int key,int val)
     {
         this.key = key;
         this.val = val;
-        this.prev = prev;
-        this.next = next;
     }
+
+    
 }
 class LRUCache 
 {
@@ -22,56 +22,52 @@ class LRUCache
     public LRUCache(int capacity) 
     {
         this.capacity = capacity;
-        this.hm = new HashMap<>();
         this.head = new Node(0,0);
         this.tail = new Node(0,0);
-        this.head.next = this.tail;
-        this.tail.prev = this.head;
+        hm = new HashMap<>();
+        head.next = tail;
+        tail.prev = head;
     }
     
-    public void insertNode(Node node)
-    {
-        Node prev = this.tail.prev;
-        prev.next = node;
-        node.prev = prev;
-        node.next = this.tail;
-        this.tail.prev = node;
-    }
-
-    public void deleteNode(Node node)
-    {
-        Node prev = node.prev;
-        prev.next = node.next;
-        node.next.prev = prev;
-    }
     public int get(int key) 
     {
         if(hm.containsKey(key))
         {
             Node node = hm.get(key);
-            deleteNode(node);
+            removeNode(node);
             insertNode(node);
             return node.val;
         }
-        return -1;
+        else
+        {
+            return -1;
+        }
     }
     
     public void put(int key, int value) 
     {
         if(hm.containsKey(key))
-        {
-            deleteNode(hm.get(key));
-        }
-        Node newNode = new Node(key,value);
-        hm.put(key,newNode);
-        insertNode(newNode);
+            removeNode(hm.get(key));
+        if(hm.size()==capacity)
+            removeNode(tail.prev);
 
-        if(hm.size()>capacity)
-        {
-            Node lru = this.head.next;
-            hm.remove(lru.key);
-            deleteNode(lru);
-        }
+        insertNode(new Node(key,value));
+    }
+
+    private void insertNode(Node node)
+    {
+        hm.put(node.key,node);
+        node.next = head.next;
+        node.next.prev = node;
+        head.next = node;
+        node.prev = head;
+    }
+
+    private void removeNode(Node node)
+    {
+        hm.remove(node.key);
+        node.next.prev = node.prev;
+        node.prev.next = node.next;
     }
 }
 
