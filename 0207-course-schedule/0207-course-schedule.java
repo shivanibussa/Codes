@@ -26,10 +26,11 @@ class Solution
                 q.offer(i);
             }
         }
+        int cnt=0;
         while(!q.isEmpty())
         {
             int pop = q.poll();
-            res.add(pop);
+            cnt++;
             for(int it:adj.get(pop))
             {
                 indegree[it]--;
@@ -39,6 +40,6 @@ class Solution
                 }
             }
         }
-        return res.size()==V ? true:false;
+        return cnt==V ? true:false;
     }
 }
