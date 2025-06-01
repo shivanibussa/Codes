@@ -57,6 +57,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/shivanibussa/Codes/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/shivanibussa/Codes/tree/master/0198-house-robber) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
+| [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0213-house-robber-ii](https://github.com/shivanibussa/Codes/tree/master/0213-house-robber-ii) |
 | [0215-kth-largest-element-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0215-kth-largest-element-in-an-array) |
 | [0239-sliding-window-maximum](https://github.com/shivanibussa/Codes/tree/master/0239-sliding-window-maximum) |
@@ -220,6 +221,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
@@ -489,6 +491,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
+| [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/shivanibussa/Codes/tree/master/0733-flood-fill) |
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
@@ -646,6 +649,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0090-subsets-ii](https://github.com/shivanibussa/Codes/tree/master/0090-subsets-ii) |
 | [0113-path-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0113-path-sum-ii) |
 | [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
+| [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0494-target-sum](https://github.com/shivanibussa/Codes/tree/master/0494-target-sum) |
 ## Bit Manipulation
@@ -689,6 +693,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 ## Queue
 |  |
