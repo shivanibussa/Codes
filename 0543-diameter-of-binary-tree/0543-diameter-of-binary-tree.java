@@ -18,7 +18,7 @@ class Solution
     int maxh = Integer.MIN_VALUE;
     public int diameterOfBinaryTree(TreeNode root) 
     {
-        f(root);
+        int res = f(root);
         return maxh;
     }
     public int f(TreeNode root)
