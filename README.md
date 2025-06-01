@@ -76,6 +76,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/shivanibussa/Codes/tree/master/0503-next-greater-element-ii) |
 | [0518-coin-change-ii](https://github.com/shivanibussa/Codes/tree/master/0518-coin-change-ii) |
+| [0529-minesweeper](https://github.com/shivanibussa/Codes/tree/master/0529-minesweeper) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
@@ -406,6 +407,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
+| [0529-minesweeper](https://github.com/shivanibussa/Codes/tree/master/0529-minesweeper) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/shivanibussa/Codes/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -444,6 +446,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0207-course-schedule](https://github.com/shivanibussa/Codes/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
 | [0322-coin-change](https://github.com/shivanibussa/Codes/tree/master/0322-coin-change) |
+| [0529-minesweeper](https://github.com/shivanibussa/Codes/tree/master/0529-minesweeper) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/shivanibussa/Codes/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/shivanibussa/Codes/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -495,6 +498,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0289-game-of-life](https://github.com/shivanibussa/Codes/tree/master/0289-game-of-life) |
+| [0529-minesweeper](https://github.com/shivanibussa/Codes/tree/master/0529-minesweeper) |
 | [0542-01-matrix](https://github.com/shivanibussa/Codes/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/shivanibussa/Codes/tree/master/0733-flood-fill) |
 | [0854-making-a-large-island](https://github.com/shivanibussa/Codes/tree/master/0854-making-a-large-island) |
