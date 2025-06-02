@@ -37,6 +37,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0046-permutations](https://github.com/shivanibussa/Codes/tree/master/0046-permutations) |
 | [0051-n-queens](https://github.com/shivanibussa/Codes/tree/master/0051-n-queens) |
+| [0054-spiral-matrix](https://github.com/shivanibussa/Codes/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/shivanibussa/Codes/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/shivanibussa/Codes/tree/master/0057-insert-interval) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
@@ -499,6 +500,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
+| [0054-spiral-matrix](https://github.com/shivanibussa/Codes/tree/master/0054-spiral-matrix) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
 | [0079-word-search](https://github.com/shivanibussa/Codes/tree/master/0079-word-search) |
@@ -594,6 +596,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Simulation
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/shivanibussa/Codes/tree/master/0054-spiral-matrix) |
 | [0289-game-of-life](https://github.com/shivanibussa/Codes/tree/master/0289-game-of-life) |
 | [0735-asteroid-collision](https://github.com/shivanibussa/Codes/tree/master/0735-asteroid-collision) |
 | [2606-difference-between-ones-and-zeros-in-row-and-column](https://github.com/shivanibussa/Codes/tree/master/2606-difference-between-ones-and-zeros-in-row-and-column) |
