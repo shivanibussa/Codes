@@ -98,6 +98,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1121-partition-array-for-maximum-sum](https://github.com/shivanibussa/Codes/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/shivanibussa/Codes/tree/master/1402-count-square-submatrices-with-all-ones) |
+| [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/shivanibussa/Codes/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1706-min-cost-to-connect-all-points](https://github.com/shivanibussa/Codes/tree/master/1706-min-cost-to-connect-all-points) |
@@ -474,6 +475,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1073-number-of-enclaves](https://github.com/shivanibussa/Codes/tree/master/1073-number-of-enclaves) |
+| [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/shivanibussa/Codes/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1442-number-of-operations-to-make-network-connected](https://github.com/shivanibussa/Codes/tree/master/1442-number-of-operations-to-make-network-connected) |
 | [1753-path-with-minimum-effort](https://github.com/shivanibussa/Codes/tree/master/1753-path-with-minimum-effort) |
 | [2461-amount-of-time-for-binary-tree-to-be-infected](https://github.com/shivanibussa/Codes/tree/master/2461-amount-of-time-for-binary-tree-to-be-infected) |
@@ -518,6 +520,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1073-number-of-enclaves](https://github.com/shivanibussa/Codes/tree/master/1073-number-of-enclaves) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/shivanibussa/Codes/tree/master/1402-count-square-submatrices-with-all-ones) |
+| [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/shivanibussa/Codes/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1559-cherry-pickup-ii](https://github.com/shivanibussa/Codes/tree/master/1559-cherry-pickup-ii) |
 | [1753-path-with-minimum-effort](https://github.com/shivanibussa/Codes/tree/master/1753-path-with-minimum-effort) |
 | [2606-difference-between-ones-and-zeros-in-row-and-column](https://github.com/shivanibussa/Codes/tree/master/2606-difference-between-ones-and-zeros-in-row-and-column) |
