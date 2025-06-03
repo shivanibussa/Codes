@@ -92,6 +92,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0890-lemonade-change](https://github.com/shivanibussa/Codes/tree/master/0890-lemonade-change) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
+| [0974-reorder-data-in-log-files](https://github.com/shivanibussa/Codes/tree/master/0974-reorder-data-in-log-files) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1073-number-of-enclaves](https://github.com/shivanibussa/Codes/tree/master/1073-number-of-enclaves) |
@@ -168,6 +169,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0778-reorganize-string](https://github.com/shivanibussa/Codes/tree/master/0778-reorganize-string) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
+| [0974-reorder-data-in-log-files](https://github.com/shivanibussa/Codes/tree/master/0974-reorder-data-in-log-files) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
@@ -241,6 +243,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0721-accounts-merge](https://github.com/shivanibussa/Codes/tree/master/0721-accounts-merge) |
 | [0778-reorganize-string](https://github.com/shivanibussa/Codes/tree/master/0778-reorganize-string) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
+| [0974-reorder-data-in-log-files](https://github.com/shivanibussa/Codes/tree/master/0974-reorder-data-in-log-files) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/shivanibussa/Codes/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/shivanibussa/Codes/tree/master/1250-longest-common-subsequence) |
