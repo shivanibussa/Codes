@@ -93,6 +93,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
 | [0974-reorder-data-in-log-files](https://github.com/shivanibussa/Codes/tree/master/0974-reorder-data-in-log-files) |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
 | [1073-number-of-enclaves](https://github.com/shivanibussa/Codes/tree/master/1073-number-of-enclaves) |
@@ -170,6 +171,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0778-reorganize-string](https://github.com/shivanibussa/Codes/tree/master/0778-reorganize-string) |
 | [0876-hand-of-straights](https://github.com/shivanibussa/Codes/tree/master/0876-hand-of-straights) |
 | [0974-reorder-data-in-log-files](https://github.com/shivanibussa/Codes/tree/master/0974-reorder-data-in-log-files) |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/shivanibussa/Codes/tree/master/1669-minimum-cost-to-cut-a-stick) |
@@ -183,6 +185,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0109-convert-sorted-list-to-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0109-convert-sorted-list-to-binary-search-tree) |
 | [0215-kth-largest-element-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -197,6 +200,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0778-reorganize-string](https://github.com/shivanibussa/Codes/tree/master/0778-reorganize-string) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/shivanibussa/Codes/tree/master/0803-cheapest-flights-within-k-stops) |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 | [1753-path-with-minimum-effort](https://github.com/shivanibussa/Codes/tree/master/1753-path-with-minimum-effort) |
 ## Bucket Sort
 |  |
@@ -214,6 +218,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 ## String
 |  |
 | ------- |
@@ -637,6 +642,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0273-integer-to-english-words](https://github.com/shivanibussa/Codes/tree/master/0273-integer-to-english-words) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 ## Memoization
 |  |
 | ------- |
@@ -741,4 +747,8 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/shivanibussa/Codes/tree/master/0146-lru-cache) |
+## Geometry
+|  |
+| ------- |
+| [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 <!---LeetCode Topics End-->
