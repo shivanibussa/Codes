@@ -56,6 +56,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/shivanibussa/Codes/tree/master/0123-best-time-to-buy-and-sell-stock-iii) |
 | [0130-surrounded-regions](https://github.com/shivanibussa/Codes/tree/master/0130-surrounded-regions) |
 | [0135-candy](https://github.com/shivanibussa/Codes/tree/master/0135-candy) |
+| [0139-word-break](https://github.com/shivanibussa/Codes/tree/master/0139-word-break) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/shivanibussa/Codes/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/shivanibussa/Codes/tree/master/0198-house-robber) |
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
@@ -123,6 +124,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
+| [0139-word-break](https://github.com/shivanibussa/Codes/tree/master/0139-word-break) |
 | [0146-lru-cache](https://github.com/shivanibussa/Codes/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
@@ -244,6 +246,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0127-word-ladder](https://github.com/shivanibussa/Codes/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
+| [0139-word-break](https://github.com/shivanibussa/Codes/tree/master/0139-word-break) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
@@ -591,6 +594,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0124-binary-tree-maximum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/shivanibussa/Codes/tree/master/0131-palindrome-partitioning) |
 | [0132-palindrome-partitioning-ii](https://github.com/shivanibussa/Codes/tree/master/0132-palindrome-partitioning-ii) |
+| [0139-word-break](https://github.com/shivanibussa/Codes/tree/master/0139-word-break) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/shivanibussa/Codes/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/shivanibussa/Codes/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/shivanibussa/Codes/tree/master/0213-house-robber-ii) |
@@ -666,6 +670,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
+| [0139-word-break](https://github.com/shivanibussa/Codes/tree/master/0139-word-break) |
 ## Combinatorics
 |  |
 | ------- |
@@ -746,6 +751,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Trie
 |  |
 | ------- |
+| [0139-word-break](https://github.com/shivanibussa/Codes/tree/master/0139-word-break) |
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
