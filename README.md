@@ -244,6 +244,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0212-word-search-ii](https://github.com/shivanibussa/Codes/tree/master/0212-word-search-ii) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0273-integer-to-english-words](https://github.com/shivanibussa/Codes/tree/master/0273-integer-to-english-words) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/shivanibussa/Codes/tree/master/0583-delete-operation-for-two-strings) |
@@ -282,6 +283,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/shivanibussa/Codes/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Two Pointers
@@ -326,6 +328,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0450-delete-node-in-a-bst](https://github.com/shivanibussa/Codes/tree/master/0450-delete-node-in-a-bst) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/shivanibussa/Codes/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -385,6 +388,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0450-delete-node-in-a-bst](https://github.com/shivanibussa/Codes/tree/master/0450-delete-node-in-a-bst) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/shivanibussa/Codes/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -428,6 +432,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0417-pacific-atlantic-water-flow](https://github.com/shivanibussa/Codes/tree/master/0417-pacific-atlantic-water-flow) |
 | [0529-minesweeper](https://github.com/shivanibussa/Codes/tree/master/0529-minesweeper) |
 | [0543-diameter-of-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0543-diameter-of-binary-tree) |
@@ -467,6 +472,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0200-number-of-islands](https://github.com/shivanibussa/Codes/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/shivanibussa/Codes/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/shivanibussa/Codes/tree/master/0210-course-schedule-ii) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0322-coin-change](https://github.com/shivanibussa/Codes/tree/master/0322-coin-change) |
 | [0417-pacific-atlantic-water-flow](https://github.com/shivanibussa/Codes/tree/master/0417-pacific-atlantic-water-flow) |
 | [0529-minesweeper](https://github.com/shivanibussa/Codes/tree/master/0529-minesweeper) |
