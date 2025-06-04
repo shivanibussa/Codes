@@ -36,6 +36,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
 | [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0046-permutations](https://github.com/shivanibussa/Codes/tree/master/0046-permutations) |
+| [0048-rotate-image](https://github.com/shivanibussa/Codes/tree/master/0048-rotate-image) |
 | [0051-n-queens](https://github.com/shivanibussa/Codes/tree/master/0051-n-queens) |
 | [0054-spiral-matrix](https://github.com/shivanibussa/Codes/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/shivanibussa/Codes/tree/master/0056-merge-intervals) |
@@ -520,6 +521,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0036-valid-sudoku](https://github.com/shivanibussa/Codes/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
+| [0048-rotate-image](https://github.com/shivanibussa/Codes/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/shivanibussa/Codes/tree/master/0054-spiral-matrix) |
 | [0063-unique-paths-ii](https://github.com/shivanibussa/Codes/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/shivanibussa/Codes/tree/master/0064-minimum-path-sum) |
@@ -648,6 +650,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0012-integer-to-roman](https://github.com/shivanibussa/Codes/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/shivanibussa/Codes/tree/master/0013-roman-to-integer) |
+| [0048-rotate-image](https://github.com/shivanibussa/Codes/tree/master/0048-rotate-image) |
 | [0062-unique-paths](https://github.com/shivanibussa/Codes/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0273-integer-to-english-words](https://github.com/shivanibussa/Codes/tree/master/0273-integer-to-english-words) |
