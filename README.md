@@ -136,6 +136,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
 | [0387-first-unique-character-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0387-first-unique-character-in-a-string) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
+| [0438-find-all-anagrams-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
@@ -267,6 +268,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0387-first-unique-character-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0387-first-unique-character-in-a-string) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
+| [0438-find-all-anagrams-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0438-find-all-anagrams-in-a-string) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/shivanibussa/Codes/tree/master/0583-delete-operation-for-two-strings) |
 | [0678-valid-parenthesis-string](https://github.com/shivanibussa/Codes/tree/master/0678-valid-parenthesis-string) |
@@ -789,6 +791,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/shivanibussa/Codes/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0239-sliding-window-maximum](https://github.com/shivanibussa/Codes/tree/master/0239-sliding-window-maximum) |
+| [0438-find-all-anagrams-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0438-find-all-anagrams-in-a-string) |
 ## Monotonic Queue
 |  |
 | ------- |
