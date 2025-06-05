@@ -1,51 +1,30 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution 
-{
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) 
-    {
-    List<List<Integer>> res = new ArrayList<>();
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();
+        List<List<Integer>> res = new ArrayList<>();
         boolean reverse = true;
         if(root==null)
             return res;
         q.add(root);
         while(!q.isEmpty())
         {
-            int s = q.size();
-            ArrayList<Integer> temp = new ArrayList<>();
             reverse = !reverse;
+            List<Integer> temp = new ArrayList<>();
+            int s = q.size();
             for(int i=0;i<s;i++)
             {
-                TreeNode node = q.poll();
-                temp.add(node.val);
-                if(node.left!=null){
-                    q.offer(node.left);
-                }
-                if(node.right!=null){
-                    q.offer(node.right);
-                }    
+                TreeNode pop = q.poll();
+                temp.add(pop.val);
+                if(pop.left!=null)
+                    q.add(pop.left);
+                if(pop.right!=null)
+                    q.add(pop.right);
             }
-            if(reverse==true)
+            if(reverse)
                 Collections.reverse(temp);
             res.add(temp);
         }
         return res;
-
-
+         
     }
-
 }
