@@ -1,40 +1,24 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution 
 {
-    public TreeNode buildTree(int[] preorder, int[] inorder) 
+    public TreeNode buildTree(int[] preorder, int[] inorder)
     {
-        HashMap<Integer,Integer> hm = new HashMap<>();
+        HashMap<Integer,Integer> inMap = new HashMap<>();
         for(int i=0;i<inorder.length;i++)
         {
-            hm.put(inorder[i],i);
+            inMap.put(inorder[i],i);
         }
         int n = preorder.length;
-        return helper(inorder,0,n-1,preorder,0,n-1,hm);
+        return helper(0,n-1,inorder,0,n-1,preorder,inMap);
     }
-    public TreeNode helper(int inorder[],int is,int ie,int preorder[],int ps,int pe,HashMap<Integer,Integer> hm)
+    public TreeNode helper(int is,int ie,int inorder[],int ps,int pe,int preorder[],HashMap<Integer,Integer> hm)
     {
         if(ps>pe || is>ie)
             return null;
-        
-        TreeNode root = new TreeNode(preorder[ps]);
-        int inroot = hm.get(preorder[ps]);
-        int numsLeft = inroot - is;
-        root.left = helper(inorder,is,inroot-1,preorder,ps+1,ps+numsLeft,hm);
-        root.right = helper(inorder,inroot+1,ie,preorder,ps+numsLeft+1,pe,hm);
+        int inRoot = hm.get(preorder[ps]);
+        int numsLeft = inRoot-is;
+        TreeNode root = new TreeNode(inorder[inRoot]);
+        root.left = helper(is,inRoot-1,inorder,ps+1,ps+numsLeft,preorder,hm);
+        root.right = helper(inRoot+1,ie,inorder,ps+1+numsLeft,pe,preorder,hm);
         return root;
-    } 
+    }
 }
