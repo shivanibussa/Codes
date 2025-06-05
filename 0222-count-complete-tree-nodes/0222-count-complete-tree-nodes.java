@@ -19,36 +19,39 @@ class Solution
     {
         if(root==null)
             return 0;
+        if(root.left==null && root.right==null)
+            return 1;
+        int lh = getLeftHeight(root.left);
+        int rh = getRightHeight(root.right);
 
-        int left = getLeftHeight(root);
-        int right = getRightHeight(root);
+        if(lh==rh)
+            return (int) Math.pow(2,lh+1)-1;
 
-        if(left==right)
-            return (int)Math.pow(2,left)-1;
-        
-        else
-            return countNodes(root.left)+countNodes(root.right)+1;
+        return countNodes(root.left)+countNodes(root.right)+1;
     }
-
     public int getLeftHeight(TreeNode root)
     {
-        int count=0;
-        while(root!=null)
+        TreeNode curr = root;
+        int l=0;
+        while(curr!=null)
         {
-            count++;
-            root = root.left;
+            l++;
+            curr=curr.left;
+            
         }
-        return count;
+        return l;
     }
 
     public int getRightHeight(TreeNode root)
     {
-        int count = 0;
-        while(root!=null)
+        TreeNode curr = root;
+        int r=0;
+        while(curr!=null)
         {
-            count++;
-            root = root.right;
+            r++;
+            curr = curr.right;
+            
         }
-        return count;
+        return r;
     }
 }
