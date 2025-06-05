@@ -1,30 +1,22 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution 
 {
-    public void parentsFeed(HashMap<TreeNode,TreeNode> parents, TreeNode root)
+    public void parentsFeed(HashMap<TreeNode,TreeNode> tm,TreeNode root)
     {
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
+        // HashMap<Tr,Integer>tm = new HashMap<>();
         while(!q.isEmpty())
         {
             TreeNode pop = q.poll();
             if(pop.left!=null)
             {
-                q.offer(pop.left);
-                parents.put(pop.left,pop);
-            }
+                q.add(pop.left);
+                tm.put(pop.left,pop);
+            }   
             if(pop.right!=null)
             {
-                q.offer(pop.right);
-                parents.put(pop.right,pop);
+                q.add(pop.right);
+                tm.put(pop.right,pop);
             }
         }
     }
@@ -32,37 +24,34 @@ class Solution
     {
         HashMap<TreeNode,TreeNode> parents = new HashMap<>();
         parentsFeed(parents,root);
-        ArrayList<Integer> res =new ArrayList<>();
         Queue<TreeNode> q = new LinkedList<>();
+        ArrayList<Integer> res = new ArrayList<>();
         HashMap<TreeNode,Boolean> visited = new HashMap<>();
-        int curr=0;
-
-        q.offer(target);
+        q.add(target);
+        int steps=0;
         while(!q.isEmpty())
         {
-            int s = q.size();
-            if(curr==k)
+            if(steps==k)
                 break;
-            
-            curr++;
+            steps++;
+            int s = q.size();
             for(int i=0;i<s;i++)
             {
                 TreeNode pop = q.poll();
                 visited.put(pop,true);
-
                 if(pop.left!=null && visited.get(pop.left)==null)
                 {
-                    q.offer(pop.left);
+                    q.add(pop.left);
                     visited.put(pop.left,true);
                 }
                 if(pop.right!=null && visited.get(pop.right)==null)
                 {
-                    q.offer(pop.right);
+                    q.add(pop.right);
                     visited.put(pop.right,true);
                 }
-                if(parents.get(pop)!=null  && visited.get(parents.get(pop))==null)
+                if(parents.get(pop)!=null && visited.get(parents.get(pop))==null)
                 {
-                    q.offer(parents.get(pop));
+                    q.add(parents.get(pop));
                     visited.put(parents.get(pop),true);
                 }
             }
