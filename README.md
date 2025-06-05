@@ -132,6 +132,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0208-implement-trie-prefix-tree](https://github.com/shivanibussa/Codes/tree/master/0208-implement-trie-prefix-tree) |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
 | [0355-design-twitter](https://github.com/shivanibussa/Codes/tree/master/0355-design-twitter) |
+| [0387-first-unique-character-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0387-first-unique-character-in-a-string) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
 | [0496-next-greater-element-i](https://github.com/shivanibussa/Codes/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/shivanibussa/Codes/tree/master/0560-subarray-sum-equals-k) |
@@ -222,6 +223,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/shivanibussa/Codes/tree/master/0347-top-k-frequent-elements) |
+| [0387-first-unique-character-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0387-first-unique-character-in-a-string) |
 | [0621-task-scheduler](https://github.com/shivanibussa/Codes/tree/master/0621-task-scheduler) |
 | [0778-reorganize-string](https://github.com/shivanibussa/Codes/tree/master/0778-reorganize-string) |
 | [0837-most-common-word](https://github.com/shivanibussa/Codes/tree/master/0837-most-common-word) |
@@ -259,6 +261,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0257-binary-tree-paths](https://github.com/shivanibussa/Codes/tree/master/0257-binary-tree-paths) |
 | [0273-integer-to-english-words](https://github.com/shivanibussa/Codes/tree/master/0273-integer-to-english-words) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0387-first-unique-character-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0387-first-unique-character-in-a-string) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/shivanibussa/Codes/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/shivanibussa/Codes/tree/master/0583-delete-operation-for-two-strings) |
@@ -773,6 +776,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/shivanibussa/Codes/tree/master/0239-sliding-window-maximum) |
+| [0387-first-unique-character-in-a-string](https://github.com/shivanibussa/Codes/tree/master/0387-first-unique-character-in-a-string) |
 ## Sliding Window
 |  |
 | ------- |
