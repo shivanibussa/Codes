@@ -98,6 +98,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [0967-minimum-falling-path-sum](https://github.com/shivanibussa/Codes/tree/master/0967-minimum-falling-path-sum) |
 | [0974-reorder-data-in-log-files](https://github.com/shivanibussa/Codes/tree/master/0974-reorder-data-in-log-files) |
+| [0994-prison-cells-after-n-days](https://github.com/shivanibussa/Codes/tree/master/0994-prison-cells-after-n-days) |
 | [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
@@ -146,6 +147,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/shivanibussa/Codes/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0952-word-subsets](https://github.com/shivanibussa/Codes/tree/master/0952-word-subsets) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/shivanibussa/Codes/tree/master/0984-most-stones-removed-with-same-row-or-column) |
+| [0994-prison-cells-after-n-days](https://github.com/shivanibussa/Codes/tree/master/0994-prison-cells-after-n-days) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/shivanibussa/Codes/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
 | [1502-construct-k-palindrome-strings](https://github.com/shivanibussa/Codes/tree/master/1502-construct-k-palindrome-strings) |
@@ -678,6 +680,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0070-climbing-stairs](https://github.com/shivanibussa/Codes/tree/master/0070-climbing-stairs) |
 | [0273-integer-to-english-words](https://github.com/shivanibussa/Codes/tree/master/0273-integer-to-english-words) |
 | [0368-largest-divisible-subset](https://github.com/shivanibussa/Codes/tree/master/0368-largest-divisible-subset) |
+| [0994-prison-cells-after-n-days](https://github.com/shivanibussa/Codes/tree/master/0994-prison-cells-after-n-days) |
 | [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 ## Memoization
 |  |
@@ -733,6 +736,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0090-subsets-ii](https://github.com/shivanibussa/Codes/tree/master/0090-subsets-ii) |
 | [0222-count-complete-tree-nodes](https://github.com/shivanibussa/Codes/tree/master/0222-count-complete-tree-nodes) |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shivanibussa/Codes/tree/master/0421-maximum-xor-of-two-numbers-in-an-array) |
+| [0994-prison-cells-after-n-days](https://github.com/shivanibussa/Codes/tree/master/0994-prison-cells-after-n-days) |
 ## Monotonic Stack
 |  |
 | ------- |
