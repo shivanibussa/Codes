@@ -1,28 +1,15 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+import java.util.*;
 class Pair
 {
     TreeNode node;
-    int row,col;
+    int haxis;
+    int axis;
 
-    Pair(TreeNode node,int row,int col)
+    Pair(TreeNode node,int haxis, int axis)
     {
         this.node = node;
-        this.row = row;
-        this.col = col;
+        this.haxis = haxis;
+        this.axis = axis;
     }
 }
 class Solution 
@@ -30,7 +17,7 @@ class Solution
     public List<List<Integer>> verticalTraversal(TreeNode root) 
     {
         List<List<Integer>> res = new ArrayList<>();
-        TreeMap<Integer,TreeMap<Integer,ArrayList<Integer>>> hm = new TreeMap<>();
+        TreeMap<Integer,TreeMap<Integer,ArrayList<Integer>>> tm = new TreeMap<>();
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(root,0,0));
 
@@ -38,31 +25,30 @@ class Solution
         {
             Pair pop = q.poll();
             TreeNode node = pop.node;
-            int x = pop.row, y = pop.col;
+            int line = pop.axis;
+            int hline = pop.haxis;
 
-            hm.computeIfAbsent(x,k-> new TreeMap<>());
-            hm.get(x).computeIfAbsent(y,k-> new ArrayList<>());
-            hm.get(x).get(y).add(node.val);
+            tm.putIfAbsent(hline,new TreeMap<>());
+            tm.get(hline).putIfAbsent(line,new ArrayList<>());
+            tm.get(hline).get(line).add(node.val);
 
             if(node.left!=null)
-            {
-                q.add(new Pair(node.left,x-1,y+1));
-            }
+                q.add(new Pair(node.left,hline-1,line+1));
             if(node.right!=null)
-            {
-                q.add(new Pair(node.right,x+1,y+1));
-            }
+                q.add(new Pair(node.right,hline+1,line+1));
         }
-        for(TreeMap<Integer,ArrayList<Integer>> tm : hm.values())
+        Collection<TreeMap<Integer, ArrayList<Integer>>> tmv = tm.values();
+        for(TreeMap<Integer,ArrayList<Integer>> entry:tmv)
         {
             ArrayList<Integer> temp = new ArrayList<>();
-            for(ArrayList<Integer> es: tm.values())
+            for(ArrayList<Integer> al:entry.values())
             {
-                Collections.sort(es);
-                temp.addAll(es);            
+                Collections.sort(al);
+                temp.addAll(al);
             }
             res.add(temp);
         }
+        System.out.println(tm);
         return res;
     }
 }
