@@ -22,19 +22,19 @@ class Solution
                 }
                 if(prev.right==null)
                 {
-                    prev.right = curr;
+                    prev.right=curr;
                     curr = curr.left;
                 }
                 else
                 {
-                    prev.right=null;
+                    prev.right = null;
                     c++;
                     if(c==k)
                         return curr.val;
                     curr = curr.right;
                 }
             }
-        }
+        }    
         return -1;
     }
 }
