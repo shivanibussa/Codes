@@ -1,24 +1,34 @@
-// User function Template for Java
+/* class Node {
+    int data;
+    Node left, right;
+
+    Node(int data) {
+        this.data = data;
+        left = right = null;
+    }
+} */
 
 class Tree 
 {
     int findCeil(Node root, int key) 
     {
-        if (root == null) return -1;
+        if(root==null)
+            return -1;
+        Node curr = root;
         int ceil = -1;
-        while(root!=null)
+        while(curr!=null)
         {
-            if(root.data==key)
-                return root.data;
-                
-            if(root.data < key)
+            if(curr.data==key)
+                return curr.data;
+            if(curr.data<key)
             {
-                root = root.right; 
+               curr = curr.right;
             }
             else
             {
-                ceil = root.data;
-                root = root.left;
+                ceil = curr.data;
+                 curr = curr.left;
+                
             }
         }
         return ceil;
