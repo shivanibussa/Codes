@@ -22,7 +22,6 @@ class Solution
             return null;
         if(root.val==key)
             return helper(root);
-
         while(curr!=null)
         {
             if(curr.val>key)
@@ -49,20 +48,20 @@ class Solution
             return node.right;
         else if(node.right==null)
             return node.left;
-        else 
+        else
         {
             TreeNode rightbranch = node.right;
-            TreeNode lastchild = findLast(node.left);
+            TreeNode lastchild = lastchild(node.left);
             lastchild.right = rightbranch;
             return node.left;
         }
     }
-    public TreeNode findLast(TreeNode curr)
+    public TreeNode lastchild(TreeNode node)
     {
-        while(curr.right!=null)
+        while(node.right!=null)
         {
-            curr = curr.right;
+            node = node.right;
         }
-        return curr;
+        return node;
     }
 }
