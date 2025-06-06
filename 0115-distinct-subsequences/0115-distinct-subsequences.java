@@ -1,33 +1,23 @@
 class Solution 
 {
-    public int numDistinct(String s, String t) 
+    public int numDistinct(String text1, String text2) 
     {
-        int m=s.length(), n=t.length();
-        int dp[] = new int[n+1];
-        dp[0] = 1;
+        int m = text1.length(), n=text2.length();
+        int dp[][] = new int[m+1][n+1];
+        for(int i=0;i<=m;i++)
+        {
+            dp[i][0] = 1;
+        }
         for(int i=1;i<=m;i++)
         {
-            int temp[] = new int[n+1];
-            temp[0] = 1;
             for(int j=1;j<=n;j++)
             {
-                if(s.charAt(i-1)==t.charAt(j-1))
-                    temp[j] = dp[j-1]+dp[j];
+                if(text1.charAt(i-1)==text2.charAt(j-1))
+                    dp[i][j] = dp[i-1][j-1]+dp[i-1][j];
                 else
-                    temp[j] = dp[j];
+                    dp[i][j] = dp[i-1][j];
             }
-            dp = temp;
         }
-        return dp[n];
-    }
-    public int f(String s1, String s2, int i,int j)
-    {
-        if(j<0)
-            return 1;
-        if(i<0)
-            return 0;
-        if(s1.charAt(i)==s2.charAt(j))
-            return f(s1,s2,i-1,j-1)+f(s1,s2,i-1,j);
-        return f(s1,s2,i-1,j);
+        return dp[m][n];
     }
 }
