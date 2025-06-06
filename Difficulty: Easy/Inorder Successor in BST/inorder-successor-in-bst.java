@@ -1,17 +1,4 @@
-// User function Template for Java
-
-/*Complete the function below
-Node is as follows:
-class Node{
-    int data;
-    Node left,right;
-    Node(int d){
-        data=d;
-        left=right=null;
-    }
-}
-*/
-class Solution 
+class Solution
 {
     public int inorderSuccessor(Node root, Node x) 
     {
