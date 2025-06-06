@@ -20,13 +20,11 @@ class Solution
 
         TreeNode left = f(root.left,p,q);
         TreeNode right = f(root.right,p,q);
-
         if(left==null)
             return right;
         else if(right==null)
             return left;
-        else
+        else 
             return root;
-
     }
 }
