@@ -1,62 +1,56 @@
-//{ Driver Code Starts
-// Initial Template for Java
-
-import java.io.*;
-import java.lang.*;
-import java.util.*;
-
-class GFG {
-    public static void main(String args[]) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while (t-- > 0) {
-            int N = sc.nextInt();
-            int[][] arr = new int[N][3];
-            for (int i = 0; i < N; i++) {
-                for (int j = 0; j < 3; j++) {
-                    arr[i][j] = sc.nextInt();
-                }
-            }
-            Solution obj = new Solution();
-            int res = obj.maximumPoints(arr);
-            System.out.println(res);
-
-            System.out.println("~");
-        }
-    }
-}
-// } Driver Code Ends
-
-
-// User function Template for Java
-
 class Solution 
 {
     public int maximumPoints(int arr[][]) 
     {
         int n = arr.length;
-        int prev[] = new int[4];
-        prev[0] = Math.max(arr[0][1],arr[0][2]);
-        prev[1] = Math.max(arr[0][0],arr[0][2]);
-        prev[2] = Math.max(arr[0][0],arr[0][1]);
-        prev[3] = Math.max(arr[0][0],Math.max(arr[0][1],arr[0][2]));
+        int dp[][] = new int[n][4];
+        dp[0][0] = Math.max(arr[0][1],arr[0][2]);
+        dp[0][1] = Math.max(arr[0][0],arr[0][2]);
+        dp[0][2] = Math.max(arr[0][1],arr[0][0]);
+        dp[0][3] = Math.max(arr[0][0],Math.max(arr[0][1],arr[0][2]));
         
         for(int day=1;day<n;day++)
         {
-            int temp[] = new int[4];
-            for(int last=0;last<4;last++)
+            
+            for(int last=0;last<=3;last++)
             {
-                temp[last]=0;
-                for(int task=0;task<=2;task++)
+                int maxP=0;
+                for(int i=0;i<3;i++)
                 {
-                    if(task!=last)
+                    if(i!=last)
                     {
-                        temp[last] = Math.max(temp[last],prev[task]+arr[day][task]);
+                        maxP = Math.max(maxP,dp[day-1][i]+arr[day][i]);
                     }
+                    
+                }
+                dp[day][last] = maxP;
+            }
+            
+        }
+        
+        return dp[n-1][3];
+    }
+    public int f(int arr[][],int day,int last)
+    {
+        int maxP=0;
+        if(day==0)
+        {
+            for(int i=0;i<3;i++)
+            {
+                if(i!=last)
+                    maxP = Math.max(maxP,arr[day][i]);
+            }
+        }
+        else
+        {
+            for(int i=0;i<3;i++)
+            {
+                if(i!=last)
+                {
+                    maxP = Math.max(maxP,f(arr,day-1,i)+arr[day][i]);
                 }
             }
-            prev = temp;
         }
-        return prev[3];
+        return maxP;
     }
 }
