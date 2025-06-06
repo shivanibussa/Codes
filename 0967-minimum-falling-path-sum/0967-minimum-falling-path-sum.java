@@ -1,50 +1,45 @@
 class Solution 
 {
-    public int minFallingPathSum(int[][] matrix) 
+    public int minFallingPathSum(int[][] mat)
     {
-        int m = matrix.length, n = matrix[0].length,min = Integer.MAX_VALUE;
-        int dp[] = new int[n];
-
-        for(int j=0;j<n;j++)
+        int minS = Integer.MAX_VALUE;
+        int n = mat.length;
+        int dp[][] = new int[n][n];
+        for(int i=0;i<n;i++)
         {
-            dp[j] = matrix[0][j];
+            dp[0][i] = mat[0][i];
         }
-
-        for(int i=1;i<m;i++)
+        for(int i=1;i<n;i++)
         {
-            int temp[] = new int[n];
             for(int j=0;j<n;j++)
             {
-                int up = dp[j],ld = Integer.MAX_VALUE,rd = Integer.MAX_VALUE;
+                int up = Integer.MAX_VALUE,ld=Integer.MAX_VALUE,rd=Integer.MAX_VALUE;
                 if(j-1>=0)
-                    ld = dp[j-1];
+                    ld = dp[i-1][j-1];
                 if(j+1<=n-1)
-                    rd = dp[j+1];
-                temp[j] = matrix[i][j]+Math.min(up,Math.min(ld,rd));
+                    rd = dp[i-1][j+1];
+
+                up = dp[i-1][j];
+                dp[i][j] = mat[i][j]+Math.min(up,Math.min(ld,rd));
             }
-            dp = temp;
         }
-        for(int j=0;j<n;j++)
+        for(int i=0;i<n;i++)
         {
-            min = Math.min(min,dp[j]);
+            minS = Math.min(minS,dp[n-1][i]);
         }
-        return min;
+        return minS;
     }
-
-    public int f(int i,int j,int matrix[][])
+    public int f(int mat[][],int i,int j)
     {
-        int m = matrix.length, n = matrix[0].length;
-        if(i<0 || j<0 ||i>m-1 || j>n-1)
+        if(i<0 || j<0 || i>mat.length-1 || j>mat.length-1)
             return Integer.MAX_VALUE;
-
         if(i==0)
-            return matrix[i][j];
+            return mat[i][j];
 
-        int up = f(i-1,j,matrix);
-        int ld = f(i-1,j-1,matrix);
-        int rd = f(i-1,j+1,matrix);
+        int up = f(mat,i-1,j);
+        int ld = f(mat,i-1,j-1);
+        int rd = f(mat,i-1,j+1);
 
-        return matrix[i][j]+Math.min(up,Math.min(ld,rd));
-
+        return mat[i][j]+Math.min(up,Math.min(ld,rd));
     }
 }
