@@ -1,23 +1,28 @@
-class Solution 
-{
+// User function Template for Java
+
+class Solution {
     public static int floor(Node root, int x) 
     {
-        int floor=-1;
-        while(root!=null)
+        // Code here
+        Node curr = root;
+        if(root==null)
+            return -1;
+        int floor = -1;
+        while(curr!=null)
         {
-            if(root.data==x)
-                return root.data;
-            
-            if(root.data > x)
+            if(curr.data==x)
+                return x;
+            if(curr.data<x)
             {
-                root = root.left;
+                floor = curr.data;
+                curr = curr.right;
             }
             else
             {
-                floor = root.data;
-                root = root.right;
+                curr = curr.left;
             }
         }
         return floor;
+        
     }
 }
