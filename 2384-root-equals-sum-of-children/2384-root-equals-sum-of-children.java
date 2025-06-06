@@ -18,7 +18,9 @@ class Solution
     public boolean checkTree(TreeNode root) 
     {
         return f(root)==root.val;
+    
     }
+
     public int f(TreeNode root)
     {
         if(root.left==null && root.right==null)
