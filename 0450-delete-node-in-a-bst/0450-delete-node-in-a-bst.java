@@ -1,21 +1,6 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution 
+class Solution
 {
-    public TreeNode deleteNode(TreeNode root, int key) 
+    public TreeNode deleteNode(TreeNode root, int key)
     {
         TreeNode curr = root;
         if(root==null)
@@ -27,7 +12,7 @@ class Solution
             if(curr.val>key)
             {
                 if(curr.left!=null && curr.left.val==key)
-                    curr.left = helper(curr.left);
+                    curr.left  = helper(curr.left);
                 else
                     curr = curr.left;
             }
@@ -38,30 +23,32 @@ class Solution
                 else
                     curr = curr.right;
             }
-        }
+        }    
         return root;
     }
 
-    public TreeNode helper(TreeNode node)
+    public TreeNode helper(TreeNode curr)
     {
-        if(node.left==null)
-            return node.right;
-        else if(node.right==null)
-            return node.left;
+        if(curr.left==null)
+            return curr.right;
+        else if(curr.right==null)
+            return curr.left;
         else
         {
-            TreeNode rightbranch = node.right;
-            TreeNode lastchild = lastchild(node.left);
-            lastchild.right = rightbranch;
-            return node.left;
+            TreeNode rightchild = curr.right;
+            TreeNode lastchild = getLC(curr.left);
+            lastchild.right = rightchild;
+            return curr.left;
         }
     }
-    public TreeNode lastchild(TreeNode node)
+
+    public TreeNode getLC(TreeNode root)
     {
-        while(node.right!=null)
+        TreeNode curr = root;
+        while(curr.right!=null)
         {
-            node = node.right;
+            curr = curr.right;
         }
-        return node;
+        return curr;
     }
 }
