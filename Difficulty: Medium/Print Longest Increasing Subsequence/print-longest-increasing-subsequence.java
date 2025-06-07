@@ -1,18 +1,16 @@
-// User function Template for Java
-
 class Solution 
 {
-    public ArrayList<Integer> getLIS(int arr[]) 
+    public ArrayList<Integer> getLIS(int arr[])
     {
-        int n = arr.length,lastindex=0,maxi=1;
-        int dp[] = new int[n];
+        int n = arr.length,maxL=1,end=0;
         int hash[] = new int[n];
+        int dp[] = new int[n];
         ArrayList<Integer> res = new ArrayList<>();
-        for(int i=0;i<n;i++)
-        {
+        for(int i=0;i<n;i++){
             dp[i] = 1;
             hash[i] = i;
         }
+
         for(int i=1;i<n;i++)
         {
             for(int j=0;j<i;j++)
@@ -20,20 +18,20 @@ class Solution
                 if(arr[i]>arr[j] && 1+dp[j]>dp[i])
                 {
                     dp[i] = 1+dp[j];
-                    hash[i] = j;
+                    hash[i] =j;
                 }
             }
-            if(maxi<dp[i])
+            if(maxL<dp[i])
             {
-                maxi = dp[i];
-                lastindex = i;
+                maxL = dp[i];
+                end = i;
             }
-        }
-        res.add(arr[lastindex]);
-        while(lastindex!=hash[lastindex])
+        }        
+        res.add(arr[end]);
+        while(hash[end]!=end)
         {
-            lastindex = hash[lastindex];
-            res.add(arr[lastindex]);
+            end=hash[end];
+            res.add(arr[end]);
         }
         Collections.reverse(res);
         return res;
