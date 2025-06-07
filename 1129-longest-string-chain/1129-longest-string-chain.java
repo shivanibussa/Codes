@@ -1,43 +1,50 @@
 class Solution 
 {
-    public int longestStrChain(String[] s) 
+    public int longestStrChain(String[] arr) 
     {
-        Arrays.sort(s,(a,b)->a.length()-b.length());
-        int n = s.length,maxi=1;
+        Arrays.sort(arr,(a,b)->a.length()-b.length());
+        int n = arr.length,maxL=1,end=0;
         int dp[] = new int[n];
-        for(int i=0;i<n;i++)
-            dp[i]=1;
+        ArrayList<Integer> res = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            dp[i] = 1;
+        }
+
         for(int i=1;i<n;i++)
         {
             for(int j=0;j<i;j++)
             {
-                if(Check(s[i],s[j]) && 1+dp[j]>dp[i])
+                if(Check(arr[i],arr[j]) && 1+dp[j]>dp[i])
                 {
                     dp[i] = 1+dp[j];
                 }
-                maxi = Math.max(maxi,dp[i]);
             }
-        }       
-        return maxi;
+            if(maxL<dp[i])
+            {
+                maxL = dp[i];
+                end = i;
+            }
+        }        
+        return maxL;
     }
-    boolean Check(String s1, String s2)
+    public boolean Check(String s,String t)
     {
-        int f=0,s=0,m=s1.length(),n=s2.length();
+        int i=0,m=s.length(),j=0,n=t.length();
         if(m-n!=1)
             return false;
-        while(f<m)
+        while(i<m)
         {
-            if(s<n && s1.charAt(f)==s2.charAt(s))
+            if(j<n && s.charAt(i)==t.charAt(j))
             {
-                f++;
-                s++;
+                i++;
+                j++;
             }
             else
             {
-                f++;
+                i++;
             }
         }
-        if(f==s1.length() && s==s2.length())
+        if(i==m && j==n)
             return true;
         return false;
     }
