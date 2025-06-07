@@ -2,39 +2,55 @@ class Solution
 {
     public int numEnclaves(int[][] board) 
     {
+        Queue<int[]> q= new LinkedList<>();
         int m = board.length, n=board[0].length;
         int visited[][] = new int[m][n];
+        int dr[] = new int[]{-1,0,1,0};
+        int dc[] = new int[]{0,-1,0,1};
         int cnt=0;
-        Queue<int[]> q = new LinkedList<>();
         for(int i=0;i<m;i++)
         {
             if(board[i][0]==1)
+            {
                 q.add(new int[]{i,0});
+                visited[i][0] = 1;
+            }
+
             if(board[i][n-1]==1)
+            {
                 q.add(new int[]{i,n-1});
+                visited[i][n-1]=1;
+            }
         }
+
         for(int j=0;j<n;j++)
         {
             if(board[0][j]==1)
+            {
                 q.add(new int[]{0,j});
-            
+                visited[0][j]=1;
+            }
+
             if(board[m-1][j]==1)
+            {
                 q.add(new int[]{m-1,j});
+                visited[m-1][j]=1;
+            }
         }
-        int dr[] = new int[]{-1,0,1,0};
-        int dc[] = new int[]{0,-1,0,1};
+
         while(!q.isEmpty())
         {
             int pop[] = q.poll();
-            int r = pop[0], c = pop[1];
-            visited[r][c] = 1;
+            int x = pop[0],y=pop[1];
+
             for(int k=0;k<4;k++)
             {
-                int nr = r+dr[k];
-                int nc = c+dc[k];
-                if(nr>=0 && nc>=0 && nr<m && nc<n && board[nr][nc]==1 && visited[nr][nc]==0)
+                int nr = x+dr[k];
+                int nc = y+dc[k];
+
+                if(nr>=0 && nc>=0 && nr<m && nc<n && visited[nr][nc]==0 && board[nr][nc]==1)
                 {
-                    visited[nr][nc] = 1;
+                    visited[nr][nc]=1;
                     q.add(new int[]{nr,nc});
                 }
             }
@@ -43,7 +59,7 @@ class Solution
         {
             for(int j=0;j<n;j++)
             {
-                if(board[i][j]==1 && visited[i][j]==0)
+                if(visited[i][j]==0 && board[i][j]==1)
                     cnt++;
             }
         }
