@@ -2,6 +2,9 @@ class Solution
 {
     public boolean isCycle(int V, int[][] edges)
     {
+      
+        ArrayList<Integer>res = new ArrayList<>();
+        
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         boolean visited[] = new boolean[V];
         for(int i=0;i<V;i++)
@@ -19,29 +22,38 @@ class Solution
         {
             if(visited[i]==false)
             {
-                if(dfs(adj,visited,i,-1))
+                if(bfs(adj,i,visited)==true)
                     return true;
             }
         }
-        
         return false;
+        
     }
     
-    public boolean dfs(ArrayList<ArrayList<Integer>> adj,boolean visited[],int node,int parent)
+    public boolean bfs(ArrayList<ArrayList<Integer>> adj ,int snode,boolean visited[])
     {
-        visited[node] = true;
-        for(int it:adj.get(node))
+        Queue<int[]> q = new LinkedList<>();
+        q.add(new int[]{snode,-1});
+        visited[snode] = true;
+        while(!q.isEmpty())
         {
-            if(visited[it]==false)
+            int pop[] = q.poll();
+            
+            int node = pop[0],parent=pop[1];
+            for(int it:adj.get(node))
             {
-                if(dfs(adj,visited,it,node)==true)
+                if(visited[it]==false)
+                {
+                    q.add(new int[]{it,node});
+                    visited[it] = true;
+                }
+                else if(visited[it]==true && it!=parent)
+                {
                     return true;
-            }
-            else if(it!=parent)
-            {
-                return true;
+                }
             }
         }
         return false;
+        
     }
 }
