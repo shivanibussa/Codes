@@ -1,26 +1,25 @@
 class Solution 
 {
-    
     public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) 
     {
-        Queue<Integer> q = new LinkedList<>();
         int V = adj.size();
-        int visited[] = new int[V];
-        ArrayList<Integer> res = new ArrayList<>();
+        ArrayList<Integer>res = new ArrayList<>();
+        Queue<Integer> q = new LinkedList<>();
         q.add(0);
+        boolean visited[] = new boolean[V];
+        visited[0] = true;
         while(!q.isEmpty())
         {
             int pop = q.poll();
-            visited[pop] = 1;
+            res.add(pop);
             for(int it:adj.get(pop))
             {
-                if(visited[it]==0)
+                if(visited[it]==false)
                 {
                     q.add(it);
-                    visited[it]=1;
+                    visited[it] = true;
                 }
             }
-            res.add(pop);
         }
         return res;
     }
