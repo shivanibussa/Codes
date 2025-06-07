@@ -1,7 +1,6 @@
-// User function Template for Java
+
 class Solution 
 {
-
     public int[] shortestPath(int V, int E, int[][] edges) 
     {
         ArrayList<ArrayList<int[]>>adj = new ArrayList<>();
@@ -46,16 +45,18 @@ class Solution
         dist[0]=0;
         for(int vertex:al)
         {
-            for(int it[]:adj.get(vertex))
+            for(int[] neigh:adj.get(vertex))
             {
-                int nv = it[0],wt = it[1];
-                if(dist[vertex]+wt<dist[nv])
+                int nv = neigh[0];
+                int nvw = neigh[1];
+                
+                if(nvw+dist[vertex]<dist[nv])
                 {
-                    dist[nv] = wt+dist[vertex];
+                    dist[nv] = nvw+dist[vertex];
                 }
             }
         }
-        for(int i=0;i<V;i++)
+         for(int i=0;i<V;i++)
         {
             if(dist[i]==(int)1e9)
                 dist[i]=-1;
