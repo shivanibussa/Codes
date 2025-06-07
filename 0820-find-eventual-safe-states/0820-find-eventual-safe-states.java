@@ -1,44 +1,43 @@
-class Solution 
-{
-    public List<Integer> eventualSafeNodes(int[][] adj) 
-    {
-        int V = adj.length;
-        int visited[] = new int[V];
-        int pathvisited[] = new int[V];
-        int check[] = new int[V];
-        List<Integer> res = new ArrayList<>();
+class Solution {
+    public List<Integer> eventualSafeNodes(int[][] edges) {
+        int V = edges.length;
+        int indegree[] = new int[V];
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        ArrayList<Integer> res = new ArrayList<>();
+        Queue<Integer> q = new LinkedList<>();
+        for(int i=0;i<V;i++)
+            adj.add(new ArrayList<>());
+        
         for(int i=0;i<V;i++)
         {
-            if(visited[i]==0)
+            for(int j=0;j<edges[i].length;j++)
             {
-                dfs(i,adj,visited,pathvisited,check);
+                adj.get(edges[i][j]).add(i);
+                indegree[i]++;
             }
         }
+        
         for(int i=0;i<V;i++)
         {
-            if(check[i]==1)
-                res.add(i);
+            if(indegree[i]==0)
+            {
+                q.add(i);
+            }
         }
+        while(!q.isEmpty())
+        {
+            int pop = q.poll();
+            res.add(pop);
+            for(int it:adj.get(pop))
+            {
+                indegree[it]--;
+                if(indegree[it]==0)
+                {
+                    q.add(it);
+                }
+            }
+        }
+        Collections.sort(res);
         return res;
-    }
-    public boolean dfs(int node,int[][] adj,int visited[],int pathvisited[],int check[])
-    {
-        visited[node]=1;
-        pathvisited[node]=1;
-        for(int it:adj[node])
-        {
-            if(visited[it]==0)
-            {
-                if(dfs(it,adj,visited,pathvisited,check)==true)
-                    return true;
-            }
-            else if(visited[it]==1 && pathvisited[it]==1)
-            {
-                return true;
-            }
-        }
-        pathvisited[node]=0;
-        check[node]=1;
-        return false;
     }
 }
