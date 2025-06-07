@@ -2,29 +2,26 @@ class Solution
 {
     public int maxProfit(int[] prices, int fee) 
     {
-        int n = prices.length;
-        int dp[] = new int[2];
+        int n=prices.length;
+        int dp[][]= new int[n+1][2];
         for(int i=n-1;i>=0;i--)
         {
-            int temp[] = new int[2];
             for(int j=0;j<2;j++)
             {
                 if(j==1)
                 {
-                    int take = -prices[i]+dp[0];
-                    int not_take = dp[1];
-                    temp[j] = Math.max(take,not_take);
+                    int take = -prices[i]+dp[i+1][0];
+                    int not_take = 0+dp[i+1][1];
+                    dp[i][j] = Math.max(take,not_take);
                 }
                 else
                 {
-                    int sell = prices[i]+dp[1];
-                    int not_sell = dp[0];
-                    temp[j] = Math.max(sell-fee,not_sell);
+                    int sell = prices[i]+dp[i+1][1]-fee;
+                    int not_sell = 0+dp[i+1][0];
+                    dp[i][j] = Math.max(sell,not_sell);
                 }
             }
-            dp = temp;
         }
-        return dp[1];
-
+        return dp[0][1];
     }
 }
