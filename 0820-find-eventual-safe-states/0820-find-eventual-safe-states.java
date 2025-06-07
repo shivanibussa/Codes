@@ -1,17 +1,17 @@
 class Solution 
 {
-    public List<Integer> eventualSafeNodes(int[][] graph) 
+    public List<Integer> eventualSafeNodes(int[][] adj) 
     {
-        int V = graph.length;
+        int V = adj.length;
         int visited[] = new int[V];
         int pathvisited[] = new int[V];
         int check[] = new int[V];
-        ArrayList<Integer> res = new ArrayList<>();
-        for(int i=0;i<graph.length;i++)
+        List<Integer> res = new ArrayList<>();
+        for(int i=0;i<V;i++)
         {
             if(visited[i]==0)
             {
-                dfs(graph,visited,pathvisited,check,i);
+                dfs(i,adj,visited,pathvisited,check);
             }
         }
         for(int i=0;i<V;i++)
@@ -21,25 +21,24 @@ class Solution
         }
         return res;
     }
-    public boolean dfs(int graph[][],int vis[],int pathvis[],int check[],int node)
+    public boolean dfs(int node,int[][] adj,int visited[],int pathvisited[],int check[])
     {
-        vis[node]=1;
-        pathvis[node]=1;
-
-        for(int it:graph[node])
+        visited[node]=1;
+        pathvisited[node]=1;
+        for(int it:adj[node])
         {
-            if(vis[it]==0)
+            if(visited[it]==0)
             {
-                if(dfs(graph,vis,pathvis,check,it)==true)
+                if(dfs(it,adj,visited,pathvisited,check)==true)
                     return true;
             }
-            else if(vis[it]==1 && pathvis[it]==1)
+            else if(visited[it]==1 && pathvisited[it]==1)
             {
                 return true;
             }
         }
+        pathvisited[node]=0;
         check[node]=1;
-        pathvis[node]=0;
         return false;
     }
 }
