@@ -1,43 +1,39 @@
 class Solution 
 {
-    public int maximalRectangle(char[][] matrix) 
+    public int maximalRectangle(char[][] mat) 
     {
-        int m=matrix.length,n = matrix[0].length,maxA=0;
+        int m = mat.length,n=mat[0].length;
+        int maxA=0;
         int arr[] = new int[n];
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
             {
-                if(matrix[i][j]=='1')
-                {
-                    arr[j]++;
-                }
-                else
-                {
+                if(mat[i][j]=='0')
                     arr[j]=0;
-                }
+                else
+                    arr[j]+=1;
             }
-            maxA = Math.max(maxA,maxArea(arr));
+            maxA=Math.max(maxA,f(arr));
         }
         return maxA;
     }
-    public int maxArea(int arr[])
+
+    public int f(int arr[])
     {
-        int n = arr.length,maxA=0;
-        Stack<Integer> st = new Stack<>();
-        for(int i=0;i<=n;i++)
+        int n=arr.length,maxA=0;
+        Stack<Integer>st = new Stack<>();
+        for(int i=0;i<=arr.length;i++)
         {
-            while(!st.isEmpty() && (i==n|| arr[i]<=arr[st.peek()]))
+            while(!st.isEmpty()&&( i==n || arr[i]<=arr[st.peek()]))
             {
                 int height = arr[st.pop()];
-                int width = st.isEmpty()==true? i : (i-st.peek()-1);
+                int width =  st.isEmpty()==true?i:i-st.peek()-1;
                 int area = height*width;
-                maxA = Math.max(area,maxA);
+                maxA = Math.max(maxA,area);
             }
             st.push(i);
         }
         return maxA;
     }
-
-
 }
