@@ -5,37 +5,37 @@ class Solution
     {
         int V = adj.size();
         int dist[] = new int[V];
-        Queue<int[]>q = new LinkedList<>();
+        Queue<int[]> q = new LinkedList<>();
         
         for(int i=0;i<V;i++)
             dist[i] = (int)1e9;
             
         dist[src]=0;
-        q.add(new int[]{src,0});
         
+        q.add(new int[]{0,src});
         while(!q.isEmpty())
         {
             int pop[] = q.poll();
-            int popv = pop[0], distx = pop[1];
+            int node = pop[1], wt = pop[0];
             
-            for(int it:adj.get(popv))
+            for(int it:adj.get(node))
             {
-                if(dist[it]>1+distx)
+                int itv = it;
+        
+                if(dist[itv]>1+wt)
                 {
-                    dist[it] = 1+distx;
-                    q.add(new int[]{it,dist[it]});
+                    dist[itv] = 1+wt;
+                    q.add(new int[]{dist[itv],itv});
                 }
             }
+            
         }
-        
-        for(int i=0;i<V;i++)
+         for(int i=0;i<V;i++)
         {
             if(dist[i]==(int)1e9)
-            {
-                dist[i] = -1;
-            }
+                dist[i]=-1;
         }
-        
         return dist;
+        
     }
 }
