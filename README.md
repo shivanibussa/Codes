@@ -34,6 +34,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0037-sudoku-solver](https://github.com/shivanibussa/Codes/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/shivanibussa/Codes/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/shivanibussa/Codes/tree/master/0040-combination-sum-ii) |
+| [0042-trapping-rain-water](https://github.com/shivanibussa/Codes/tree/master/0042-trapping-rain-water) |
 | [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0046-permutations](https://github.com/shivanibussa/Codes/tree/master/0046-permutations) |
 | [0048-rotate-image](https://github.com/shivanibussa/Codes/tree/master/0048-rotate-image) |
@@ -314,6 +315,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
+| [0042-trapping-rain-water](https://github.com/shivanibussa/Codes/tree/master/0042-trapping-rain-water) |
 | [0061-rotate-list](https://github.com/shivanibussa/Codes/tree/master/0061-rotate-list) |
 | [0165-compare-version-numbers](https://github.com/shivanibussa/Codes/tree/master/0165-compare-version-numbers) |
 | [0295-find-median-from-data-stream](https://github.com/shivanibussa/Codes/tree/master/0295-find-median-from-data-stream) |
@@ -596,6 +598,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shivanibussa/Codes/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/shivanibussa/Codes/tree/master/0022-generate-parentheses) |
+| [0042-trapping-rain-water](https://github.com/shivanibussa/Codes/tree/master/0042-trapping-rain-water) |
 | [0044-wildcard-matching](https://github.com/shivanibussa/Codes/tree/master/0044-wildcard-matching) |
 | [0045-jump-game-ii](https://github.com/shivanibussa/Codes/tree/master/0045-jump-game-ii) |
 | [0053-maximum-subarray](https://github.com/shivanibussa/Codes/tree/master/0053-maximum-subarray) |
@@ -701,6 +704,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/shivanibussa/Codes/tree/master/0020-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/shivanibussa/Codes/tree/master/0042-trapping-rain-water) |
 | [0084-largest-rectangle-in-histogram](https://github.com/shivanibussa/Codes/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0094-binary-tree-inorder-traversal](https://github.com/shivanibussa/Codes/tree/master/0094-binary-tree-inorder-traversal) |
@@ -745,6 +749,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 ## Monotonic Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/shivanibussa/Codes/tree/master/0042-trapping-rain-water) |
 | [0084-largest-rectangle-in-histogram](https://github.com/shivanibussa/Codes/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/shivanibussa/Codes/tree/master/0085-maximal-rectangle) |
 | [0402-remove-k-digits](https://github.com/shivanibussa/Codes/tree/master/0402-remove-k-digits) |
