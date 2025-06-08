@@ -1,56 +1,47 @@
-class Solution 
-{
-    public int countPaths(int n, int[][] edges) 
-    {
-        PriorityQueue<long[]> q = new PriorityQueue<>((a,b)->Long.compare(a[0],b[0]));
-        long dist[] = new long [n];
-        int ways[] = new int[n];
+class Solution {
+    public int countPaths(int V, int[][] edges) {
+        PriorityQueue<long[]>pq = new PriorityQueue<>((a,b)->(Long.compare(a[0],b[0])));
         ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
-
-        for(int i=0;i<n;i++)
+        long dist[] = new long[V];
+        int ways[] = new int[V];
+        for(int i=0;i<V;i++)
         {
             adj.add(new ArrayList<>());
             dist[i] = Long.MAX_VALUE;
         }
-
         for(int i=0;i<edges.length;i++)
         {
-            int a = edges[i][0];
-            int b = edges[i][1];
-            int c = edges[i][2];
-
+            int a=edges[i][0],b=edges[i][1],c=edges[i][2];
             adj.get(a).add(new int[]{b,c});
             adj.get(b).add(new int[]{a,c});
         }
-
-        dist[0] = 0;
-        q.offer(new long[]{0,0});
-        ways[0] = 1;
-
-        while(!q.isEmpty())
+        
+        pq.offer(new long[]{0,0});
+        dist[0]=0;
+        ways[0]=1;
+        while(!pq.isEmpty())
         {
-            long pop[] = q.poll();
-            long w = pop[0]; 
-            int ver = (int) pop[1];
-            if(w>dist[ver])
-                continue;
-            for(int it[]:adj.get(ver))
+            long pop[] = pq.poll();
+            long wt = pop[0];
+            int node = (int)pop[1];
+            
+            for(int it[]:adj.get(node))
             {
-                int nv = it[0];
-                int neiW = it[1];
-
-                if(dist[nv]>neiW+w)
+                int itv = it[0];
+                int itw = it[1];
+                
+                if(dist[itv]>itw+wt)
                 {
-                    dist[nv] = neiW+w;
-                    ways[nv] = ways[(int)ver];
-                    q.add(new long[]{dist[nv],nv});
+                    dist[itv] = itw+wt;
+                    ways[itv] = ways[(int)node];
+                    pq.add(new long[]{dist[itv],itv});
                 }
-                else if(dist[nv]==neiW+w)
+                else if(dist[itv]==itw+wt)
                 {
-                    ways[nv]=(ways[nv]+ways[ver])%1000000007;
+                    ways[itv] = (ways[itv] + ways[node])%1000000007;
                 }
             }
         }
-        return ways[n-1];
+        return ways[V-1];
     }
 }
