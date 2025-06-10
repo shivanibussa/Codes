@@ -18,12 +18,12 @@ class Solution
         {
             res.add(new ArrayList<>(path));
         }
-        else{
+       
         if(root.left!=null)
             f(res,path,root.left,target,sum);
         if(root.right!=null)
             f(res,path,root.right,target,sum);
-        }
+        
         path.remove(path.size()-1);
     }
 }
