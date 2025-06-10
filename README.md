@@ -104,6 +104,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [1014-k-closest-points-to-origin](https://github.com/shivanibussa/Codes/tree/master/1014-k-closest-points-to-origin) |
 | [1036-rotting-oranges](https://github.com/shivanibussa/Codes/tree/master/1036-rotting-oranges) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
+| [1056-capacity-to-ship-packages-within-d-days](https://github.com/shivanibussa/Codes/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1073-number-of-enclaves](https://github.com/shivanibussa/Codes/tree/master/1073-number-of-enclaves) |
 | [1121-partition-array-for-maximum-sum](https://github.com/shivanibussa/Codes/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/shivanibussa/Codes/tree/master/1129-longest-string-chain) |
@@ -387,6 +388,7 @@ You can browse through this repository to explore my solutions to LeetCode probl
 | [0784-insert-into-a-binary-search-tree](https://github.com/shivanibussa/Codes/tree/master/0784-insert-into-a-binary-search-tree) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/shivanibussa/Codes/tree/master/0789-kth-largest-element-in-a-stream) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/shivanibussa/Codes/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
+| [1056-capacity-to-ship-packages-within-d-days](https://github.com/shivanibussa/Codes/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1753-path-with-minimum-effort](https://github.com/shivanibussa/Codes/tree/master/1753-path-with-minimum-effort) |
 ## Binary Tree
 |  |
